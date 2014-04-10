@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inv_n: MyString
+  supplier: MyString
+  inv_amt: 
+
+two:
+  inv_n: MyString
+  supplier: MyString
+  inv_amt: 

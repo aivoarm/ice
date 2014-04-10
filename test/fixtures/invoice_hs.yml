@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inv_id: 1
+  province: MyString
+  valid: false
+
+two:
+  inv_id: 1
+  province: MyString
+  valid: false
