@@ -1,4 +1,6 @@
 App::Application.routes.draw do
+  get "download/index"
+  post "download/download"
   resources :uploads
 
   resources :invoices
