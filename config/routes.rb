@@ -1,4 +1,6 @@
 App::Application.routes.draw do
+  resources :uploads
+
   resources :invoices
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,10 +10,10 @@ App::Application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  get 'upload', :to=> 'upload#uploadfile'
-  get "upload/uploadFile"
+  #get 'upload', :to=> 'upload#uploadfile'
+  #get "upload/uploadFile"
   
-  post "upload/uploadFile"
+  #post "upload/uploadFile"
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
