@@ -1,10 +1,14 @@
 App::Application.routes.draw do
-  get "download/index"
-  post "download/download"
+
+  
   resources :uploads
 
   resources :invoices
-
+    
+  delete "invoices/index"
+  get "download/index"
+  post "download/download"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

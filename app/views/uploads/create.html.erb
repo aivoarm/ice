@@ -1,17 +1,29 @@
-<p id="notice"><%= notice %></p>
-<ul>
-<% @d.each do |l| %>
-
-<li></li><%= l%></li>
-
-<%end %>
-</ul>
-</br>
 <div>
+<lable>back to </lable>
 <%= link_to "Upload", "/uploads" %>
 </div>
+</br>
+<%= link_to "invoices", "/invoices" %>
+</br>
+
+
+
+
+<% unless @d.nil?%>
+<p id="notice"><%= notice %></p>
+
+<ul>
+<%@d.each do |l| %>
+
+<li></li><%= l%></li>
+<%end %>
+
+</ul>
+<%end %>
+</br>
 
 </br>
+<lable>Files list </lable>
 <ul>
 <% Dir.entries("public/data")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
   <li><%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %></li>

@@ -1,5 +1,7 @@
 <h1>Listing invoices</h1>
-
+        <p><%= link_to 'Delete All', invoices_index_path , method: :delete,  data: { confirm: 'Are you sure?' } %></p>
+    
+    <p><%= link_to 'Uploads', "/uploads" %></p>
 <table>
   <thead>
     <tr>
