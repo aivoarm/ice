@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  start: 1
+  length: 1
+  type: 
+  ou: MyString
+
+two:
+  description: MyString
+  start: 1
+  length: 1
+  type: 
+  ou: MyString

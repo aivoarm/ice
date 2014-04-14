@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplierNumber: MyString
+  supplierName: MyString
+  GL: MyString
+  'ON': MyString
+  QC: MyString
+  BC: MyString
+  AB: MyString
+  NL: MyString
+  MA: MyString
+  SK: MyString
+  NF: MyString
+  PEI: MyString
+  NT: MyString
+
+two:
+  supplierNumber: MyString
+  supplierName: MyString
+  GL: MyString
+  'ON': MyString
+  QC: MyString
+  BC: MyString
+  AB: MyString
+  NL: MyString
+  MA: MyString
+  SK: MyString
+  NF: MyString
+  PEI: MyString
+  NT: MyString

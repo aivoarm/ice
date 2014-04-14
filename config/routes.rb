@@ -1,10 +1,17 @@
 App::Application.routes.draw do
 
   
+  resources :users
+
+  resources :suppliers
+
+  resources :layouts
+
   resources :uploads
 
   resources :invoices
-    
+  resources :invoices_h
+  
   delete "invoices/index"
   get "download/index"
   post "download/download"

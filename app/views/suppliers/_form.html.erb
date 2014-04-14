@@ -1,0 +1,69 @@
+<%= form_for(@supplier) do |f| %>
+  <% if @supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@supplier.errors.count, "error") %> prohibited this supplier from being saved:</h2>
+
+      <ul>
+      <% @supplier.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :supplierNumber %><br>
+    <%= f.text_field :supplierNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :supplierName %><br>
+    <%= f.text_field :supplierName %>
+  </div>
+  <div class="field">
+    <%= f.label :GL %><br>
+    <%= f.text_field :GL %>
+  </div>
+  <div class="field">
+    <%= f.label :ON %><br>
+    <%= f.text_field :ON %>
+  </div>
+  <div class="field">
+    <%= f.label :QC %><br>
+    <%= f.text_field :QC %>
+  </div>
+  <div class="field">
+    <%= f.label :BC %><br>
+    <%= f.text_field :BC %>
+  </div>
+  <div class="field">
+    <%= f.label :AB %><br>
+    <%= f.text_field :AB %>
+  </div>
+  <div class="field">
+    <%= f.label :NL %><br>
+    <%= f.text_field :NL %>
+  </div>
+  <div class="field">
+    <%= f.label :MA %><br>
+    <%= f.text_field :MA %>
+  </div>
+  <div class="field">
+    <%= f.label :SK %><br>
+    <%= f.text_field :SK %>
+  </div>
+  <div class="field">
+    <%= f.label :NF %><br>
+    <%= f.text_field :NF %>
+  </div>
+  <div class="field">
+    <%= f.label :PEI %><br>
+    <%= f.text_field :PEI %>
+  </div>
+  <div class="field">
+    <%= f.label :NT %><br>
+    <%= f.text_field :NT %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

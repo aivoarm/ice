@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410042502) do
+ActiveRecord::Schema.define(version: 20140414015559) do
 
   create_table "data_files", force: true do |t|
     t.datetime "created_at"
@@ -34,7 +34,43 @@ ActiveRecord::Schema.define(version: 20140410042502) do
     t.datetime "updated_at"
   end
 
+  create_table "layouts", force: true do |t|
+    t.string   "description"
+    t.integer  "start"
+    t.integer  "length"
+    t.string   "ftype"
+    t.string   "ou"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", force: true do |t|
+    t.string   "supplierNumber"
+    t.string   "supplierName"
+    t.string   "GL"
+    t.string   "ON"
+    t.string   "QC"
+    t.string   "BC"
+    t.string   "AB"
+    t.string   "NL"
+    t.string   "MA"
+    t.string   "SK"
+    t.string   "NF"
+    t.string   "PEI"
+    t.string   "NT"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "uploads", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "user_id"
+    t.string   "password"
+    t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
