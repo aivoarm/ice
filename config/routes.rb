@@ -5,14 +5,21 @@ App::Application.routes.draw do
 
   resources :suppliers
 
-  resources :layouts
+ # resources :layouts
 
   resources :uploads
 
   resources :invoices
-  resources :invoices_h
   
-  delete "invoices/index"
+  
+  #delete "invoices/index"
+  
+  delete '/layouts', to: 'layouts#destroy'
+  delete '/layouts/d', to: 'layouts#delete_file'
+  get '/layouts/show', to: 'layouts#show'
+  get '/layouts', to: 'layouts#index'
+  post '/layouts', to: 'layouts#create'
+  
   get "download/index"
   post "download/download"
   

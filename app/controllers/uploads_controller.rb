@@ -3,7 +3,6 @@ class UploadsController < ApplicationController
 
   def index
     @uploads = Upload.all
-    #@invoice = Invoice.all
   end
 
  def create

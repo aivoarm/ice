@@ -1,79 +1,55 @@
 class LayoutsController < ApplicationController
-  before_action :set_layout, only: [:show, :edit, :update, :destroy]
- @p
-  # GET /layouts
-  # GET /layouts.json
+ # before_action :set_layout, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate #, except:     [:index, :show] 
+   def authenticate
+        authenticate_or_request_with_http_basic do |name, password|
+            name =="admin" && password == "admin"
+        end
+    end
+    
   def index
     @layouts = Layout.all
-     @layout = Layout.new
-    #@layout.save
-  
-  end
-
-  # GET /layouts/1
-  # GET /layouts/1.json
-  def show
-      redirect_to "/layouts"
-  end
-
-  # GET /layouts/new
-  def new
-    @layout = Layout.new
     
   end
-
-  # GET /layouts/1/edit
-  def edit
+  
+  def show
+    @layouts = Layout.all
   end
 
-  # POST /layouts
-  # POST /layouts.json
-  def create
-    @layout = Layout.new(layout_params)
-
-    respond_to do |format|
-      if @layout.save
-        format.html { redirect_to @layout, notice: 'Layout was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @layout }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @layout.errors, status: :unprocessable_entity }
-      end
+ def create
+   unless params[:upload].nil?
+       post = Layout.save(params[:upload])
+       flash[:notice] = "uploaded!"
+       
+       @d = Layout.read(params[:upload])
+       
+       @d.each do |l| 
+              
+              p =  l.scan(/\w+/)
+                @layout =Layout.new(:ou =>p[0], :ftype =>p[1], :description =>p[2],:start =>p[3], :length =>p[4])
+                @layout.save
+                
+         end
     end
+    redirect_to action: 'show'
+ end
+ 
+ def destroy
+   
+   Layout.delete_all
+    unless Dir["public/layouts/*"].empty?
+        File.delete('public/layouts/'+params[:file])
+    end
+   redirect_to action: 'index'
   end
-
-  # PATCH/PUT /layouts/1
-  # PATCH/PUT /layouts/1.json
-  def update
-    respond_to do |format|
-      if @layout.update(layout_params)
-        format.html { redirect_to @layout, notice: 'Layout was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @layout.errors, status: :unprocessable_entity }
-      end
+  
+  def delete_file
+       Layout.delete_all
+       flash[:notice] = "done!"
+    unless Dir["public/layouts/*"].empty?
+        File.delete('public/layouts/'+params[:file])
     end
+    redirect_to action: 'index'
   end
-
-  # DELETE /layouts/1
-  # DELETE /layouts/1.json
-  def destroy
-    @layout.destroy
-    respond_to do |format|
-      format.html { redirect_to layouts_url }
-      format.json { head :no_content }
-    end
-  end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_layout
-      @layout = Layout.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def layout_params
-      params.require(:layout).permit(:description, :start, :length, :ftype, :ou)
-    end
+  
 end

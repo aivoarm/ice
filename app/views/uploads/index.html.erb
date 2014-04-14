@@ -8,5 +8,13 @@
 <% end %>
 
 
+<br />
+<h3>Files list </h3>
+<ul>
+
+<% Dir.entries("public/data")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+  <li><%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %></li>
+<% end %>
+</ul>
 
 

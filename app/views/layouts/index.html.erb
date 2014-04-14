@@ -1,99 +1,33 @@
-<h1>Listing layouts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Start</th>
-      <th>Length</th>
-      <th>Type</th>
-      <th>Ou</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @layouts.each do |layout| %>
-      <tr>
-        <td><%= layout.ou %></td>
-        <td><%= layout.ftype %></td>
-        <td><%= layout.description %></td>
-        <td><%= layout.start %></td>
-        <td><%= layout.length %></td>
-        
-        
-        <td><%= link_to 'Show', layout %></td>
-        <td><%= link_to 'Edit', edit_layout_path(layout) %></td>
-        <td><%= link_to 'Destroy', layout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-
-
-
-<%= link_to 'New Layout', new_layout_path %>
-
-
-<%= form_for(@layout) do |f| %>
-  <% if @layout.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@layout.errors.count, "error") %> prohibited this layout from being saved:</h2>
-
-      <ul>
-      <% @layout.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  <table>
-   <tr>
-   <td>
-     <div class="field">
-        <%= f.label :ou %><br>
-        <%= f.text_field :ou, value: 'BMO'%>
-      </div>
-  </td>
-   <td>
-      <div class="field">
-        <%= f.label :ftype %><br>
-        <%= f.text_field :ftype,value: 'BMO1' %>
-      </div>
-  </td>
-   <td>
-      <div class="field">
-        <%= f.label :description %><br>
-        <%= f.text_field :description, value: 'BMO2' %>
-      </div>
-  </td>
-   <td>
-      <div class="field">
-        <%= f.label :start %><br>
-        <%= f.number_field :start, value: '1' %>
-      </div>
-  </td>
-   <td>
-  <div class="field">
-    <%= f.label :length %><br>
-    <%= f.number_field :length, value: '2' %>
-  </div>
-  </td>
-  <td>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  </td>
-   <tr>
-   
-  </table>
-  
+<%= form_tag({:action => 'create'}, :multipart => true) do %>
+  <%= file_field 'upload', 'datafile' %>
+  <%= submit_tag 'Upload' %>
 <% end %>
 
-<%=@p %>
+
+
+<h2>Layouts list </h2>
+<table>
+    
+       
+        <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+      
+             <tr>
+            <td><%= @l %> </td>
+                 <td>
+                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                </td>
+                <td>
+                     <%= link_to 'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}") , method: :delete,   confirm: '<Are you sure?'  %>
+                </td>
+                <td>
+                    <%= link_to 'Show', layouts_show_path %>
+                </td>
+            </tr>
+            
+        <% end %>
+   
+</table>
+
+
+
+

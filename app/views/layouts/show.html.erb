@@ -1,31 +1,40 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Ou:</strong>
-  <%= @layout.ou %>
-</p>
-<p>
-  <strong>Type:</strong>
-  <%= @layout.ftype %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @layout.description %>
-</p>
-
-<p>
-  <strong>Start:</strong>
-  <%= @layout.start %>
-</p>
-
-<p>
-  <strong>Length:</strong>
-  <%= @layout.length %>
-</p>
-
-
-
-
-<%= link_to 'Edit', edit_layout_path(@layout) %> |
+ <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+ <p><%= link_to 'Delete All', layouts_path( :file => "#{URI.escape(file_name)}") , method: :delete,  data: { confirm: 'Are you sure?' } %></p>
+<%end%>
 <%= link_to 'Back', layouts_path %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>OU</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Start</th>
+      <th>Length</th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @layouts.each do |layout| %>
+      <tr>
+        <td><%= layout.ou %></td>
+        <td><%= layout.ftype %></td>
+        <td><%= layout.description %></td>
+         <td><%= layout.start %></td>
+          <td><%= layout.length %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+

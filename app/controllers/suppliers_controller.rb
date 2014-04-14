@@ -1,5 +1,11 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate #, except:     [:index, :show] 
+   def authenticate
+        authenticate_or_request_with_http_basic do |name, password|
+            name =="admin" && password == "admin"
+        end
+    end
 
   # GET /suppliers
   # GET /suppliers.json
