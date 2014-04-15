@@ -9,11 +9,13 @@ class LayoutsController < ApplicationController
     
   def index
     #@layouts = Layout.all
-     
+      @cl=params[:ou]
+ 
   end
   
   def show
     @layouts = Layout.all
+    redirect_to action: 'index'
   end
 
  def create
@@ -57,7 +59,7 @@ class LayoutsController < ApplicationController
     
      
    # render html: "<strong>Not Found</strong>".html_safe
-    redirect_to :action => 'chose', :ou => params[:ou]
+    redirect_to :action => 'index', :ou => params[:ou]
 
   end
   
