@@ -1,6 +1,6 @@
 class LayoutsController < ApplicationController
  # before_action :set_layout, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate #, except:     [:index, :show] 
+  #before_action :authenticate #, except:     [:index, :show] 
    def authenticate
         authenticate_or_request_with_http_basic do |name, password|
             name =="admin" && password == "admin"
@@ -8,8 +8,8 @@ class LayoutsController < ApplicationController
     end
     
   def index
-    @layouts = Layout.all
-    
+    #@layouts = Layout.all
+     
   end
   
   def show
@@ -42,14 +42,37 @@ class LayoutsController < ApplicationController
     end
    redirect_to action: 'index'
   end
+  def chose
+  @cl=params[:ou]
+  flash[:notice] = params[:ou]
+  end
   
   def delete_file
+     flash[:notice] = params[:ou]
        Layout.delete_all
        flash[:notice] = "done!"
     unless Dir["public/layouts/*"].empty?
         File.delete('public/layouts/'+params[:file])
     end
-    redirect_to action: 'index'
+    
+     
+   # render html: "<strong>Not Found</strong>".html_safe
+    redirect_to :action => 'chose', :ou => params[:ou]
+
+  end
+  
+  def download
+   
+    name =  params[:file]
+    directory = "public/layouts"
+    # create the file path
+    path = File.join(directory, name)
+    
+    
+    #send_file '/public/data/'+ @file,  :x_sendfile=>true
+    
+   send_file path 
+   
   end
   
 end

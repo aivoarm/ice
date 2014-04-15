@@ -1,3 +1,5 @@
+<%= javascript_include_tag  "jq.js" %>
+
 <%= form_tag({:action => 'create'}, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
   <%= submit_tag 'Upload' %>
@@ -5,20 +7,22 @@
 
 
 
+
 <h2>Layouts list </h2>
 <table>
-    
-       
+   
+      
+      
         <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
       
              <tr>
             <td><%= @l %> </td>
                  <td>
-                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                     <%= link_to file_name, layouts_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
                 </td>
                 <td>
-                     <%= link_to 'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}") , method: :delete,   confirm: '<Are you sure?'  %>
-                </td>
+                     <%= link_to  'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id => "booked"   %>
+                </td> 
                 <td>
                     <%= link_to 'Show', layouts_show_path %>
                 </td>
@@ -27,7 +31,6 @@
         <% end %>
    
 </table>
-
-
+<%= @cl %>
 
 

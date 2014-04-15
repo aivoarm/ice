@@ -15,6 +15,7 @@ App::Application.routes.draw do
   #delete "invoices/index"
   
   delete '/layouts', to: 'layouts#destroy'
+  get '/layouts/c', to: 'layouts#chose'
   delete '/layouts/d', to: 'layouts#delete_file'
   get '/layouts/show', to: 'layouts#show'
   get '/layouts', to: 'layouts#index'
@@ -22,6 +23,7 @@ App::Application.routes.draw do
   
   get "download/index"
   post "download/download"
+   post "layouts/download" , to: 'layouts#download'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
