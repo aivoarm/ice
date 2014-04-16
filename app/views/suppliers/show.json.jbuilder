@@ -1,1 +1,1 @@
-json.extract! @supplier, :id, :supplierNumber, :supplierName, :GL, :ON, :QC, :BC, :AB, :NL, :MA, :SK, :NF, :PEI, :NT, :created_at, :updated_at
+json.extract! @supplier, :id, :SupplierNo, :SupplerName, :Account, :SubAccount, :OU, :AB, :BC, :MA, :NB, :NF, :NS, :NU, :NT, :FC, :ONT, :PE, :QC, :SK, :YU, :IO, :IQ, :created_at, :updated_at

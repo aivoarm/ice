@@ -1,31 +1,49 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  supplierNumber: MyString
-  supplierName: MyString
-  GL: MyString
-  'ON': MyString
-  QC: MyString
-  BC: MyString
+  SupplierNo: MyString
+  SupplerName: MyString
+  Account: MyString
+  SubAccount: MyString
+  string: MyString
+  OU: MyString
   AB: MyString
-  NL: MyString
+  BC: MyString
   MA: MyString
-  SK: MyString
+  NB: MyString
   NF: MyString
-  PEI: MyString
+  NS: MyString
+  NU: MyString
   NT: MyString
+  FC: MyString
+  ONT: MyString
+  PE: MyString
+  QC: MyString
+  SK: MyString
+  YU: MyString
+  IO: MyString
+  IQ: MyString
 
 two:
-  supplierNumber: MyString
-  supplierName: MyString
-  GL: MyString
-  'ON': MyString
-  QC: MyString
-  BC: MyString
+  SupplierNo: MyString
+  SupplerName: MyString
+  Account: MyString
+  SubAccount: MyString
+  string: MyString
+  OU: MyString
   AB: MyString
-  NL: MyString
+  BC: MyString
   MA: MyString
-  SK: MyString
+  NB: MyString
   NF: MyString
-  PEI: MyString
+  NS: MyString
+  NU: MyString
   NT: MyString
+  FC: MyString
+  ONT: MyString
+  PE: MyString
+  QC: MyString
+  SK: MyString
+  YU: MyString
+  IO: MyString
+  IQ: MyString

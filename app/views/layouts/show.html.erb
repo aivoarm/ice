@@ -1,10 +1,13 @@
 
- <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
- <p><%= link_to 'Delete All', layouts_path( :file => "#{URI.escape(file_name)}") , method: :delete,  data: { confirm: 'Are you sure?' } %></p>
-<%end%>
+ 
 <%= link_to 'Back', layouts_path %>
+<%= javascript_include_tag  "jq.js" %>
 
-
+            <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+ <p><%= link_to 'Delete  ' + file_name, layouts_path( :file => "#{URI.escape(file_name)}" ) , method: :delete,  data: { confirm: 'Are you sure?' }, :id => "booked" %></p>
+<%end%>
+            
+        
 <table>
   <thead>
     <tr>

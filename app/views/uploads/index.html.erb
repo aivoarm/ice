@@ -1,20 +1,69 @@
-<h1 uploads</h1>
+<h1 Uploads</h1>
 
 
+<p><%= link_to 'Home', "/" %></p>
 
-<%= form_tag({:action => 'create'}, :multipart => true) do %>
+
+<%= form_tag({:action => 'index'}, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %></p>
   <%= submit_tag 'Upload' %>
 <% end %>
 
 
 <br />
-<h3>Files list </h3>
-<ul>
+<h3>List of uploaded files </h3>
 
-<% Dir.entries("public/data")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-  <li><%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %></li>
-<% end %>
-</ul>
 
+<table>
+   
+        <% Dir.entries("public/data")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+      
+             <tr>
+            <td><%= @l %> </td>
+                 <td>
+                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                </td>
+                <td></td>
+                
+                <td>
+                     <%= link_to  'Delete', uploads_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, data: { confirm: 'Are you sure?' } %>
+                </td> 
+                 <td></td>
+                <td>
+                     <%= link_to  'Validate', uploads_c_path( :file => "#{URI.escape(file_name)}") %>
+                </td> 
+                
+                
+            </tr>
+            
+        <% end %>
+   
+</table>
+<h3>List of validated files </h3>
+
+
+
+<table>
+   
+        <% Dir.entries("public/done")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+      
+             <tr>
+            <td><%= @l %> </td>
+                 <td>
+                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                </td>
+                <td></td>
+                
+                <td>
+                     <%= link_to  'Delete', download_download_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id =>'btnOpenDialog' %>
+                </td> 
+                 <td></td>
+                
+                
+                
+            </tr>
+            
+        <% end %>
+   
+</table>
 

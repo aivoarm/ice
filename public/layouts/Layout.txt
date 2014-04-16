@@ -1,4 +1,3 @@
-OU      ftype          description              start      length
 BMO     File_Header    RECORD_TYPE                        1          1
 BMO     File_Header    FILE_DATE                          2         14
 BMO     File_Header    SOURCE                            16         10

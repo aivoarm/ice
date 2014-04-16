@@ -1,4 +1,6 @@
 <%= javascript_include_tag  "jq.js" %>
+<%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" %>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 
 <%= form_tag({:action => 'create'}, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
@@ -21,7 +23,7 @@
                      <%= link_to file_name, layouts_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
                 </td>
                 <td>
-                     <%= link_to  'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id => "booked"   %>
+                     <%= link_to  'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id =>'btnOpenDialog' %>
                 </td> 
                 <td>
                     <%= link_to 'Show', layouts_show_path %>
@@ -31,6 +33,9 @@
         <% end %>
    
 </table>
-<%= @cl %>
 
 
+
+<div id="dialog-confirm"></div>
+
+<p><%= link_to 'Home', "/" %></p>

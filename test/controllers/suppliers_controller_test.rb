@@ -18,7 +18,7 @@ class SuppliersControllerTest < ActionController::TestCase
 
   test "should create supplier" do
     assert_difference('Supplier.count') do
-      post :create, supplier: { AB: @supplier.AB, BC: @supplier.BC, GL: @supplier.GL, MA: @supplier.MA, NF: @supplier.NF, NL: @supplier.NL, NT: @supplier.NT, ON: @supplier.ON, PEI: @supplier.PEI, QC: @supplier.QC, SK: @supplier.SK, supplierName: @supplier.supplierName, supplierNumber: @supplier.supplierNumber }
+      post :create, supplier: { AB: @supplier.AB, Account: @supplier.Account, BC: @supplier.BC, FC: @supplier.FC, IO: @supplier.IO, IQ: @supplier.IQ, MA: @supplier.MA, NB: @supplier.NB, NF: @supplier.NF, NS: @supplier.NS, NT: @supplier.NT, NU: @supplier.NU, ONT: @supplier.ONT, OU: @supplier.OU, PE: @supplier.PE, QC: @supplier.QC, SK: @supplier.SK, SubAccount: @supplier.SubAccount, SupplerName: @supplier.SupplerName, SupplierNo: @supplier.SupplierNo, YU: @supplier.YU, string: @supplier.string }
     end
 
     assert_redirected_to supplier_path(assigns(:supplier))
@@ -35,7 +35,7 @@ class SuppliersControllerTest < ActionController::TestCase
   end
 
   test "should update supplier" do
-    patch :update, id: @supplier, supplier: { AB: @supplier.AB, BC: @supplier.BC, GL: @supplier.GL, MA: @supplier.MA, NF: @supplier.NF, NL: @supplier.NL, NT: @supplier.NT, ON: @supplier.ON, PEI: @supplier.PEI, QC: @supplier.QC, SK: @supplier.SK, supplierName: @supplier.supplierName, supplierNumber: @supplier.supplierNumber }
+    patch :update, id: @supplier, supplier: { AB: @supplier.AB, Account: @supplier.Account, BC: @supplier.BC, FC: @supplier.FC, IO: @supplier.IO, IQ: @supplier.IQ, MA: @supplier.MA, NB: @supplier.NB, NF: @supplier.NF, NS: @supplier.NS, NT: @supplier.NT, NU: @supplier.NU, ONT: @supplier.ONT, OU: @supplier.OU, PE: @supplier.PE, QC: @supplier.QC, SK: @supplier.SK, SubAccount: @supplier.SubAccount, SupplerName: @supplier.SupplerName, SupplierNo: @supplier.SupplierNo, YU: @supplier.YU, string: @supplier.string }
     assert_redirected_to supplier_path(assigns(:supplier))
   end
 

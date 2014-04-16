@@ -1,11 +1,5 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate #, except:     [:index, :show] 
-   def authenticate
-        authenticate_or_request_with_http_basic do |name, password|
-            name =="admin" && password == "admin"
-        end
-    end
 
   # GET /suppliers
   # GET /suppliers.json
@@ -75,6 +69,6 @@ class SuppliersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def supplier_params
-      params.require(:supplier).permit(:supplierNumber, :supplierName, :GL, :ON, :QC, :BC, :AB, :NL, :MA, :SK, :NF, :PEI, :NT)
+      params.require(:supplier).permit(:SupplierNo, :SupplerName, :Account, :SubAccount, :string, :OU, :AB, :BC, :MA, :NB, :NF, :NS, :NU, :NT, :FC, :ONT, :PE, :QC, :SK, :YU, :IO, :IQ)
     end
 end

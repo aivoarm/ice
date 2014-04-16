@@ -1,0 +1,4 @@
+rails g scaffold supplier SupplierNo:string SupplerName:string Account:string SubAccount: string OU:string AB:string BC:string MA:string NB:string NF:string NS:string NU:string NT:string FC:string ONT:string PE:string QC:string SK:string YU:string IO:string IQ:string
+
+
+rails generate migration add_filepath_to_uploads filepath:string

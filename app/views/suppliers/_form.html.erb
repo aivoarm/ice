@@ -11,59 +11,153 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :supplierNumber %><br>
-    <%= f.text_field :supplierNumber %>
-  </div>
-  <div class="field">
-    <%= f.label :supplierName %><br>
-    <%= f.text_field :supplierName %>
-  </div>
-  <div class="field">
-    <%= f.label :GL %><br>
-    <%= f.text_field :GL %>
-  </div>
-  <div class="field">
-    <%= f.label :ON %><br>
-    <%= f.text_field :ON %>
-  </div>
-  <div class="field">
-    <%= f.label :QC %><br>
-    <%= f.text_field :QC %>
-  </div>
-  <div class="field">
-    <%= f.label :BC %><br>
-    <%= f.text_field :BC %>
-  </div>
-  <div class="field">
-    <%= f.label :AB %><br>
-    <%= f.text_field :AB %>
-  </div>
-  <div class="field">
-    <%= f.label :NL %><br>
-    <%= f.text_field :NL %>
-  </div>
-  <div class="field">
-    <%= f.label :MA %><br>
-    <%= f.text_field :MA %>
-  </div>
-  <div class="field">
-    <%= f.label :SK %><br>
-    <%= f.text_field :SK %>
-  </div>
-  <div class="field">
-    <%= f.label :NF %><br>
-    <%= f.text_field :NF %>
-  </div>
-  <div class="field">
-    <%= f.label :PEI %><br>
-    <%= f.text_field :PEI %>
-  </div>
-  <div class="field">
-    <%= f.label :NT %><br>
-    <%= f.text_field :NT %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<table>
+    <tr>
+                <td>
+                      <div class="field">
+                        <%= f.label :SupplierNo %><br>
+                        <%= f.text_field :SupplierNo %>
+                      </div>
+                </td>
+                <td>
+                      <div class="field">
+                        <%= f.label :SupplerName %><br>
+                        <%= f.text_field :SupplerName %>
+                      </div>
+               </td>
+             
+             <td>
+             
+                      <div class="field">
+                        <%= f.label :Account %><br>
+                        <%= f.text_field :Account %>
+                      </div>
+               </td>
+               
+              <td>
+                    <div class="field">
+                    <%= f.label :SubAccount %><br>
+                    <%= f.text_field :SubAccount %>
+              </div>
+              
+             
+              
+              
+       </tr>
+           
+        <tr>
+             <td>
+                  <div class="field">
+                    <%= f.label :OU %><br>
+                    <%= f.text_field :OU %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :AB %><br>
+                    <%= f.text_field :AB %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :BC %><br>
+                    <%= f.text_field :BC %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :MA %><br>
+                    <%= f.text_field :MA %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :NB %><br>
+                    <%= f.text_field :NB %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :NF %><br>
+                    <%= f.text_field :NF %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :NS %><br>
+                    <%= f.text_field :NS %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :NU %><br>
+                    <%= f.text_field :NU %>
+                  </div>
+               </td>
+        </tr>
+        <tr>      
+              <td>
+                  <div class="field">
+                    <%= f.label :NT %><br>
+                    <%= f.text_field :NT %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :FC %><br>
+                    <%= f.text_field :FC %>
+                  </div>
+               </td>
+              <td>
+                  <div class="field">
+                    <%= f.label :ONT %><br>
+                    <%= f.text_field :ONT %>
+                  </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :PE %><br>
+                <%= f.text_field :PE %>
+              </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :QC %><br>
+                <%= f.text_field :QC %>
+              </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :SK %><br>
+                <%= f.text_field :SK %>
+              </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :YU %><br>
+                <%= f.text_field :YU %>
+              </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :IO %><br>
+                <%= f.text_field :IO %>
+              </div>
+               </td>
+              <td>
+              <div class="field">
+                <%= f.label :IQ %><br>
+                <%= f.text_field :IQ %>
+              </div>
+              </td>
+              
+        </tr>
+        <tr>
+                <td>
+                    <div class="actions">
+                       <%= f.submit %>
+                  </div>
+               </td>
+          </tr>
+  </table>
 <% end %>

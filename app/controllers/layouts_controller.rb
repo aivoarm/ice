@@ -1,5 +1,6 @@
 class LayoutsController < ApplicationController
  # before_action :set_layout, only: [:show, :edit, :update, :destroy]
+ 
   #before_action :authenticate #, except:     [:index, :show] 
    def authenticate
         authenticate_or_request_with_http_basic do |name, password|
@@ -15,13 +16,14 @@ class LayoutsController < ApplicationController
   
   def show
     @layouts = Layout.all
-    redirect_to action: 'index'
+   
   end
 
  def create
    unless params[:upload].nil?
+   
        post = Layout.save(params[:upload])
-       flash[:notice] = "uploaded!"
+       flash[:notice] = post
        
        @d = Layout.read(params[:upload])
        
@@ -33,7 +35,7 @@ class LayoutsController < ApplicationController
                 
          end
     end
-    redirect_to action: 'show'
+    redirect_to action: 'index'
  end
  
  def destroy
@@ -44,15 +46,18 @@ class LayoutsController < ApplicationController
     end
    redirect_to action: 'index'
   end
+  
   def chose
   @cl=params[:ou]
   flash[:notice] = params[:ou]
   end
   
   def delete_file
-     flash[:notice] = params[:ou]
+     
        Layout.delete_all
+       
        flash[:notice] = "done!"
+       
     unless Dir["public/layouts/*"].empty?
         File.delete('public/layouts/'+params[:file])
     end
