@@ -20,10 +20,12 @@ App::Application.routes.draw do
   get '/layouts/show', to: 'layouts#show'
   get '/layouts', to: 'layouts#index'
   post '/layouts', to: 'layouts#create'
+  post '/suppliers/u', to: 'suppliers#upload'
   
   get "download/index"
   post "download/download"
   post "layouts/download" , to: 'layouts#download'
+  get "suppliers/download" , to: 'suppliers#download'
   get "/uploads/c", to: 'uploads#create'
   get "/uploads", to: 'uploads#index'
   post "/uploads", to: 'uploads#index'

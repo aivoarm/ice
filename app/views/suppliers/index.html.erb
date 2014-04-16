@@ -1,5 +1,31 @@
 <h1>Listing suppliers</h1>
 
+<%= form_tag(suppliers_u_path, :multipart => true) do %>
+  <%= file_field 'upload', 'datafile' %>
+  <%= submit_tag 'Upload' %>
+<% end %>
+
+
+<br />
+<br />
+<h2>Layouts list </h2>
+<table>
+   
+        <% Dir.entries("public/suppliers")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+               <tr>
+                   <td>
+                     <%= link_to file_name, suppliers_path(:file => "#{URI.escape(file_name)}"), :method => :get, :controller => DownloadController %>
+                </td>
+                
+            </tr>
+            
+        <% end %>
+   
+</table>
+
+<br />
+<br />
+
 <table>
   <thead>
     <tr>

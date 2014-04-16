@@ -58,12 +58,21 @@
                      <%= link_to  'Delete', download_download_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id =>'btnOpenDialog' %>
                 </td> 
                  <td></td>
-                
-                
-                
+            
             </tr>
             
         <% end %>
    
 </table>
 
+
+<table>
+<tbody>
+    <% @uploads.each do |up| %>
+      <tr>
+        <td><%= up.filepath %></td>
+        <td>hhhhhhh</td>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>

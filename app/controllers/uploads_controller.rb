@@ -2,7 +2,7 @@ class UploadsController < ApplicationController
  skip_before_filter :verify_authenticity_token  
 
   def index
-            @uploads = Upload.all
+            
             unless params[:upload].nil?
             post = Upload.save(params[:upload])
            
@@ -10,6 +10,8 @@ class UploadsController < ApplicationController
            @file =Upload.new(:filepath =>params[:upload][:datafile].original_filename )
            @file.save
             end
+            
+            @uploads = Upload.all
   end
 
    def destroy

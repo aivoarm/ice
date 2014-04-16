@@ -1,12 +1,36 @@
 class SuppliersController < ApplicationController
-  before_action :set_supplier, only: [:show, :edit, :update, :destroy]
+  before_action :set_supplier, only: [:show, :edit, :update, :destroy, :download]
 
   # GET /suppliers
   # GET /suppliers.json
   def index
     @suppliers = Supplier.all
+    
+    name =  params[:file]
+    directory = "public/suppliers"
+    # create the file path
+    path = File.join(directory, name)
+    
+    
+    #send_file '/public/data/'+ @file,  :x_sendfile=>true
+    
+   send_file path 
   end
-
+  def upload
+      unless params[:upload].nil?
+            post = Supplier.save(params[:upload])
+           
+           
+           #@file =Supplier.new(:filepath =>params[:upload][:datafile].original_filename )
+           #@file.save
+            end
+             redirect_to action: 'index'
+  end
+def download
+   
+    
+   redirect_to action: 'index'
+  end
   # GET /suppliers/1
   # GET /suppliers/1.json
   def show
@@ -64,11 +88,13 @@ class SuppliersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_supplier
-      @supplier = Supplier.find(params[:id])
+         unless params[:id] == 'download'
+             @supplier = Supplier.find(params[:id])
+         end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def supplier_params
-      params.require(:supplier).permit(:SupplierNo, :SupplerName, :Account, :SubAccount, :string, :OU, :AB, :BC, :MA, :NB, :NF, :NS, :NU, :NT, :FC, :ONT, :PE, :QC, :SK, :YU, :IO, :IQ)
+      params.require(:supplier).permit(:SupplierNo, :SupplerName, :Account, :SubAccount, :string, :OU, :AB, :BC, :MA, :NB, :NF, :NS, :NU, :NT, :FC, :ONT, :PE, :QC, :SK, :YU, :IO, :IQ, :upload)
     end
 end
