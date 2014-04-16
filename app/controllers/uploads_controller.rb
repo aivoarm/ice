@@ -24,21 +24,25 @@ class UploadsController < ApplicationController
    
  def create
       
-   @fheader={}
-   @iheader={}
-   @dheader={}
-   
-        unless params[:file].nil?
-         
-             @fheader  = separate("BMO", "File_Header", "F") 
-             @iheader = separate("BMO", "Invoice_Header", "H")    
-             @dheader = separate("BMO", "Invoice_Detail", "D")
+           @fheader={}
+           @iheader={}
+           @dheader={}
+       
+            unless params[:file].nil?
+             
+                 @fheader  = separate("BMO", "File_Header", "F") 
+                 @iheader = separate("BMO", "Invoice_Header", "H")    
+                 @dheader = separate("BMO", "Invoice_Detail", "D")
+                    
+                #totals
                 
                 @amt=0
-            @dheader['ITEM_AMOUNT'].each do |i|
-                @amt=@amt+i.to_f
-            end
-        
+                @dheader['ITEM_AMOUNT'].each do |i|
+                    @amt=@amt+i.to_f
+                end
+        @chk = validate_layouts(/^\d{14}$/,@fheader['FILE_DATE'][0])
+         
+        @chkamt = validate_layouts(/(\+|-)?([0-9]+(\.[0-9]{1,2}))/, @fheader['INVOICE_AMOUNT'][0])
         end
   end
   
@@ -46,6 +50,13 @@ class UploadsController < ApplicationController
   
   
   private 
+  
+  def validate_layouts(regex, f_FILE_DATE)
+    regex.match(f_FILE_DATE)
+  
+  end
+  
+  
   def separate(ou, ftype, t)
       value = {}
       @d = Upload.read(params[:file])
