@@ -9,7 +9,7 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: mysql2
+  adapter: mysql
   database: c9
   username: aivoarm_1
   password:
@@ -26,14 +26,13 @@ test:
   host: localhost
 
 #production:
-
-     production:
-encoding: utf8
-reconnect: false
-pool: 5
-database: <%=ENV['OPENSHIFT_APP_NAME']%>
-username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
-password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
-socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
-host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
-port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+production:
+    encoding: utf8
+    reconnect: false
+    pool: 5
+    database: <%=ENV['OPENSHIFT_APP_NAME']%>
+    username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+    password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+    socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>
+    host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+    port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
