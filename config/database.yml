@@ -26,9 +26,8 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  port: 5432
-  database: d5e4moc9crif70
-  username: faieddelfwvbws
-  password: b1nik29B8sEteGTJAGuJksgvvf
+  adapter: mysql
+  database: ice
+  username: adminCdsC3wp
+  password: ZePV699Q_nFn
+  host: <%=ENV['IP']%>
