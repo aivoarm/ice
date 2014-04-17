@@ -8,8 +8,8 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
-development:
-  adapter: mysql
+#development:
+  adapter: mysql2
   database: c9
   username: aivoarm_1
   password:
@@ -25,8 +25,8 @@ test:
   password:
   host: localhost
 
-production:
-
+#production:
+development:
       adapter: mysql2
       encoding: utf8
       database: <%=ENV['OPENSHIFT_APP_NAME']%>
