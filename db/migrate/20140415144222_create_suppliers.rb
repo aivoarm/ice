@@ -5,7 +5,6 @@ class CreateSuppliers < ActiveRecord::Migration
       t.string :SupplerName
       t.string :Account
       t.string :SubAccount
-      t.string :string
       t.string :OU
       t.string :AB
       t.string :BC
