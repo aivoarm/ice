@@ -16,8 +16,8 @@
 
 <table>
    
-        <% Dir.entries("public/data")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-      
+        <% Dir.entries("public/data")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+            <% unless file_name =="." || file_name ==".." %>
              <tr>
             <td><%= @l %> </td>
                  <td>
@@ -35,7 +35,7 @@
                 
                 
             </tr>
-            
+            <% end %>
         <% end %>
    
 </table>
@@ -71,7 +71,7 @@
     <% @uploads.each do |up| %>
       <tr>
         <td><%= up.filepath %></td>
-        <td>hhhhhhh</td>
+       
       </tr>
     <% end %>
   </tbody>

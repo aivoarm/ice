@@ -15,8 +15,8 @@
    
       
       
-        <% Dir.entries("public/layouts")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-      
+        <% Dir.entries("public/layouts")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+      <% unless file_name =="." || file_name ==".." %>
              <tr>
             <td><%= @l %> </td>
                  <td>
@@ -29,7 +29,7 @@
                     <%= link_to 'Show', layouts_show_path %>
                 </td>
             </tr>
-            
+               <% end %>
         <% end %>
    
 </table>
