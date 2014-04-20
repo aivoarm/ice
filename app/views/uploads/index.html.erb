@@ -43,27 +43,6 @@
 
 
 
-<table>
-   
-        <% Dir.entries("public/done")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-      
-             <tr>
-            <td><%= @l %> </td>
-                 <td>
-                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
-                </td>
-                <td></td>
-                
-                <td>
-                     <%= link_to  'Delete', download_download_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id =>'btnOpenDialog' %>
-                </td> 
-                 <td></td>
-            
-            </tr>
-            
-        <% end %>
-   
-</table>
 
 
 <table>
