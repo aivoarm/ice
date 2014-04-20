@@ -6,15 +6,6 @@ class SuppliersController < ApplicationController
   def index
     @suppliers = Supplier.all
     
-    name =  params[:file]
-    directory = "public/suppliers"
-    # create the file path
-    path = File.join(directory, name)
-    
-    
-    #send_file '/public/data/'+ @file,  :x_sendfile=>true
-    
-   send_file path 
   end
   def upload
       unless params[:upload].nil?
