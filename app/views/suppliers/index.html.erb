@@ -1,6 +1,6 @@
 <h1>Listing suppliers</h1>
 
-<%= form_tag(suppliers_u_path, :multipart => true) do %>
+<%= form_tag(upload_suppliers_path, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
   <%= submit_tag 'Upload' %>
 <% end %>
@@ -15,8 +15,11 @@
                 <% unless file_name =="." || file_name ==".." %>
                <tr>
                    <td>
-                     <%= link_to file_name, suppliers_path(:file => "#{URI.escape(file_name)}"), :method => :get, :controller => DownloadController %>
+                     <%= link_to file_name, download_suppliers_path(:file => "#{URI.escape(file_name)}"), :method => :get, :controller => DownloadController %>
                 </td>
+                <td>
+                     <%= link_to  'Delete', delete_file_suppliers_path( :file => "#{URI.escape(file_name, /\W/)}"), :method => :delete, data: { confirm: 'Are you sure?' } %>
+                </td> 
                 
             </tr>
              <% end %>

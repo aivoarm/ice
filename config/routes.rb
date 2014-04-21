@@ -2,7 +2,13 @@ App::Application.routes.draw do
 
  root :to => 'welcome#index'
   
-  resources :suppliers
+  resources :suppliers do
+     collection do
+        delete 'delete_file'
+        post 'upload'  #, match ':controller/upload'
+        get 'download'
+     end
+end
 
   resources :users
 
@@ -17,15 +23,17 @@ App::Application.routes.draw do
   delete '/layouts', to: 'layouts#destroy'
   get '/layouts/c', to: 'layouts#chose'
   delete '/layouts/d', to: 'layouts#delete_file'
+  #delete '/suppliers/d', to: 'suppliers#delete_file'
   get '/layouts/show', to: 'layouts#show'
   get '/layouts', to: 'layouts#index'
   post '/layouts', to: 'layouts#create'
-  post '/suppliers/u', to: 'suppliers#upload'
+  
+  #post '/suppliers/u', to: 'suppliers#upload'
   
   get "download/index"
   post "download/download"
   post "layouts/download" , to: 'layouts#download'
-  get "suppliers/download" , to: 'suppliers#download'
+ # get "suppliers/download" , to: 'suppliers#download'
   get "/uploads/c", to: 'uploads#create'
   get "/uploads", to: 'uploads#index'
   post "/uploads", to: 'uploads#index'
