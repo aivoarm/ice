@@ -6,9 +6,9 @@ gem 'rails', '4.0.4'
 group :development, :test do
    gem 'sqlite3', '1.3.5'
 end
-
-gem 'pg'
-
+group :production do
+    gem 'pg'
+end
 # Use jdbcmysql as the database for Active Record
 #gem 'mysql'
 
