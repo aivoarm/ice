@@ -11,14 +11,15 @@
 <h2>Layouts list </h2>
 <table>
    
-        <% Dir.entries("public/suppliers")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+        <% Dir.entries("public/suppliers")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+                <% unless file_name =="." || file_name ==".." %>
                <tr>
                    <td>
                      <%= link_to file_name, suppliers_path(:file => "#{URI.escape(file_name)}"), :method => :get, :controller => DownloadController %>
                 </td>
                 
             </tr>
-            
+             <% end %>
         <% end %>
    
 </table>
