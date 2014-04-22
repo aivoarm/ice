@@ -8,15 +8,15 @@
 
 <br />
 <br />
-<h2>Layouts list </h2>
+<h2>supplier files list </h2>
 <table>
    
         <% Dir.entries("public/suppliers")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
                 <% unless file_name =="." || file_name ==".." %>
                <tr>
-                   <td>
+                    <td>
                      <%= link_to file_name, download_suppliers_path(:file => "#{URI.escape(file_name)}"), :method => :get, :controller => DownloadController %>
-                </td>
+                    </td>
                 <td>
                      <%= link_to  'Delete', delete_file_suppliers_path( :file => "#{URI.escape(file_name, /\W/)}"), :method => :delete, data: { confirm: 'Are you sure?' } %>
                 </td> 
@@ -26,6 +26,14 @@
         <% end %>
    
 </table>
+
+<h2>supplier in db list </h2>
+
+<ul>
+<% @supplierfiles.each do |supplierfile| %>
+<li>  <%= supplierfile.filepath  %>   <%= link_to 'Destroy', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</ul>
 
 <br />
 <br />

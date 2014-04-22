@@ -5,17 +5,19 @@ class SuppliersController < ApplicationController
   # GET /suppliers.json
   def index
     @suppliers = Supplier.all
-    
+    @supplierfiles = SuppierFile.all
   end
   
   def upload
       unless params[:upload].nil?
-            post = Supplier.save(params[:upload])
-           
+           post = SuppierFile.save(params[:upload])
            
            #@file =Supplier.new(:filepath =>params[:upload][:datafile].original_filename )
            #@file.save
-            end
+           
+            @file =SuppierFile.new(:filepath =>params[:upload][:datafile].original_filename )
+           @file.save
+         end
              redirect_to action: 'index'
   end
 
@@ -43,7 +45,10 @@ def delete_file
        flash[:notice] = "done!"
        
     unless Dir["public/suppliers/*"].empty?
-        File.delete('public/suppliers/'+params[:file])
+       
+        
+        File.delete('public/suppliers/'+ SuppierFile.find(params[:id]).filepath)
+         SuppierFile.find(params[:id]).destroy
     end
     
      
@@ -58,6 +63,7 @@ def delete_file
   # GET /suppliers/new
   def new
     @supplier = Supplier.new
+    
   end
 
   # GET /suppliers/1/edit

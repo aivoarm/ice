@@ -11,7 +11,7 @@ class UploadsController < ApplicationController
            @file.save
             end
             
-            @uploads = Upload.all
+           @uploads = Upload.all
   end
 
    def destroy

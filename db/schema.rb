@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415155913) do
+ActiveRecord::Schema.define(version: 20140421194812) do
 
   create_table "data_files", force: true do |t|
     t.datetime "created_at"
@@ -40,6 +40,12 @@ ActiveRecord::Schema.define(version: 20140415155913) do
     t.integer  "length"
     t.string   "ftype"
     t.string   "ou"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppier_files", force: true do |t|
+    t.string   "filepath"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
