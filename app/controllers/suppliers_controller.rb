@@ -43,6 +43,7 @@ end
 
   
   def show
+     
   end
 
   # GET /suppliers/new
@@ -95,6 +96,11 @@ end
     end
   end
   
+  def cleandb
+     Supplier.delete_all
+     
+      redirect_to :action => 'index'
+  end
   
 def delete_file
      
@@ -125,35 +131,38 @@ def delete_file
         line= SuppierFile.read(filename)
        
         header=line[0].split(',')
-        details=line[1].split(',')
-        suppl[header[1]] = details[1]
+        
+        
+        line.each do |i|
+       
+        details=i.split(',')
         
         supplier = Supplier.all
-        supplier.create(:SupplierNo => details[2], 
+        supplier.create(:SupplierNo => details[0], 
          :SupplerName => details[1], 
-         :Account => details[3], 
-         :SubAccount => details[4], 
-         :OU => "", 
-         :AB => details[5], 
-         :BC => details[6], 
-         :MA => details[7], 
-         :NB => details[8], 
-         :NF => details[9], 
-         :NS => details[10], 
-         :NU => details[11], 
-         :NT => details[12], 
-         :FC => details[13], 
-         :ONT => details[14], 
-         :PE => details[15], 
-         :QC => details[16], 
-         :SK => details[17], 
-         :YU => details[18], 
-         :IO => details[19], 
-         :IQ => details[20],
-         :GSTHST => details[21])
+         :Account => details[2], 
+         :SubAccount => details[3], 
+         :OU => "BMO", 
+         :AB => details[4], 
+         :BC => details[5], 
+         :MA => details[6], 
+         :NB => details[7], 
+         :NF => details[8], 
+         :NS => details[9], 
+         :NU => details[10], 
+         :NT => details[11], 
+         :FC => details[12], 
+         :ONT => details[13], 
+         :PE => details[14], 
+         :QC => details[15], 
+         :SK => details[16], 
+         :YU => details[17], 
+         :IO => details[18], 
+         :IQ => details[19],
+         :GSTHST => details[20])
    
         
-        
+    end
        
         redirect_to({ :action=>'index' }, :notice => suppl)
     end
@@ -163,7 +172,7 @@ def delete_file
     # Use callbacks to share common setup or constraints between actions.
     def set_supplier
          #unless params[:id] == 'download' || params == :file
-           # @supplier = Supplier.find(params[:id])
+            @supplier = Supplier.find(params[:id])
         # end
     end
 

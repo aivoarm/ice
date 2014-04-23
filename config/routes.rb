@@ -8,6 +8,7 @@ App::Application.routes.draw do
         post 'upload'  #, match ':controller/upload'
         get 'download'
         post 'update_from_file'
+       delete 'cleandb'
      end
      
 end

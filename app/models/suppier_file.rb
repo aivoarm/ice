@@ -1,4 +1,7 @@
 class SuppierFile < ActiveRecord::Base
+    
+    validates :filepath, uniqueness: true
+    
     def self.save(upload)
     name =  upload['datafile'].original_filename
     directory = "public/suppliers"

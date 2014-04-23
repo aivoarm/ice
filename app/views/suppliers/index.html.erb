@@ -1,4 +1,6 @@
 
+<p><%= link_to 'Home', "/" %></p>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing suppliers</h1>
@@ -32,18 +34,24 @@
 
 <h2>supplier in db list </h2>
 
-<ul>
+<table>
 <% @supplierfiles.each do |supplierfile| %>
-<li>  <%= supplierfile.filepath  %>   
-    <%= link_to 'Destroy', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+<tr>
+<td><%= supplierfile.filepath  %> </td>  
   
-    <%= link_to 'upload to db', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %>
-  
+   <td>
+   <%= link_to 'Destroy', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </td>
+  <td>
+   <%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %>
+ </td>
+  </tr>
   <% end %>
-</ul>
+</table>
 
 <br />
 <br />
+<%= link_to  'Delete All' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
 <table>
   <thead>
@@ -69,7 +77,7 @@
       <th>Yu</th>
       <th>Io</th>
       <th>Iq</th>
-      <th></th>
+      <th>GSTHST</th>
       <th></th>
       <th></th>
     </tr>
@@ -99,6 +107,7 @@
         <td><%= supplier.YU %></td>
         <td><%= supplier.IO %></td>
         <td><%= supplier.IQ %></td>
+        <td><%= supplier.GSTHST %></td>
         <td><%= link_to 'Show', supplier %></td>
         <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
         <td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -111,4 +120,4 @@
 
 <%= link_to 'New Supplier', new_supplier_path %>
 
-<p><%= link_to 'Home', "/" %></p>
+
