@@ -52,34 +52,8 @@ class LayoutsController < ApplicationController
   flash[:notice] = params[:ou]
   end
   
-  def delete_file
-     
-       Layout.delete_all
-       
-       flash[:notice] = "done!"
-       
-    unless Dir["public/layouts/*"].empty?
-        File.delete('public/layouts/'+params[:file])
-    end
-    
-     
-   # render html: "<strong>Not Found</strong>".html_safe
-    redirect_to :action => 'index', :ou => params[:ou]
-
-  end
   
-  def download
-   
-    name =  params[:file]
-    directory = "public/layouts"
-    # create the file path
-    path = File.join(directory, name)
-    
-    
-    #send_file '/public/data/'+ @file,  :x_sendfile=>true
-    
-   send_file path 
-   
-  end
+  
+  
   
 end

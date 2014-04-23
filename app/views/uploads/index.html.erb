@@ -4,7 +4,7 @@
 <p><%= link_to 'Home', "/" %></p>
 
 
-<%= form_tag({:action => 'index'}, :multipart => true) do %>
+<%= form_tag({:action => 'index'}, :method => :post, :multipart => true, :controller => UploadsController) do %>
   <%= file_field 'upload', 'datafile' %></p>
   <%= submit_tag 'Upload' %>
 <% end %>
@@ -21,16 +21,17 @@
              <tr>
             <td><%= @l %> </td>
                  <td>
-                     <%= link_to file_name, download_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                     <%= link_to file_name, download_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/data"),  :controller => DownloadController %>
                 </td>
                 <td></td>
                 
                 <td>
-                     <%= link_to  'Delete', uploads_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, data: { confirm: 'Are you sure?' } %>
+                     <%= link_to  'Delete', uploads_path(:file => "#{URI.escape(file_name)}", :filepath => "public/data") ,:method => :delete, data: { confirm: 'Are you sure?' } %>
+                     
                 </td> 
                  <td></td>
                 <td>
-                     <%= link_to  'Validate', uploads_c_path( :file => "#{URI.escape(file_name)}") %>
+                     <%= link_to  'Validate', validate_uploads_path(:file => "#{URI.escape(file_name)}"), :method => :get  %>
                 </td> 
                 
                 
@@ -39,7 +40,7 @@
         <% end %>
    
 </table>
-<h3>List of validated files </h3>
+<h3>List of files in db</h3>
 
 
 

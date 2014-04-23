@@ -20,10 +20,10 @@
              <tr>
             <td><%= @l %> </td>
                  <td>
-                     <%= link_to file_name, layouts_download_path( :file => "#{URI.escape(file_name)}"), :method => :post, :controller => DownloadController %>
+                     <%= link_to file_name, download_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/layouts" ), :method => :get, :controller => DownloadController %>
                 </td>
                 <td>
-                     <%= link_to  'Delete', layouts_d_path( :file => "#{URI.escape(file_name)}"), :method => :delete, :id =>'btnOpenDialog' %>
+                     <%= link_to  'Delete', delete_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/layouts", :path => 'layouts_path' ), :method => :delete, :controller => DeleteController %>
                 </td> 
                 <td>
                     <%= link_to 'Show', layouts_show_path %>

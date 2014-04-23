@@ -2,8 +2,20 @@ class UploadsController < ApplicationController
  skip_before_filter :verify_authenticity_token  
 
   def index
-            
-            unless params[:upload].nil?
+      @uploads = Upload.all
+  end
+
+   def destroy
+       Upload.delete_all
+        unless Dir["public/data/*"].empty?
+        File.delete('public/data/'+params[:file])
+         end
+        redirect_to action: 'index'
+       
+   end
+   
+    def create
+           unless params[:upload].nil?
             post = Upload.save(params[:upload])
            
            
@@ -11,20 +23,10 @@ class UploadsController < ApplicationController
            @file.save
             end
             
-           @uploads = Upload.all
-  end
-
-   def destroy
-       Upload.delete_all
-        unless Dir["public/data/*"].empty?
-        File.delete('public/data/'+params[:file])
+             redirect_to action: 'index'
     end
-   redirect_to action: 'index'
-       
-   end
-   
-   
- def create
+    
+ def validate
       
            @fheader={}
            @iheader={}

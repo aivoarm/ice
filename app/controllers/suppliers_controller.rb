@@ -23,20 +23,7 @@ class SuppliersController < ApplicationController
              redirect_to action: 'index'
   end
 
-def download
-    
-    name =  params[:file]
-    directory = "public/suppliers"
-    # create the file path
-    path = File.join(directory, name)
-    
-    
-    #send_file '/public/data/'+ @file,  :x_sendfile=>true
-    
-   send_file path 
-    
-   #redirect_to action: 'index'
-end
+
   # GET /suppliers/1
   # GET /suppliers/1.json
   
