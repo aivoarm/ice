@@ -19,11 +19,10 @@ App::Application.routes.draw do
  
  resources :uploads do
     member do
-           
     end
     
     collection do
-       
+       get 'index'
        delete 'destroy'
        get 'validate'
         
