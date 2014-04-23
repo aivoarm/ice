@@ -7,7 +7,9 @@ App::Application.routes.draw do
         delete 'delete_file'
         post 'upload'  #, match ':controller/upload'
         get 'download'
+        post 'update_from_file'
      end
+     
 end
 
   resources :users

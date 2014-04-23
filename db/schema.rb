@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140421194812) do
+ActiveRecord::Schema.define(version: 20140423005201) do
 
   create_table "data_files", force: true do |t|
     t.datetime "created_at"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(version: 20140421194812) do
     t.string   "IQ"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "GSTHST"
   end
 
   create_table "uploads", force: true do |t|

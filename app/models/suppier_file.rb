@@ -10,8 +10,8 @@ class SuppierFile < ActiveRecord::Base
   end
 
 
-def self.read(upload)
-    name =  ['datafile'].original_filename
+def self.read(name)
+   # name =  ['datafile'].original_filename
     directory = "public/suppliers"
     # create the file path
     path = File.join(directory, name)

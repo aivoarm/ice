@@ -6,6 +6,8 @@ class SuppliersController < ApplicationController
   def index
     @suppliers = Supplier.all
     @supplierfiles = SuppierFile.all
+    
+    
   end
   
   def upload
@@ -38,24 +40,7 @@ end
   # GET /suppliers/1
   # GET /suppliers/1.json
   
-def delete_file
-     
-       #Layout.delete_all
-       
-       flash[:notice] = "done!"
-       
-    unless Dir["public/suppliers/*"].empty?
-       
-        
-        File.delete('public/suppliers/'+ SuppierFile.find(params[:id]).filepath)
-         SuppierFile.find(params[:id]).destroy
-    end
-    
-     
-   # render html: "<strong>Not Found</strong>".html_safe
-    redirect_to :action => 'index'
 
-  end
   
   def show
   end
@@ -109,7 +94,70 @@ def delete_file
       format.json { head :no_content }
     end
   end
+  
+  
+def delete_file
+     
+       #Layout.delete_all
+       
+       flash[:notice] = "done!"
+       
+    unless Dir["public/suppliers/*"].empty?
+       
+        
+        File.delete('public/suppliers/'+ SuppierFile.find(params[:id]).filepath)
+         SuppierFile.find(params[:id]).destroy
+    end
+    
+     
+   # render html: "<strong>Not Found</strong>".html_safe
+    redirect_to :action => 'index'
 
+  end
+  
+  
+  
+    def update_from_file
+        suppl = {}
+        header=[], details = []
+        filename =SuppierFile.find(params[:id]).filepath  
+       
+        line= SuppierFile.read(filename)
+       
+        header=line[0].split(',')
+        details=line[1].split(',')
+        suppl[header[1]] = details[1]
+        
+        supplier = Supplier.all
+        supplier.create(:id => ,:SupplierNo => details[1], 
+         :SupplerName => details[2], 
+         :Account => details[12], 
+         :SubAccount => details[13], 
+         :OU => details[3], 
+         :AB => details[4], 
+         :BC => details[5], 
+         :MA => details[6], 
+         :NB => details[7], 
+         :NF => details[8], 
+         :NS => details[9], 
+         :NU => details[10], 
+         :NT => details[11], 
+         :FC => details[12], 
+         :ONT => details[13], 
+         :PE => details[1], 
+         :QC => details[1], 
+         :SK => details[1], 
+         :YU => details[1], 
+         :IO => details[1], 
+         :IQ => details[1])
+   
+        
+        
+       
+        redirect_to({ :action=>'index' }, :notice => suppl)
+    end
+    
+    
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_supplier
