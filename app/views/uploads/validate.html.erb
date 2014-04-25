@@ -5,13 +5,6 @@
 <%= link_to "Upload", "/uploads" %>
 </div>
 
-<ul>
-<% Dir.entries("public/data")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-  <% unless file_name =="." || file_name ==".." %>
-  <li><%= link_to file_name, download_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/data"), :method => :get, :controller => DownloadController %></li>
-<% end %>
-<% end %>
-</ul>
 
 
 <table>

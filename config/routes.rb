@@ -9,7 +9,8 @@ App::Application.routes.draw do
     end
     
     collection do
-       delete 'delete_file'
+        
+       delete 'delete_file' 
        post 'upload'  #, match ':controller/upload'
        post 'update_from_file'
        delete 'cleandb'
@@ -18,15 +19,20 @@ App::Application.routes.draw do
 
  
  resources :uploads do
-    member do
+     member do
+        delete 'destroy'   
     end
-    
-    collection do
-       get 'index'
-       delete 'destroy'
-       get 'validate'
+     
+     collection do
+        get 'index'
+        post 'index'
+        post 'create'
+        post 'show'
+        get 'validate'
         
-     end
+        delete 'cleandb'
+     end 
+   
  end
 
   

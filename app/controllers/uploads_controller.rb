@@ -3,18 +3,45 @@ class UploadsController < ApplicationController
 
   def index
       @uploads = Upload.all
+      
   end
 
    def destroy
-       Upload.delete_all
+       
         unless Dir["public/data/*"].empty?
-        File.delete('public/data/'+params[:file])
+        filename =Upload.find(params[:id]).filepath  
+        File.delete('public/data/'+filename)
          end
         redirect_to action: 'index'
-       
+        Upload.where(:id => params[:id]).destroy_all
    end
    
+    
+      
+    def save_file(formdata, name)
+    ufile = formdata[name]
+    if ufile
+      path = Rails.root.join('public', 'uploads', ufile.original_filename)
+      File.open(path, 'wb') do |file|
+        file.write(ufile.read)
+      end
+ 
+      formdata.delete name
+ 
+      #return path as string
+      path.relative_path_from(Rails.root.join('public', 'uploads')).to_s
+    else
+      nil  
+    end
+  end
+    
+   
     def create
+        
+        
+        
+       @media =params[:upload]
+        
            unless params[:upload].nil?
             post = Upload.save(params[:upload])
            
@@ -23,7 +50,8 @@ class UploadsController < ApplicationController
            @file.save
             end
             
-             redirect_to action: 'index'
+             #redirect_to action: 'index'
+             
     end
     
  def validate
@@ -50,7 +78,19 @@ class UploadsController < ApplicationController
         end
   end
   
-  
+  def cleandb
+       unless Dir["public/data/*"].empty?
+        #filename =Upload.find(params[:id]).filepath 
+       FileUtils.rm_rf('public/data')
+       
+           # File.delete('public/data/'+filename)
+        end
+         
+     Upload.delete_all
+      FileUtils.mkdir_p 'public/data'
+     
+      redirect_to :action => 'index'
+  end
   
   
   private 

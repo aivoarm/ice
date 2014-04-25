@@ -1,0 +1,73 @@
+
+    <table id="example-table" class="table table-striped table-hover table-condensed">
+
+  <thead>
+    <tr>
+      <th>Supplierno</th>
+      <th>Supplername</th>
+      <th>Account</th>
+      <th>Subaccount</th>
+      <th>Ou</th>
+      <th>Ab</th>
+      <th>Bc</th>
+      <th>Ma</th>
+      <th>Nb</th>
+      <th>Nf</th>
+      <th>Ns</th>
+      <th>Nu</th>
+      <th>Nt</th>
+      <th>Fc</th>
+      <th>Ont</th>
+      <th>Pe</th>
+      <th>Qc</th>
+      <th>Sk</th>
+      <th>Yu</th>
+      <th>Io</th>
+      <th>Iq</th>
+      <th>GSTHST</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suppliers.each do |supplier| %>
+      <tr>
+        <td><%= supplier.SupplierNo %></td>
+        <td><%= supplier.SupplerName %></td>
+        <td><%= supplier.Account %></td>
+        <td><%= supplier.SubAccount %></td>
+        <td><%= supplier.OU %></td>
+        <td><%= supplier.AB %></td>
+        <td><%= supplier.BC %></td>
+        <td><%= supplier.MA %></td>
+        <td><%= supplier.NB %></td>
+        <td><%= supplier.NF %></td>
+        <td><%= supplier.NS %></td>
+        <td><%= supplier.NU %></td>
+        <td><%= supplier.NT %></td>
+        <td><%= supplier.FC %></td>
+        <td><%= supplier.ONT %></td>
+        <td><%= supplier.PE %></td>
+        <td><%= supplier.QC %></td>
+        <td><%= supplier.SK %></td>
+        <td><%= supplier.YU %></td>
+        <td><%= supplier.IO %></td>
+        <td><%= supplier.IQ %></td>
+        <td><%= supplier.GSTHST %></td>
+        <td><%= link_to 'Show', supplier %></td>
+        <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+        <td><%= link_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<script>
+      /* Enable the Filterable table - make only the filter icons the click-able items rather than the entire heading */
+      $('#example-table').filterable({
+        editableSelector: 'i[class="icon-filter"]'
+      });
+      </script>
+    

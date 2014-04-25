@@ -6,21 +6,20 @@ class SuppliersController < ApplicationController
   def index
     @suppliers = Supplier.all
     @supplierfiles = SuppierFile.all
-    
+  
     
   end
   
   def upload
       unless params[:upload].nil?
-           post = SuppierFile.save(params[:upload])
-           
-           #@file =Supplier.new(:filepath =>params[:upload][:datafile].original_filename )
-           #@file.save
-           
-            @file =SuppierFile.new(:filepath =>params[:upload][:datafile].original_filename )
-           @file.save
+      
+       @file =SuppierFile.new(:filepath => params[:upload][:datafile].original_filename )
+       @file.save
+         
+       post = SuppierFile.save(params[:upload])
+          
+      redirect_to action: 'index' 
          end
-             redirect_to action: 'index'
   end
 
 
@@ -90,20 +89,17 @@ class SuppliersController < ApplicationController
   end
   
 def delete_file
-     
-       #Layout.delete_all
        
-       flash[:notice] = "done!"
        
-    unless Dir["public/suppliers/*"].empty?
-       
-        
-        File.delete('public/suppliers/'+ SuppierFile.find(params[:id]).filepath)
-         SuppierFile.find(params[:id]).destroy
-    end
-    
-     
-   # render html: "<strong>Not Found</strong>".html_safe
+   
+      unless Dir["public/suppliers/*"].empty?
+            filename =SuppierFile.find(params[:id]).filepath  
+            File.delete('public/suppliers/'+filename)
+        end
+        SuppierFile.where(:id => params[:id]).destroy_all
+         flash[:notice] = "done!"
+  
+  
     redirect_to :action => 'index'
 
   end
@@ -151,7 +147,7 @@ def delete_file
         
     end
        
-        redirect_to({ :action=>'index' }, :notice => suppl)
+        redirect_to({ :action=>'index' }, :notice => "done")
     end
     
     

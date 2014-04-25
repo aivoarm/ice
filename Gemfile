@@ -39,6 +39,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'dropzonejs-rails', '~> 0.4.14'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

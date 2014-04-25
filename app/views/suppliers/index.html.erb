@@ -1,9 +1,10 @@
 
-<p><%= link_to 'Home', "/" %></p>
-
 <p id="notice"><%= notice %></p>
 
-<h1>Listing suppliers</h1>
+<p><%= link_to 'Home', "/" %></p>
+
+
+<h2>Upload supplier file</h2>
 
 <%= form_tag(upload_suppliers_path, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
@@ -11,50 +12,41 @@
 <% end %>
 
 
+
 <br />
 <br />
 
-<table style="display:">
-   
-        <% Dir.entries("public/suppliers")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-                <% unless file_name =="." || file_name ==".." %>
-               <tr>
-                    <td>
-                     <%= link_to file_name, download_index_path(:file => "#{URI.escape(file_name)}", :filepath => "public/suppliers"), :method => :get, :controller => DownloadController %>
-                    </td>
-                <td>
-                     <%= link_to  'Delete', delete_file_suppliers_path( :file => "#{URI.escape(file_name, /\W/)}"), :method => :delete, data: { confirm: 'Are you sure?' } %>
-                </td> 
-                
-            </tr>
-             <% end %>
-        <% end %>
-   
-</table>
 
-<h2>supplier in db list </h2>
+<h2>Supplier file list </h2>
 
 <table>
 <% @supplierfiles.each do |supplierfile| %>
 <tr>
     <td><%= supplierfile.filepath  %> </td>  
-    
-    <td>
-        <%= link_to 'Destroy', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
-    </td>
-  
-    <td>
-        <%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %>
-    </td>
-  </tr>
-  <% end %>
+    <td><%= link_to "Download", download_index_path(:file => supplierfile.filepath, :filepath => "public/suppliers"), :method => :get, :controller => DownloadController %></td>
+    <td><%= link_to 'Delete', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %></td>
+</tr>
+<% end %>
 </table>
 
 <br />
 <br />
-<%= link_to  'Delete All' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
-<table>
+<h2>Manual supplier load</h2>
+<%= link_to 'New Supplier', new_supplier_path %>
+<%= link_to  'Clean the list ' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
+<br />
+<br />
+
+<p>
+    <lable>Type to filter</lable>
+    <input type="text" id="FilterTextBox" name="FilterTextBox" />
+</p>
+
+
+<table class = 'filterable'>
+
   <thead>
     <tr>
       <th>Supplierno</th>
@@ -79,6 +71,7 @@
       <th>Io</th>
       <th>Iq</th>
       <th>GSTHST</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -117,8 +110,10 @@
   </tbody>
 </table>
 
+
+
 <br>
 
-<%= link_to 'New Supplier', new_supplier_path %>
+
 
 
