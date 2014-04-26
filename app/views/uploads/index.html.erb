@@ -1,8 +1,17 @@
 
+<%= flash[:notice]%>
+<h3> File Upload</h3>
+<%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :remote => true ,:id =>"upload") do %>
+    <%= file_field 'upload', 'file' %>
+    <%= submit_tag 'Upload' %>
+<% end %>
 
+<br />
+
+<br />
 <style>
 
-#media-dropzone {
+#upload-dropzone {
   border: 2px dashed #707070;
   color: #6E6E6E;  
   height: 70px;
@@ -10,36 +19,85 @@
   text-align: center;
   width: 400px;
 }
+
+#drop-files {
+  border: 2px dashed #707070;
+  color: #6E6E6E;  
+  height: 70px;
+  padding-top: 50px;
+  text-align: center;
+  width: 400px;
+}
+
 </style>
-<%= @media %>
-<h3> File Upload</h3>
-<%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :remote => true ,:id =>"upload") do %>
-    <%= file_field 'upload', 'datafile' %>
-    <%= submit_tag 'Upload' %>
-<% end %>
-
-<form action="/uploads/create" id="media-dropzone" class="dropzone" enctype="multipart/form-data">
-  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
-  <div class="fallback">
-    <input name="upload[datafile]" type="file" multiple />
-  </div>
-</form>
 
 
-
-
-<%= flash[:notice]%>
+<div id="drop-files" data-remote="true">
+          Drop Images Here
+</div>
 
 
 <script>
- // $(function() {
- // var mediaDropzone;
-  //mediaDropzone = new Dropzone("#media-dropzone");
-  //return mediaDropzone.on("success", function(file, responseText) {
-//    var imageUrl;
- //   imageUrl = responseText.file_name.url;
-  //});
-//});
+$(document).ready(function() {
+   
+    jQuery.event.props.push('dataTransfer');
+    var dataArray = [];
+    
+    $('#drop-files')
+     .bind('dragenter', function (e) {
+         e.originalEvent.stopPropagation();
+        e.originalEvent.preventDefault();
+     })
+      .bind('dragover', function (e) {
+          e.originalEvent.stopPropagation();
+        e.originalEvent.preventDefault();
+        $('#drop-files').css("backdround-color", "grey")
+     })
+    .bind('drop', function (e) {
+        e.originalEvent.stopPropagation();
+        e.originalEvent.preventDefault();
+        
+       var  files = e.dataTransfer.files;
+      //var  data = new FormData()
+       // data.append( 'file', input.files[0] )
+      //alert('data')  
+      //callajax(data)
+  var data, xhr;
+
+    data = new FormData();
+    data.append( 'file', files[0] );
+
+    xhr = new XMLHttpRequest();
+
+    xhr.open( 'POST', 'ajax', true );
+    xhr.onreadystatechange = function ( response ) {};
+    xhr.send( data );
+    
+    
+
+    e.preventDefault();
+    
+    });
+ 
+ 
+
+
+ function callajax(){
+    $.ajax({
+    url: 'ajax',
+    data: data,
+    cache: false,
+    contentType: 'multipart/form-data',
+    processData: false,
+    type: 'POST',
+     success: function(data){
+          alert(data);
+     }
+    });
+      
+ }   
+    
+});
 </script>
 
 
@@ -54,15 +112,12 @@
 
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
-<table>
+<table id="ajax">
 <tbody>
-    <% @uploads.each do |up| %>
-      <tr>
-        <td><%= up.filepath %></td>
-        <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
-        <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to  'Validate', validate_uploads_path(:file => up.filepath), :method => :get  %></td>
-      </tr>
-    <% end %>
+   
+
+  <%= render partial: 'uploaded', :locals => {:f=> @uploads} %>
+
+
   </tbody>
   </table>

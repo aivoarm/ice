@@ -5,7 +5,23 @@ class UploadsController < ApplicationController
       @uploads = Upload.all
       
   end
-
+  def ajax
+      uploaded_io = params[:file]
+        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+       
+           @file =Upload.new(:filepath =>params[:file].original_filename )
+           @file.save 
+        end   
+            respond_to do |format|
+               
+                #format.html { redirect_to '/uploads/index', notice: 'File was successfully created.' }
+                #format.json { render action: 'show.json', status: :created, location: @file }
+                format.js   
+               
+            end
+      
+  end
    def destroy
        
         unless Dir["public/data/*"].empty?
@@ -18,39 +34,57 @@ class UploadsController < ApplicationController
    
     
       
-    def save_file(formdata, name)
-    ufile = formdata[name]
+    def save_file(formdata)
+    ufile = formdata
     if ufile
-      path = Rails.root.join('public', 'uploads', ufile.original_filename)
+      path = Rails.root.join('public', 'data', ufile.original_filename)
       File.open(path, 'wb') do |file|
         file.write(ufile.read)
       end
  
-      formdata.delete name
+     
  
       #return path as string
-      path.relative_path_from(Rails.root.join('public', 'uploads')).to_s
+      path.relative_path_from(Rails.root.join('public', 'data')).to_s
     else
       nil  
     end
   end
+  
+    def show
+     uploaded_io = params[:file]
+        #File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
+        #file.write(uploaded_io.read)
+       
+           @file =Upload.new(:filepath =>params[:file].original_filename )
+           @file.save 
+        #end   
+           respond_to do |format|
+                if @file.save
+                format.html { redirect_to 'show', notice: 'File was successfully created.' }
+                #format.json { render action: 'show.json', status: :created, location: @file }
+                format.js
+                else
+                format.html { render action: 'new' }
+                format.json { render json: @file.errors, status: :unprocessable_entity }
+              end
+            end
+        #redirect_to action: 'show'
     
+end
    
     def create
         
-        
-        
-       @media =params[:upload]
+           @media =params[:upload]
         
            unless params[:upload].nil?
-            post = Upload.save(params[:upload])
+           save_file(params[:upload][:file]) #Upload.save(params[:upload])
            
-           
-           @file =Upload.new(:filepath =>params[:upload][:datafile].original_filename )
+           @file =Upload.new(:filepath =>params[:upload][:file].original_filename )
            @file.save
             end
             
-             #redirect_to action: 'index'
+             redirect_to action: 'index'
              
     end
     

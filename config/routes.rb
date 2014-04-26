@@ -18,7 +18,7 @@ App::Application.routes.draw do
  end
 
  
- resources :uploads do
+  resources :uploads do
      member do
         delete 'destroy'   
     end
@@ -27,7 +27,9 @@ App::Application.routes.draw do
         get 'index'
         post 'index'
         post 'create'
-        post 'show'
+        post 'ajax'
+        get 'ajax'
+        
         get 'validate'
         
         delete 'cleandb'

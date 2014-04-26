@@ -1,1 +1,4 @@
-<%=@media%>
+json.array!(@file) do |file|
+  json.extract! file, :id, :filepath
+  json.url user_url(file, format: :json)
+end
