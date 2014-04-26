@@ -31,11 +31,12 @@
 
 </style>
 
+<%= form_tag( {:action => 'ajax'}, :remote => true ) do %>
 
-<div id="drop-files" data-remote="true">
+<div id="drop-files" >
           Drop Images Here
 </div>
-
+<% end %>
 
 <script>
 $(document).ready(function() {
@@ -70,7 +71,7 @@ $(document).ready(function() {
     xhr = new XMLHttpRequest();
 
     xhr.open( 'POST', 'ajax', true );
-    xhr.onreadystatechange = function ( response ) {};
+    xhr.onreadystatechange = function ( response ) {location.reload(true)};
     xhr.send( data );
     
     
@@ -84,7 +85,7 @@ $(document).ready(function() {
 
  function callajax(){
     $.ajax({
-    url: 'ajax',
+    url: 'index',
     data: data,
     cache: false,
     contentType: 'multipart/form-data',
@@ -112,12 +113,11 @@ $(document).ready(function() {
 
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
-<table id="ajax">
-<tbody>
+
+   <div id="divajax"></div>
+            <%= render partial: 'uploaded' %>
    
-
-  <%= render partial: 'uploaded', :locals => {:f=> @uploads} %>
-
-
-  </tbody>
-  </table>
+     
+  
+  
+  

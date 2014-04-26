@@ -17,7 +17,7 @@ App::Application.routes.draw do
      end
  end
 
- 
+ post 'uploads/ajax' , to: 'uploads#ajax'
   resources :uploads do
      member do
         delete 'destroy'   
@@ -27,7 +27,7 @@ App::Application.routes.draw do
         get 'index'
         post 'index'
         post 'create'
-        post 'ajax'
+        
         get 'ajax'
         
         get 'validate'

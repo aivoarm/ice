@@ -4,20 +4,17 @@ class UploadsController < ApplicationController
   def index
       @uploads = Upload.all
       
+       
   end
   def ajax
-      uploaded_io = params[:file]
-        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
-        file.write(uploaded_io.read)
-       
-           @file =Upload.new(:filepath =>params[:file].original_filename )
-           @file.save 
-        end   
+       @uploads = Upload.all
+        
+        save_file(params[:file])
             respond_to do |format|
                
-                #format.html { redirect_to '/uploads/index', notice: 'File was successfully created.' }
+                format.html { redirect_to '/uploads/index', notice: 'File was successfully created.' }
                 #format.json { render action: 'show.json', status: :created, location: @file }
-                format.js   
+                #format.js   
                
             end
       
@@ -35,21 +32,18 @@ class UploadsController < ApplicationController
     
       
     def save_file(formdata)
-    ufile = formdata
-    if ufile
-      path = Rails.root.join('public', 'data', ufile.original_filename)
-      File.open(path, 'wb') do |file|
-        file.write(ufile.read)
+   uploaded_io = params[:file]
+        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+       
+           @file =Upload.new(:filepath =>params[:file].original_filename )
+           @file.save 
+        end   
       end
  
      
  
-      #return path as string
-      path.relative_path_from(Rails.root.join('public', 'data')).to_s
-    else
-      nil  
-    end
-  end
+  
   
     def show
      uploaded_io = params[:file]

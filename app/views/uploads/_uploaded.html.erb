@@ -1,8 +1,15 @@
- <% f.each do |up| %>
-      <tr>
+ 
+<table>
+<tbody>
+   <% @uploads.each do |up| %>
+ <tr>
         <td><%= up.filepath %></td>
         <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
         <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= link_to  'Validate', validate_uploads_path(:file => up.filepath), :method => :get  %></td>
-      </tr>
-    <% end %>
+</tr>
+  <% end %>
+
+
+  </tbody>
+  </table>

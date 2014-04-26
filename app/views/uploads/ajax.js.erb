@@ -1,4 +1,3 @@
-
-
-   
-    $("#ajax").html('$("<%= j render(:partial => 'uploaded'), :locals => {:f => @uploads} %>")');
+  $(window.location.replace("/uploads/index")) 
+  $("#divajax").append("<%= escape_javascript( render(:partial => "uploaded") ) %>");
+  
