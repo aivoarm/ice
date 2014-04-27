@@ -1,17 +1,19 @@
-
+<p><%= link_to 'Home', "/" %></p>
+<br />
 <%= flash[:notice]%>
 <h3> File Upload</h3>
-<%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :remote => true ,:id =>"upload") do %>
+<%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
     <%= file_field 'upload', 'file' %>
     <%= submit_tag 'Upload' %>
+	
 <% end %>
-
+<div  id = "drop-files" class= 'dropz'>Click or drop file Here</div>
 <br />
 
 <br />
 <style>
 
-#upload-dropzone {
+.dropz {
   border: 2px dashed #707070;
   color: #6E6E6E;  
   height: 70px;
@@ -20,91 +22,82 @@
   width: 400px;
 }
 
-#drop-files {
+#uploadfile 	{
   border: 2px dashed #707070;
   color: #6E6E6E;  
   height: 70px;
   padding-top: 50px;
   text-align: center;
   width: 400px;
+position: absolute;
+left: -1000px;
 }
 
 </style>
 
-<%= form_tag( {:action => 'ajax'}, :remote => true ) do %>
-
-<div id="drop-files" >
-          Drop Images Here
-</div>
-<% end %>
 
 <script>
+
+ 
+ 
 $(document).ready(function() {
    
-    jQuery.event.props.push('dataTransfer');
+	 jQuery.event.props.push('dataTransfer');
+	 
+	 $( ".dropz" ).click(function(e) {
+   	   		$("#upload_file").trigger('click');
+		});
+	
+			
+	        $('#uploadfile input').change(function (e) {
+					if(e) $('input[type=submit]').trigger('click')
+		    });
+	   	
+	
     var dataArray = [];
-    
-    $('#drop-files')
-     .bind('dragenter', function (e) {
+     var  files;
+    $('.dropz')
+	.bind('dragenter', function (e) {
          e.originalEvent.stopPropagation();
         e.originalEvent.preventDefault();
      })
       .bind('dragover', function (e) {
           e.originalEvent.stopPropagation();
         e.originalEvent.preventDefault();
-        $('#drop-files').css("backdround-color", "grey")
+        $('.dropz').css("backdround-color", "grey")
      })
     .bind('drop', function (e) {
         e.originalEvent.stopPropagation();
         e.originalEvent.preventDefault();
         
-       var  files = e.dataTransfer.files;
-      //var  data = new FormData()
-       // data.append( 'file', input.files[0] )
-      //alert('data')  
-      //callajax(data)
-  var data, xhr;
+       files = e.dataTransfer.files;
+     
+  	   var data, xhr;
 
-    data = new FormData();
-    data.append( 'file', files[0] );
+    	data = new FormData();
+    	data.append( 'file', files[0] );
+//alert( files[0] )
+ 	    callajax(data)
+    
+    });
+ 
+ 
 
+
+});
+
+function callajax(data){
     xhr = new XMLHttpRequest();
 
     xhr.open( 'POST', 'ajax', true );
     xhr.onreadystatechange = function ( response ) {location.reload(true)};
     xhr.send( data );
-    
-    
-
-    e.preventDefault();
-    
-    });
- 
- 
-
-
- function callajax(){
-    $.ajax({
-    url: 'index',
-    data: data,
-    cache: false,
-    contentType: 'multipart/form-data',
-    processData: false,
-    type: 'POST',
-     success: function(data){
-          alert(data);
-     }
-    });
-      
- }   
-    
-});
+	e.preventDefault();
+     
+}   
+   
 </script>
 
-
-
-
-<p><%= link_to 'Home', "/" %></p>
 
 
 <br />
@@ -115,7 +108,7 @@ $(document).ready(function() {
 
 
    <div id="divajax"></div>
-            <%= render partial: 'uploaded' %>
+ <%= render partial: 'uploaded' %>
    
      
   

@@ -30,17 +30,7 @@ class UploadsController < ApplicationController
    end
    
     
-      
-    def save_file(formdata)
-   uploaded_io = params[:file]
-        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
-        file.write(uploaded_io.read)
-       
-           @file =Upload.new(:filepath =>params[:file].original_filename )
-           @file.save 
-        end   
-      end
- 
+   
      
  
   
@@ -69,16 +59,17 @@ end
    
     def create
         
-           @media =params[:upload]
+        @media =params[:upload][:file]
         
-           unless params[:upload].nil?
-           save_file(params[:upload][:file]) #Upload.save(params[:upload])
+           unless @media.nil?
+           save_file(@media) #Upload.save(params[:upload])
            
-           @file =Upload.new(:filepath =>params[:upload][:file].original_filename )
-           @file.save
+           #@file =Upload.new(:filepath =>params[:file].original_filename )
+           #@file.save
             end
             
              redirect_to action: 'index'
+             
              
     end
     
@@ -122,7 +113,17 @@ end
   
   
   private 
-  
+     
+    def save_file(formdata)
+      uploaded_io = formdata
+        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
+          file.write(uploaded_io.read)
+       
+           @file =Upload.new(:filepath =>formdata.original_filename )
+           @file.save 
+         end   
+  end
+ 
   def validate_layouts(regex, f_FILE_DATE)
     regex.match(f_FILE_DATE)
   
