@@ -78,6 +78,6 @@ config.serve_static_assets = true
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   
-   #config.action_mailer.default_url_options = { :host => 'http://127.10.64.1:8080' }
+   config.action_mailer.default_url_options = { :host => 'http://secret-beyond-4918.herokuapp.com/' }
   
 end
