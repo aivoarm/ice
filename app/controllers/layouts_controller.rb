@@ -2,12 +2,7 @@ class LayoutsController < ApplicationController
  # before_action :set_layout, only: [:show, :edit, :update, :destroy]
  
   #before_action :authenticate #, except:     [:index, :show] 
-   def authenticate
-        authenticate_or_request_with_http_basic do |name, password|
-            name =="admin" && password == "admin"
-        end
-    end
-    
+   before_filter :authenticate_user!, except: [:index]
   def index
     #@layouts = Layout.all
       @cl=params[:ou]

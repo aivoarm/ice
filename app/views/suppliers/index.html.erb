@@ -3,8 +3,8 @@
 
 <p><%= link_to 'Home', "/" %></p>
 
-
-<h2>Upload supplier file</h2>
+ <% if can? :update, :all%>
+    <h2>Upload supplier file</h2>
 
 <%= form_tag(upload_suppliers_path, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
@@ -22,10 +22,16 @@
 <table>
 <% @supplierfiles.each do |supplierfile| %>
 <tr>
-    <td><%= supplierfile.filepath  %> </td>  
+ 
+   
     <td><%= link_to "Download", download_index_path(:file => supplierfile.filepath, :filepath => "public/suppliers"), :method => :get, :controller => DownloadController %></td>
+  
     <td><%= link_to 'Delete', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td><%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %></td>
+    <td>
+   
+    <%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %>
+       
+    </td>
 </tr>
 <% end %>
 </table>
@@ -34,8 +40,14 @@
 <br />
 
 <h2>Manual supplier load</h2>
-<%= link_to 'New Supplier', new_supplier_path %>
-<%= link_to  'Clean the list ' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
+
+
+    <%= link_to 'New Supplier', new_supplier_path %>
+
+    <%= link_to  'Clean the list ' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
+
+
+<% end %>
 <br />
 <br />
 

@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
        (role || '').include? r.to_s
     end
     
+    
 end

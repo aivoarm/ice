@@ -1,16 +1,15 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy, :download]
-
+before_filter :authenticate_user!, except: [:index]
   # GET /suppliers
   # GET /suppliers.json
   def index
     @suppliers = Supplier.all
     @supplierfiles = SuppierFile.all
-  
-    
   end
   
   def upload
+      
       unless params[:upload].nil?
       
        @file =SuppierFile.new(:filepath => params[:upload][:datafile].original_filename )
@@ -20,6 +19,8 @@ class SuppliersController < ApplicationController
           
       redirect_to action: 'index' 
          end
+         
+    
   end
 
 
@@ -29,7 +30,8 @@ class SuppliersController < ApplicationController
 
   
   def show
-     
+       
+          
   end
 
   # GET /suppliers/new
@@ -84,8 +86,7 @@ class SuppliersController < ApplicationController
   
   def cleandb
      Supplier.delete_all
-     
-      redirect_to :action => 'index'
+     redirect_to :action => 'index'
   end
   
 def delete_file
