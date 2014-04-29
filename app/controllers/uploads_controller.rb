@@ -58,15 +58,9 @@ class UploadsController < ApplicationController
 end
    
     def create
-        
-        @media =params[:upload][:file]
-        
-           unless @media.nil?
-           save_file(@media) #Upload.save(params[:upload])
-           
-           #@file =Upload.new(:filepath =>params[:file].original_filename )
-           #@file.save
-            end
+        unless params[:upload][:file].nil?
+            save_file(params[:upload][:file]) 
+        end
             
              redirect_to action: 'index'
              
