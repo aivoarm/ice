@@ -5,7 +5,7 @@ class AddRoleToUsers < ActiveRecord::Migration
         User.create! do |u|
             u.email     = 'admin@example.com'
             u.password    = 'admin123'
-            u.role = 'admin'
+            u.role = 'administrator'
         end
     end
 end

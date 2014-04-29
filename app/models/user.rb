@@ -7,7 +7,5 @@ class User < ActiveRecord::Base
     def role?(r)
        (role || '').include? r.to_s
     end
-    def admin?
-        admin
-    end
+    
 end
