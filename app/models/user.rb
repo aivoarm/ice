@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
     def role?(r)
-         role.include? r.to_s
+       (role || '').include? r.to_s
     end
     def admin?
         admin
