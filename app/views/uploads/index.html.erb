@@ -1,12 +1,15 @@
 <p><%= link_to 'Home', "/" %></p>
 <br />
+
 <%= flash[:notice]%>
 <h3> File Upload</h3>
+<div class="selected_btn">
 <%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
-    <%= file_field 'upload', 'file' %>
+    <%= file_field 'upload', 'file'%>
     <%= submit_tag 'Upload' %>
 	
 <% end %>
+</div>
 <div  id = "drop-files" class= 'dropz'>Click or drop file Here</div>
 <br />
 
@@ -33,26 +36,40 @@ position: absolute;
 left: -1000px;
 }
 
+
+
 </style>
 
 
 <script>
 
- 
+function isIE( version, comparison ){
+    var $div = $('<div style="display:none;"/>').appendTo($('body'));
+    $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+    var ieTest = $div.find('a').length;
+    $div.remove();
+    return ieTest;
+}
+
  
 $(document).ready(function() {
    
 	 jQuery.event.props.push('dataTransfer');
-	 
+if(isIE(8)){ /* runs in IE8 */
+    $( ".dropz" ).hide()
+    $('#uploadfile').css("left", "0px")
+    
+} 
 	 $( ".dropz" ).click(function(e) {
    	   		$("#upload_file").trigger('click');
 		});
-	
+
+	if(!isIE(8)){ /* runs in IE8 */
 			
 	        $('#uploadfile input').change(function (e) {
 					if(e) $('input[type=submit]').trigger('click')
 		    });
-	   	
+	}
 	
     var dataArray = [];
      var  files;
@@ -87,7 +104,7 @@ $(document).ready(function() {
 });
 
 function callajax(data){
-    xhr = new XMLHttpRequest();
+    xhr =  getXMLHttpRequest()
 
     xhr.open( 'POST', 'ajax', true );
     xhr.onreadystatechange = function ( response ) {location.reload(true)};
@@ -96,9 +113,35 @@ function callajax(data){
      
 }   
    
+   
+   function getXMLHttpRequest() {
+
+   var xhr = null;
+
+   if (window.XMLHttpRequest || window.ActiveXObject) {
+      if (window.ActiveXObject) {
+         try {
+            xhr = new ActiveXObject("Msxml2.XMLHTTP");
+         } catch(e) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+         }
+      } else {
+         xhr = new XMLHttpRequest();
+      }
+   } else {
+      alert("Your browser doesn't support XMLHTTPRequest...");
+      return null;
+   }
+
+   return xhr;
+
+}
 </script>
 
 
+
+<br />
+<br />
 
 <br />
 <h3>List of uploaded files </h3>
