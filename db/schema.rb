@@ -13,26 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140423005201) do
 
-  create_table "data_files", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
-  create_table "invoice_hs", force: true do |t|
-    t.integer  "inv_id"
-    t.string   "province"
-    t.boolean  "valid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "invoices", force: true do |t|
-    t.string   "inv_n"
-    t.string   "supplier"
-    t.decimal  "inv_amt",    precision: 16, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "layouts", force: true do |t|
     t.string   "description"
@@ -83,12 +64,5 @@ ActiveRecord::Schema.define(version: 20140423005201) do
     t.string   "filepath"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "user_id"
-    t.string   "password"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+ 
 end
