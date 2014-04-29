@@ -1,7 +1,8 @@
-<%= javascript_include_tag  "jq.js" %>
-<%= javascript_include_tag  "//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" %>
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
-
+ 
+ <p><%= link_to 'Home', "/" %></p>
+ <br />
+  <br />
+ <% if can? :update, :all%>
 <%= form_tag({:action => 'create'}, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
   <%= submit_tag 'Upload' %>
@@ -35,7 +36,7 @@
 </table>
 
 
-
+  <% end %>
 <div id="dialog-confirm"></div>
 
-<p><%= link_to 'Home', "/" %></p>
+
