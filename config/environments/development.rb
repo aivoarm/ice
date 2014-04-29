@@ -26,4 +26,6 @@ App::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+  
+  config.action_mailer.default_url_options = { :host => 'http://127.10.64.1:8080' }
 end
