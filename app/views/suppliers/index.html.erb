@@ -1,7 +1,6 @@
 
 
-
-<p><%= link_to 'Home', "/" %></p>
+<p><%= link_to 'Home', "/uploads/index" %></p>
 
  <% if can? :update, :all%>
     <h2>Upload supplier file</h2>
@@ -24,14 +23,10 @@
 <tr>
  
     <% if can? :update, supplierfile%>
+     <td><%= supplierfile.filepath %></td>
     <td><%= link_to "Download", download_index_path(:file => supplierfile.filepath, :filepath => "public/suppliers"), :method => :get, :controller => DownloadController %></td>
-  
     <td><%= link_to 'Delete', delete_file_suppliers_path(:id =>supplierfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <td>
-   
-    <%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %>
-       
-    </td>
+    <td><%= link_to 'Upload to DB', update_from_file_suppliers_path(:id =>supplierfile.id), method: :post %></td>
     <% end %>
 </tr>
 <% end %>
@@ -42,9 +37,7 @@
 
 <h2>Manual supplier load</h2>
 
-
     <%= link_to 'New Supplier', new_supplier_path %>
-
     <%= link_to  'Clean the list ' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
 
@@ -82,11 +75,11 @@
 
   <thead>
     <tr>
+      <th>Ou</th>
       <th>Supplierno</th>
       <th>Supplername</th>
       <th>Account</th>
       <th>Subaccount</th>
-      <th>Ou</th>
       <th>Ab</th>
       <th>Bc</th>
       <th>Ma</th>
@@ -113,11 +106,12 @@
   <tbody>
     <% @suppliers.each do |supplier| %>
       <tr>
+        <td><%= supplier.OU %></td>
         <td><%= supplier.SupplierNo %></td>
         <td><%= supplier.SupplerName %></td>
         <td><%= supplier.Account %></td>
         <td><%= supplier.SubAccount %></td>
-        <td><%= supplier.OU %></td>
+       
         <td><%= supplier.AB %></td>
         <td><%= supplier.BC %></td>
         <td><%= supplier.MA %></td>

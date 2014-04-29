@@ -113,37 +113,42 @@ def delete_file
         filename =SuppierFile.find(params[:id]).filepath  
        
         line= SuppierFile.read(filename)
-       
+       line.shift[0] #shift the header
         header=line[0].split(',')
         
         
         line.each do |i|
        
         details=i.split(',')
+       
+        # next if i==details[4]?
         
         supplier = Supplier.all
-        supplier.create(:SupplierNo => details[0], 
-         :SupplerName => details[1], 
-         :Account => details[2], 
-         :SubAccount => details[3], 
-         :OU => "BMO", 
-         :AB => details[4], 
-         :BC => details[5], 
-         :MA => details[6], 
-         :NB => details[7], 
-         :NF => details[8], 
-         :NS => details[9], 
-         :NU => details[10], 
-         :NT => details[11], 
-         :FC => details[12], 
-         :ONT => details[13], 
-         :PE => details[14], 
-         :QC => details[15], 
-         :SK => details[16], 
-         :YU => details[17], 
-         :IO => details[18], 
-         :IQ => details[19],
-         :GSTHST => details[20])
+        
+        supplier.create(
+         :OU => filename, 
+         :SupplierNo => details[1], 
+         :SupplerName => details[2], 
+         :Account => details[22], 
+         :SubAccount => details[23], 
+         
+         :AB => details[3], 
+         :BC => details[4], 
+         :MA => details[5], 
+         :NB => details[6], 
+         :NF => details[7], 
+         :NS => details[8], 
+         :NU => details[9], 
+         :NT => details[10], 
+         :FC => details[11], 
+         :ONT => details[12], 
+         :PE => details[13], 
+         :QC => details[14], 
+         :SK => details[15], 
+         :YU => details[16], 
+         :IO => details[17], 
+         :IQ => details[18],
+         :GSTHST => details[19])
    
         
     end

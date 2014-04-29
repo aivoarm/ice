@@ -1,11 +1,9 @@
 class CreateSuppliers < ActiveRecord::Migration
-  def change
+ def change
     create_table :suppliers do |t|
+      t.string :OU
       t.string :SupplierNo
       t.string :SupplerName
-      t.string :Account
-      t.string :SubAccount
-      t.string :OU
       t.string :AB
       t.string :BC
       t.string :MA
@@ -22,7 +20,10 @@ class CreateSuppliers < ActiveRecord::Migration
       t.string :YU
       t.string :IO
       t.string :IQ
-
+      t.string :GSTHST
+      t.string :Account
+      t.string :SubAccount
+      
       t.timestamps
     end
   end

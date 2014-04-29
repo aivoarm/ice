@@ -1,5 +1,5 @@
  
- <p><%= link_to 'Home', "/" %></p>
+ <p><%= link_to 'Home', "/uploads/index" %></p>
  <br />
   <br />
  <% if can? :update, :all%>
@@ -14,9 +14,10 @@
 <h2>Layouts list </h2>
 <table>
    
+   
       
       
-        <% Dir.entries("public/layouts")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+     <% Dir.entries("public/layouts")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
       <% unless file_name =="." || file_name ==".." %>
              <tr>
             <td><%= @l %> </td>

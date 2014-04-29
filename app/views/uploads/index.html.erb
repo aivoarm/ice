@@ -1,8 +1,12 @@
-<p><%= link_to 'Home', "/" %></p>
+<h1>Welcome to ICE validation toolkit</h1>
+
+<h3>Upload file for validation</h3>
+<br />
 <br />
 
+
 <%= flash[:notice]%>
-<h3> File Upload</h3>
+
 <div class="selected_btn">
 <%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
     <%= file_field 'upload', 'file'%>
@@ -32,8 +36,8 @@
   padding-top: 50px;
   text-align: center;
   width: 400px;
-position: absolute;
-left: -1000px;
+    position: absolute;
+    left: -1000px;
 }
 
 
@@ -146,14 +150,18 @@ function callajax(data){
 <br />
 <h3>List of uploaded files </h3>
 
-
+ <% if can? :update, cleandb_uploads_path%>
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
-
+ <%end%>
 
    <div id="divajax"></div>
  <%= render partial: 'uploaded' %>
    
-     
+    <% if can? :update, :all%>  
   
-  
-  
+  <h3>Setup</h3>
+
+<p><%= link_to 'Supplier', suppliers_path %></p>
+<p><%= link_to 'Layout', layouts_path %></p>
+
+  <%end%>

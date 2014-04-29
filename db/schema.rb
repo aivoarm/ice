@@ -45,11 +45,9 @@ ActiveRecord::Schema.define(version: 20140429022722) do
   end
 
   create_table "suppliers", force: true do |t|
+    t.string   "OU"
     t.string   "SupplierNo"
     t.string   "SupplerName"
-    t.string   "Account"
-    t.string   "SubAccount"
-    t.string   "OU"
     t.string   "AB"
     t.string   "BC"
     t.string   "MA"
@@ -66,9 +64,11 @@ ActiveRecord::Schema.define(version: 20140429022722) do
     t.string   "YU"
     t.string   "IO"
     t.string   "IQ"
+    t.string   "GSTHST"
+    t.string   "Account"
+    t.string   "SubAccount"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "GSTHST"
   end
 
   create_table "uploads", force: true do |t|

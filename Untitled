@@ -2,3 +2,8 @@ rails g scaffold supplier SupplierNo:string SupplerName:string Account:string Su
 
 
 rails generate migration add_filepath_to_uploads filepath:string
+
+
+
+
+ActiveRecord::Migration.drop_table(:users)
