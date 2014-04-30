@@ -43,15 +43,25 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
   
   #delete "invoices/index"
   
-   
+    resources :layouts do
+    collection do
+        get 'index'
+         get 'show'
+       delete 'delete_file' 
+       post 'upload'  #, match ':controller/upload'
+      # post 'update_from_file'
+       delete 'cleandb'
+     end
+ end
+ 
   delete '/layouts', to: 'layouts#destroy'
   
-  get '/layouts/c', to: 'layouts#chose'
+  #get '/layouts/c', to: 'layouts#chose'
   
   #delete '/suppliers/d', to: 'suppliers#delete_file'
-  get '/layouts/show', to: 'layouts#show'
-  get '/layouts', to: 'layouts#index'
-  post '/layouts', to: 'layouts#create'
+  #get '/layouts/show', to: 'layouts#show'
+ # get '/layouts', to: 'layouts#index'
+  #post '/layouts', to: 'layouts#create'
   
   #post '/suppliers/u', to: 'suppliers#upload'
   

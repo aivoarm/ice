@@ -1,6 +1,7 @@
 class ValidatorController < ApplicationController
       protect_from_forgery with: :exception
   load_and_authorize_resource
+  
   def index
   
   id = (params[:id])
@@ -38,7 +39,7 @@ class ValidatorController < ApplicationController
   def separate(ou, ftype, t, id)
       value = {}
       
-       name =Upload.find(id).filepath  
+    name =Upload.find(id).filepath  
    
     directory = "public/data"
     # create the file path
@@ -60,6 +61,42 @@ class ValidatorController < ApplicationController
             end
             return value
   end
+  
+  def read_layout()
+  
+    
+    #@layouts = Layout.all
+    id = (params[:id])
+    name =LayoutFile.find(id).filepath  
+   
+    directory = "public/layouts"
+    # create the file path
+    path = File.join(directory, name)
+    # read the file
+    arr = IO.readlines(path)
+    #redirect_to action: 'index' 
+   @layout={}
+   
+    arr.shift[0]
+    
+       @layout['ou']=[]
+       @layout['ftype']=[]
+       @layout['description']=[]
+       @layout['start']=[]
+       @layout['length']=[]
+       
+   arr.each do |line|  
+     
+       @layout['ou'] << (line.split(" ")[0])
+       @layout['ftype'] << (line.split(" ")[1])
+       @layout['description'] << (line.split(" ")[2])
+       @layout['start'] << (line.split(" ")[3])
+       @layout['length'] << (line.split(" ")[4])
+   end
+   
+ 
+  end
+  
   
   
 end

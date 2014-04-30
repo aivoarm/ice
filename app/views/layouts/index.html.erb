@@ -1,4 +1,4 @@
- 
+ <p class="error"><%= flash[:error] %></p>
  <p><%= link_to 'Home', "/uploads/index" %></p>
  <br />
   <br />
@@ -13,31 +13,35 @@
 
 <h2>Layouts list </h2>
 <table>
-   
-   
-      
-      
-     <% Dir.entries("public/layouts")[0..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-      <% unless file_name =="." || file_name ==".." %>
-             <tr>
-            <td><%= @l %> </td>
+ 
+ <% @layoutfiles.each do |layoutfile| %>
+<tr>
+            
+            
+            <td><%= layoutfile.filepath %></td>
                  <td>
-                     <%= link_to file_name, download_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/layouts" ), :method => :get, :controller => DownloadController %>
+                     <%= link_to 'Download', download_index_path( :id => layoutfile.id, :filepath => "public/layouts" ), :method => :get, :controller => DownloadController %>
                 </td>
-                <td>
-                     <%= link_to  'Delete', delete_index_path( :file => "#{URI.escape(file_name)}", :filepath => "public/layouts", :path => 'layouts_path' ), :method => :delete, :controller => DeleteController %>
+                
+                 <td>
+                    <td><%= link_to 'Delete', delete_file_layouts_path(:id =>layoutfile.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    
                 </td> 
+                
                 <td>
-                    <%= link_to 'Show', layouts_show_path %>
+                     <%= link_to 'Show', layout_path( :id => layoutfile.id, :filepath => "public/layouts" ), :method => :get %>
                 </td>
-            </tr>
-               <% end %>
-        <% end %>
-   
+                
+</tr>
+
+
+<% end %>
 </table>
 
 
+
   <% end %>
+
 <div id="dialog-confirm"></div>
 
 

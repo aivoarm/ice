@@ -2,52 +2,88 @@ class LayoutsController < ApplicationController
  # before_action :set_layout, only: [:show, :edit, :update, :destroy]
  
   #before_action :authenticate #, except:     [:index, :show] 
-   before_filter :authenticate_user!, except: [:index]
+  # before_filter :authenticate_user!, except: [:index]
+  
+  
   def index
-    #@layouts = Layout.all
-      @cl=params[:ou]
- 
+    @layoutfiles = LayoutFile.all
+     
   end
   
   def show
-    @layouts = Layout.all
+    #@layouts = Layout.all
+    id = (params[:id])
+    name =LayoutFile.find(id).filepath  
+   
+    directory = "public/layouts"
+    # create the file path
+    path = File.join(directory, name)
+    # read the file
+    arr = IO.readlines(path)
+    @len =arr.length
+    #redirect_to action: 'index' 
+   @layout={}
+   
+    arr.shift[0]
+    
+       @layout['ou']=[]
+       @layout['ftype']=[]
+       @layout['description']=[]
+       @layout['start']=[]
+       @layout['length']=[]
+       
+   arr.each do |line|  
+     
+       @layout['ou'] << (line.split(" ")[0])
+       @layout['ftype'] << (line.split(" ")[1])
+       @layout['description'] << (line.split(" ")[2])
+       @layout['start'] << (line.split(" ")[3])
+       @layout['length'] << (line.split(" ")[4])
+   end
    
   end
 
- def create
-   unless params[:upload].nil?
-   
-       post = Layout.save(params[:upload])
-       flash[:notice] = post
+def create
+      
+      unless params[:upload].nil?
+      
+        ext = (params[:upload][:datafile].original_filename).split('.').last
+      
+        if ext=='csv' || ext=='txt'
+           @file =LayoutFile.new(:filepath => params[:upload][:datafile].original_filename )
+           @file.save
+             
+           post = LayoutFile.save(params[:upload])
        
-       @d = Layout.read(params[:upload])
-       
-       @d.each do |l| 
-              
-              p =  l.scan(/\w+/)
-                @layout =Layout.new(:ou =>p[0], :ftype =>p[1], :description =>p[2],:start =>p[3], :length =>p[4])
-                @layout.save
-                
+         else 
+             flash[:error ] = 'Wrong file type.'
+         end  
+     
+             redirect_to action: 'index' 
          end
-    end
-    redirect_to action: 'index'
- end
+         
+    
+  end
+
+
  
- def destroy
-   
-   Layout.delete_all
+ def delete_file
     unless Dir["public/layouts/*"].empty?
-        File.delete('public/layouts/'+params[:file])
+            filename =LayoutFile.find(params[:id]).filepath  
+            File.delete('public/suppliers/'+filename)
     end
-   redirect_to action: 'index'
+        LayoutFile.where(:id => params[:id]).destroy_all
+         flash[:notice] = "done!"
+  
+  
+    redirect_to :action => 'index'
   end
-  
-  def chose
-  @cl=params[:ou]
-  flash[:notice] = params[:ou]
+ 
+  def cleandb
+     LayoutFile.delete_all
+     Layout.delete_all
+     redirect_to :action => 'index'
   end
-  
-  
   
   
   
