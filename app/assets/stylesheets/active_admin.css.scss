@@ -13,6 +13,13 @@
 body{
  margin: 10px;
  }
+ 
+ .error{
+     
+     color:red;
+ }
+ 
+//S @import "bootstrap";
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //

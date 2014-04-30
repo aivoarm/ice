@@ -12,11 +12,18 @@ before_filter :authenticate_user!, except: [:index]
       
       unless params[:upload].nil?
       
+      ext = (params[:upload][:datafile].original_filename).split('.').last
+      
+      if ext=='csv'
        @file =SuppierFile.new(:filepath => params[:upload][:datafile].original_filename )
        @file.save
          
        post = SuppierFile.save(params[:upload])
+       
+        else 
+            flash[:error ] = 'Wrong file type.'
           
+        end  
       redirect_to action: 'index' 
          end
          

@@ -7,10 +7,6 @@ root :to => 'uploads#index'
  resources :users
  
  resources :suppliers do
-    member do
-           
-    end
-    
     collection do
         
        delete 'delete_file' 
@@ -21,7 +17,8 @@ root :to => 'uploads#index'
  end
 
  post 'uploads/ajax' , to: 'uploads#ajax'
-  resources :uploads do
+ 
+    resources :uploads do
      member do
         delete 'destroy'   
     end
@@ -30,22 +27,16 @@ root :to => 'uploads#index'
         get 'index'
         post 'index'
         post 'create'
-        
         get 'ajax'
-        
-        get 'validate'
-        
         delete 'cleandb'
      end 
    
  end
-
-  
-
+ 
  # resources :layouts
 
   #resources :uploads
-  
+   get '/validator',  to: 'validator#index'
   
   #delete "invoices/index"
   

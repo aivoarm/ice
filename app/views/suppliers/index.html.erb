@@ -1,9 +1,10 @@
 
-
+<p class="error"><%= flash[:error] %></p>
 <p><%= link_to 'Home', "/uploads/index" %></p>
 
  <% if can? :update, :all%>
     <h2>Upload supplier file</h2>
+    <p>CSV format only</p>
 
 <%= form_tag(upload_suppliers_path, :multipart => true) do %>
   <%= file_field 'upload', 'datafile' %>
