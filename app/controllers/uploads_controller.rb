@@ -1,5 +1,6 @@
 class UploadsController < ApplicationController
  skip_before_filter :verify_authenticity_token  
+load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
       @uploads = Upload.all
@@ -19,6 +20,7 @@ class UploadsController < ApplicationController
             end
       
   end
+  
    def destroy
        
         unless Dir["public/data/*"].empty?

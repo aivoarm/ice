@@ -1,6 +1,6 @@
 class ValidatorController < ApplicationController
       protect_from_forgery with: :exception
-
+  load_and_authorize_resource
   def index
   
   id = (params[:id])
@@ -27,6 +27,7 @@ class ValidatorController < ApplicationController
         end
   end
   
+  private
    def validate_layouts(regex, f_FILE_DATE)
     regex.match(f_FILE_DATE)
   
@@ -60,9 +61,5 @@ class ValidatorController < ApplicationController
             return value
   end
   
-  def read()
-      
-     
-       
-  end
+  
 end

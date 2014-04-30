@@ -5,10 +5,13 @@
      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     
 <% else %>
-
     <%= link_to "Sign in", new_user_session_path %>
 <% end %>
 
 <% if can? :update, admin_root_path %>
      <%= link_to "Admin", admin_root_path %>
-    <% end %>
+<% end %>
+
+<% if signed_in? %>
+    <%= link_to "Change your password", edit_user_registration_path %>
+<% end %>

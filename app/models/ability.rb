@@ -7,9 +7,14 @@ class Ability
    user ||= User.new # guest user (not logged in)
      if user.role == "administrator"
          can :manage, :all
+    
+    elsif user.role == "editor"
+          can :ajax, Upload, :published => true
+          can :index, Validator,  :published => true
+          can :destroy, Upload
       else
-         can :read, :all
-          #can :manage, Supplier
+         #can :read, :all
+         #can :manage, Supplier
      end
              
     # Define abilities for the passed in user here. For example:

@@ -1,8 +1,11 @@
 App::Application.routes.draw do
 root :to => 'uploads#index'
+get 'users/sign_up' => redirect('/email_to_admin.html')
+ 
   devise_for :users
   #devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+ 
  
  resources :users
  

@@ -150,6 +150,7 @@ function callajax(data){
 <br />
 <h3>List of uploaded files </h3>
 
+ 
  <% if can? :update, cleandb_uploads_path%>
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
  <%end%>
@@ -157,7 +158,7 @@ function callajax(data){
    <div id="divajax"></div>
  <%= render partial: 'uploaded' %>
    
-    <% if can? :update, :all%>  
+    <% if can? :update, :all%> 
   
   <h3>Setup</h3>
 

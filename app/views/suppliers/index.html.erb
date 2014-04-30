@@ -42,7 +42,7 @@
     <%= link_to  'Clean the list ' , cleandb_suppliers_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
 
 
-<% end %>
+
 <br />
 <br />
 
@@ -137,9 +137,9 @@
     <% end %>
   </tbody>
 </table>
-
-
-
+<%else%>
+<p>For admins only</p>
+<% end %>
 <br>
 
 
