@@ -34,11 +34,11 @@ class LayoutsController < ApplicationController
        
    arr.each do |line|  
      
-       @layout['ou'] << (line.split(" ")[0])
-       @layout['ftype'] << (line.split(" ")[1])
-       @layout['description'] << (line.split(" ")[2])
-       @layout['start'] << (line.split(" ")[3])
-       @layout['length'] << (line.split(" ")[4])
+       @layout['ou'] << (line.split(/\W+/)[0])
+       @layout['ftype'] << (line.split(/\W+/)[1])
+       @layout['description'] << (line.split(/\W+/)[2])
+       @layout['start'] << (line.split(/\W+/)[3])
+       @layout['length'] << (line.split(/\W+/)[4])
    end
    
   end
@@ -70,7 +70,7 @@ def create
  def delete_file
     unless Dir["public/layouts/*"].empty?
             filename =LayoutFile.find(params[:id]).filepath  
-            File.delete('public/suppliers/'+filename)
+            File.delete('public/layouts/'+filename)
     end
         LayoutFile.where(:id => params[:id]).destroy_all
          flash[:notice] = "done!"
