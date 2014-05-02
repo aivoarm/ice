@@ -1,0 +1,85 @@
+<%= form_for(@invoice_header) do |f| %>
+  <% if @invoice_header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@invoice_header.errors.count, "error") %> prohibited this invoice_header from being saved:</h2>
+
+      <ul>
+      <% @invoice_header.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :line_num %><br>
+    <%= f.number_field :line_num %>
+  </div>
+  <div class="field">
+    <%= f.label :RECORD_TYPE %><br>
+    <%= f.text_field :RECORD_TYPE %>
+  </div>
+  <div class="field">
+    <%= f.label :FILE_DATE %><br>
+    <%= f.number_field :FILE_DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :VENDOR_NUMBER %><br>
+    <%= f.text_field :VENDOR_NUMBER %>
+  </div>
+  <div class="field">
+    <%= f.label :PROVINCE_TAX_CODE %><br>
+    <%= f.text_field :PROVINCE_TAX_CODE %>
+  </div>
+  <div class="field">
+    <%= f.label :CURRENCY_CODE %><br>
+    <%= f.text_field :CURRENCY_CODE %>
+  </div>
+  <div class="field">
+    <%= f.label :INVOICE_NUMBER %><br>
+    <%= f.text_field :INVOICE_NUMBER %>
+  </div>
+  <div class="field">
+    <%= f.label :INVOICE_DATE %><br>
+    <%= f.number_field :INVOICE_DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :INVOICE_AMOUNT %><br>
+    <%= f.text_field :INVOICE_AMOUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :ITEM_AMOUNT %><br>
+    <%= f.text_field :ITEM_AMOUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :GST_AMOUNT %><br>
+    <%= f.text_field :GST_AMOUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :PST_AMOUNT %><br>
+    <%= f.text_field :PST_AMOUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :COMPANY_CODE_SEGMENT %><br>
+    <%= f.text_field :COMPANY_CODE_SEGMENT %>
+  </div>
+  <div class="field">
+    <%= f.label :TAX_VALIDATED %><br>
+    <%= f.text_field :TAX_VALIDATED %>
+  </div>
+  <div class="field">
+    <%= f.label :VENDOR_SITE_CODE %><br>
+    <%= f.text_field :VENDOR_SITE_CODE %>
+  </div>
+  <div class="field">
+    <%= f.label :SOURCE %><br>
+    <%= f.text_field :SOURCE %>
+  </div>
+  <div class="field">
+    <%= f.label :valid %><br>
+    <%= f.check_box :valid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

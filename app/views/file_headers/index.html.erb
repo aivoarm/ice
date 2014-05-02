@@ -1,0 +1,41 @@
+<h1>Listing file_headers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line num</th>
+      <th>Record type</th>
+      <th>File date</th>
+      <th>Source</th>
+      <th>Invoice count</th>
+      <th>Invoice amount</th>
+      <th>Tax validated</th>
+      <th>Valid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @file_headers.each do |file_header| %>
+      <tr>
+        <td><%= file_header.line_num %></td>
+        <td><%= file_header.RECORD_TYPE %></td>
+        <td><%= file_header.FILE_DATE %></td>
+        <td><%= file_header.SOURCE %></td>
+        <td><%= file_header.INVOICE_COUNT %></td>
+        <td><%= file_header.INVOICE_AMOUNT %></td>
+        <td><%= file_header.TAX_VALIDATED %></td>
+        <td><%= file_header.valid %></td>
+        <td><%= link_to 'Show', file_header %></td>
+        <td><%= link_to 'Edit', edit_file_header_path(file_header) %></td>
+        <td><%= link_to 'Destroy', file_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New File header', new_file_header_path %>

@@ -1,0 +1,49 @@
+<%= form_for(@file_header) do |f| %>
+  <% if @file_header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@file_header.errors.count, "error") %> prohibited this file_header from being saved:</h2>
+
+      <ul>
+      <% @file_header.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :line_num %><br>
+    <%= f.number_field :line_num %>
+  </div>
+  <div class="field">
+    <%= f.label :RECORD_TYPE %><br>
+    <%= f.text_field :RECORD_TYPE %>
+  </div>
+  <div class="field">
+    <%= f.label :FILE_DATE %><br>
+    <%= f.number_field :FILE_DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :SOURCE %><br>
+    <%= f.text_field :SOURCE %>
+  </div>
+  <div class="field">
+    <%= f.label :INVOICE_COUNT %><br>
+    <%= f.number_field :INVOICE_COUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :INVOICE_AMOUNT %><br>
+    <%= f.text_field :INVOICE_AMOUNT %>
+  </div>
+  <div class="field">
+    <%= f.label :TAX_VALIDATED %><br>
+    <%= f.text_field :TAX_VALIDATED %>
+  </div>
+  <div class="field">
+    <%= f.label :valid %><br>
+    <%= f.check_box :valid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

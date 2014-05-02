@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502125812) do
+ActiveRecord::Schema.define(version: 20140502174759) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -27,6 +27,61 @@ ActiveRecord::Schema.define(version: 20140502125812) do
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
+
+  create_table "file_headers", force: true do |t|
+    t.integer  "line_num"
+    t.string   "RECORD_TYPE"
+    t.integer  "FILE_DATE"
+    t.string   "SOURCE"
+    t.integer  "INVOICE_COUNT"
+    t.decimal  "INVOICE_AMOUNT"
+    t.string   "TAX_VALIDATED"
+    t.boolean  "valid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invoice_details", force: true do |t|
+    t.integer  "line_num"
+    t.string   "RECORD_TYPE"
+    t.integer  "FILE_DATE"
+    t.string   "VENDOR_NUMBER"
+    t.string   "PROVINCE_TAX_CODE"
+    t.string   "INVOICE_NUMBER"
+    t.decimal  "ITEM_AMOUNT"
+    t.decimal  "GST_AMOUNT"
+    t.decimal  "PST_AMOUNT"
+    t.string   "COST_CENTER_SEGMENT"
+    t.string   "ACCOUNT_SEGMENT"
+    t.string   "SUB_ACCOUNT_SEGMENT"
+    t.string   "SOURCE"
+    t.string   "FILLER"
+    t.boolean  "valid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "invoice_headers", force: true do |t|
+    t.integer  "line_num"
+    t.string   "RECORD_TYPE"
+    t.integer  "FILE_DATE"
+    t.string   "VENDOR_NUMBER"
+    t.string   "PROVINCE_TAX_CODE"
+    t.string   "CURRENCY_CODE"
+    t.string   "INVOICE_NUMBER"
+    t.integer  "INVOICE_DATE"
+    t.decimal  "INVOICE_AMOUNT"
+    t.decimal  "ITEM_AMOUNT"
+    t.decimal  "GST_AMOUNT"
+    t.decimal  "PST_AMOUNT"
+    t.string   "COMPANY_CODE_SEGMENT"
+    t.string   "TAX_VALIDATED"
+    t.string   "VENDOR_SITE_CODE"
+    t.string   "SOURCE"
+    t.boolean  "valid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "layout_files", force: true do |t|
     t.string   "filepath"

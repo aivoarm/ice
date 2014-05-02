@@ -2,42 +2,43 @@ class ValidatorController < ApplicationController
       protect_from_forgery with: :exception
     load_and_authorize_resource
   #require_relative "invoice.rb"
-  
+ # require "fileClass.rb"
+ 
+ 
   def index
-    
-    invoice=Invoice.new()
-    @inv = invoice.number="123"
-    
-    
-         id = (params[:id])
-     @d=[]
-     i=0
-      read_file(id).each do |l|
-          
-        @d << l[i]   
-     i=i+1
-      end
-     
-#=begin     
-        @layout=read_layout("BMO")
+      
+        id = (params[:id])
         
-        
+        name =Upload.find(id).filepath  
+    
+      
         fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
-           
-           @err =  checking_for_layout(fheader)
-            
+        idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
         iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
-          #  checking_for_layout(iheader)
-        
-        idetails =split_per_layout( read_file(id), read_layout("BMO")[2], "D")
-         
-         
-          @file=[ fheader,iheader, idetails]
-         
-
        
-        #totals
-                
+        
+        @file_header=FileHeader.new(to_params_for_db_load(fheader), 1)
+               @file_header.save
+        
+        @invoice_detail=InvoiceDetail.new(to_params_for_db_load( idetails), 1)
+               @invoice_detail.save
+  
+  
+        @invoice_header=InvoiceHeader.new(to_params_for_db_load(iheader), 1)
+               @invoice_header.save
+  
+  
+  
+  
+  
+    # if @invoice_detail.save
+        # redirect_to @file_header
+       # end
+        
+        
+=begin     
+
+   
                 @amt=0
                 idetails['ITEM_AMOUNT'].each do |i|
                     @amt=@amt+i.to_f
@@ -47,13 +48,94 @@ class ValidatorController < ApplicationController
         @chkamt = validate_layouts(/^(\+|-)?([0-9]+(\.[0-9]{1,2}))/, fheader['INVOICE_AMOUNT'][0])
        
      
-#=end
+=end
        
   end
   
   #####################################################################################################################
-  
   private
+  
+  def file_header_params()
+     return {                           :line_num =>1, 
+                                        :RECORD_TYPE => "F", 
+                                        :FILE_DATE => '',
+                                        :SOURCE => '', 
+                                        :INVOICE_COUNT =>'', 
+                                        :INVOICE_AMOUNT =>'', 
+                                        :TAX_VALIDATED =>'', 
+                                        :valid => false
+            }
+   end
+  
+  def invoice_header_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :CURRENCY_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :INVOICE_DATE =>'',
+                                        :INVOICE_AMOUNT =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COMPANY_CODE_SEGMENT =>'',
+                                        :TAX_VALIDATED =>'',
+                                        :VENDOR_SITE_CODE =>'',
+                                        :SOURCE =>'',
+                                        :valid => false
+            }
+   end
+  
+  def invoice_detail_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COST_CENTER_SEGMENT =>'',
+                                        :ACCOUNT_SEGMENT =>'',
+                                        :SUB_ACCOUNT_SEGMENT =>'',
+                                        :SOURCE =>'',
+                                        :FILLER =>'',
+                                        :valid => false
+            }
+   end
+   #--------------------------------------------------------------------- 
+ 
+  def to_params_for_db_load(obj, i)
+      val={}
+      
+      obj.each do |k,v|
+        
+        val[k] = v[i]
+       
+          
+      end
+      return val
+  
+  end
+  
+  
+ #   {"line_num"=>[2, 3], "RECORD_TYPE"=>["D", "D"], "FILE_DATE"=>["20140409085502", "20140409085502"], "VENDOR_NUMBER"=>["B098259 ", "B098259 "], "PROVINCE_TAX_CODE"=>["ON", "ON"], "INVOICE_NUMBER"=>["06201404090855", "06201404090855"], 
+ #   "ITEM_AMOUNT"=>[" 163.29", " -3549.22"], "GST_AMOUNT"=>[" 20.91", " -0.01"], "PST_AMOUNT"=>[" 0.00", " 0.00"], "COST_CENTER_SEGMENT"=>["H5676", "H8193"], "ACCOUNT_SEGMENT"=>["946122", "961780"], "SUB_ACCOUNT_SEGMENT"=>["000 ", "000 "], "SOURCE"=>["MC ", "MC "], "FILLER"=>[" \r", " \r"]}
+ #   
+ 
+ #  {:line_num=>1, :RECORD_TYPE=>"F", :FILE_DATE=>"20140409085502", :SOURCE=>"MC ", :INVOICE_COUNT=>" 1", :INVOICE_AMOUNT=>" -3365.03", :TAX_VALIDATED=>"Y", :valid=>false}
+
+
+  
+  
+  
+  
+   #--------------------------------------------------------------------- 
   
   def checking_for_layout(fheader)
       
@@ -78,23 +160,27 @@ class ValidatorController < ApplicationController
     regex.match(f_FILE_DATE)
   
    end
- #--------------------------------------------------------------------- 
+#-------------------------------------------------------------------------------------------------------------------------------------  
+# 
+#  apply  LAYOUT to file
+# 
+#     @fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
+
+#     {"RECORD_TYPE"=>["F"], "FILE_DATE"=>["20140409085502"], "SOURCE"=>["MC "], "INVOICE_COUNT"=>[" 1"], "INVOICE_AMOUNT"=>[" -3365.03"], "TAX_VALIDATED"=>["Y"]
+#--------------------------------------------------------------------------------------------------------------------------------
 
 
   def split_per_layout(file, layout, t)
-      
-       d=[]
-       
-       y=0
+     
        data=[]
-      file.each do |l|
-         data << l[y]   
-         y=y+1
-        end     
-      
-           data.each do |l|
-              if l[0]==t
-                  d.push(l)
+         line_num=[]
+            
+           file.each do |l|
+               
+               
+              if l[1][0]==t
+                  line_num.push(l[0])
+                  data.push(l[1])
               end
            end
            
@@ -103,10 +189,11 @@ class ValidatorController < ApplicationController
           
         for i in layout
                 tmp=[] 
-                       for da in d
+                        for da in data
                           s=i[1]-1
                           l=i[2]
                           tmp.push(da[s,l])
+                          value["line_num"]=line_num
                           value[i[0]]=tmp
                         end   
                     
@@ -116,12 +203,13 @@ class ValidatorController < ApplicationController
   end
 #
 #
-# [["RECORD_TYPE", 1, 1], ["FILE_DATE", 2, 14], ["SOURCE", 16, 10], ["INVOICE_COUNT", 26, 15], ["INVOICE_AMOUNT", 41, 15], ["TAX_VALIDATED", 56, 1]]
 
+#-------------------------------------------------------------------------------------------------------------------------------------  
+# 
+#  read LAYOUT TO ARRAY with 3 ARRAYS inside, argument OU in file name
+# 
 #
-##---------------------------------------------------------------------  
- 
-  
+#--------------------------------------------------------------------------------------------------------------------------------
   def read_layout(ou)
      
     name = LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath
@@ -156,37 +244,35 @@ class ValidatorController < ApplicationController
     line=[ file_Header,invoice_Header,invoice_Detail]
     
   
-       return line
+    return line
   
   end
- #---------------------------------------------------------------------  
+#-------------------------------------------------------------------------------------------------------------------------------------  
+# 
+#  READ FILE TO ARRAY , argument ID  of file name 
+# 
+#
+#--------------------------------------------------------------------------------------------------------------------------------
   def read_file(id)
       
-      
-    #data=[], line_num=[]
     data=[]
     count=0
     name =Upload.find(id).filepath  
    
     directory = "public/data"
-    # create the file path
     path = File.join(directory, name)
-    # read the file
-   
-    #data = IO.readlines(path).each_with_index {|line, index|}
-    #data = IO.lines.each_with_index {|line, index|}
-      
-      IO.foreach(path) do |line| 
+     
+        IO.foreach(path) do |line| 
           
-            data << {count => line} if !line.chomp.empty?
-            #line_num << count
-    # You might be able to use split or something to get attributes
-    count=count+1
-    end
-       
+            data << [count, line] if !line.chomp.empty?
+            count=count+1
+        
+        end   
     return  data
        
   end
+  #---------------------------------------------------------------------   
+  
   
   
   

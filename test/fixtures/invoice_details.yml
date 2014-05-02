@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line_num: 1
+  RECORD_TYPE: MyString
+  FILE_DATE: 1
+  VENDOR_NUMBER: MyString
+  PROVINCE_TAX_CODE: MyString
+  INVOICE_NUMBER: MyString
+  ITEM_AMOUNT: 9.99
+  GST_AMOUNT: 9.99
+  PST_AMOUNT: 9.99
+  COST_CENTER_SEGMENT: MyString
+  ACCOUNT_SEGMENT: MyString
+  SUB_ACCOUNT_SEGMENT: MyString
+  SOURCE: MyString
+  FILLER: MyString
+  valid: false
+
+two:
+  line_num: 1
+  RECORD_TYPE: MyString
+  FILE_DATE: 1
+  VENDOR_NUMBER: MyString
+  PROVINCE_TAX_CODE: MyString
+  INVOICE_NUMBER: MyString
+  ITEM_AMOUNT: 9.99
+  GST_AMOUNT: 9.99
+  PST_AMOUNT: 9.99
+  COST_CENTER_SEGMENT: MyString
+  ACCOUNT_SEGMENT: MyString
+  SUB_ACCOUNT_SEGMENT: MyString
+  SOURCE: MyString
+  FILLER: MyString
+  valid: false

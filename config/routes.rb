@@ -1,4 +1,14 @@
 App::Application.routes.draw do
+  resources :file_headers
+  
+resources :file_headers do
+    resources :invoice_headers do
+        resources :invoice_headers
+    end
+end
+
+ 
+
 root :to => 'uploads#index'
 get 'users/sign_up' => redirect('/email_to_admin.html')
  

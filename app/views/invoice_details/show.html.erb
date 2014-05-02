@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Line num:</strong>
+  <%= @invoice_detail.line_num %>
+</p>
+
+<p>
+  <strong>Record type:</strong>
+  <%= @invoice_detail.RECORD_TYPE %>
+</p>
+
+<p>
+  <strong>File date:</strong>
+  <%= @invoice_detail.FILE_DATE %>
+</p>
+
+<p>
+  <strong>Vendor number:</strong>
+  <%= @invoice_detail.VENDOR_NUMBER %>
+</p>
+
+<p>
+  <strong>Province tax code:</strong>
+  <%= @invoice_detail.PROVINCE_TAX_CODE %>
+</p>
+
+<p>
+  <strong>Invoice number:</strong>
+  <%= @invoice_detail.INVOICE_NUMBER %>
+</p>
+
+<p>
+  <strong>Item amount:</strong>
+  <%= @invoice_detail.ITEM_AMOUNT %>
+</p>
+
+<p>
+  <strong>Gst amount:</strong>
+  <%= @invoice_detail.GST_AMOUNT %>
+</p>
+
+<p>
+  <strong>Pst amount:</strong>
+  <%= @invoice_detail.PST_AMOUNT %>
+</p>
+
+<p>
+  <strong>Cost center segment:</strong>
+  <%= @invoice_detail.COST_CENTER_SEGMENT %>
+</p>
+
+<p>
+  <strong>Account segment:</strong>
+  <%= @invoice_detail.ACCOUNT_SEGMENT %>
+</p>
+
+<p>
+  <strong>Sub account segment:</strong>
+  <%= @invoice_detail.SUB_ACCOUNT_SEGMENT %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @invoice_detail.SOURCE %>
+</p>
+
+<p>
+  <strong>Filler:</strong>
+  <%= @invoice_detail.FILLER %>
+</p>
+
+<p>
+  <strong>Valid:</strong>
+  <%= @invoice_detail.valid %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_detail_path(@invoice_detail) %> |
+<%= link_to 'Back', invoice_details_path %>

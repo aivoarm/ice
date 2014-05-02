@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Line num:</strong>
+  <%= @invoice_header.line_num %>
+</p>
+
+<p>
+  <strong>Record type:</strong>
+  <%= @invoice_header.RECORD_TYPE %>
+</p>
+
+<p>
+  <strong>File date:</strong>
+  <%= @invoice_header.FILE_DATE %>
+</p>
+
+<p>
+  <strong>Vendor number:</strong>
+  <%= @invoice_header.VENDOR_NUMBER %>
+</p>
+
+<p>
+  <strong>Province tax code:</strong>
+  <%= @invoice_header.PROVINCE_TAX_CODE %>
+</p>
+
+<p>
+  <strong>Currency code:</strong>
+  <%= @invoice_header.CURRENCY_CODE %>
+</p>
+
+<p>
+  <strong>Invoice number:</strong>
+  <%= @invoice_header.INVOICE_NUMBER %>
+</p>
+
+<p>
+  <strong>Invoice date:</strong>
+  <%= @invoice_header.INVOICE_DATE %>
+</p>
+
+<p>
+  <strong>Invoice amount:</strong>
+  <%= @invoice_header.INVOICE_AMOUNT %>
+</p>
+
+<p>
+  <strong>Item amount:</strong>
+  <%= @invoice_header.ITEM_AMOUNT %>
+</p>
+
+<p>
+  <strong>Gst amount:</strong>
+  <%= @invoice_header.GST_AMOUNT %>
+</p>
+
+<p>
+  <strong>Pst amount:</strong>
+  <%= @invoice_header.PST_AMOUNT %>
+</p>
+
+<p>
+  <strong>Company code segment:</strong>
+  <%= @invoice_header.COMPANY_CODE_SEGMENT %>
+</p>
+
+<p>
+  <strong>Tax validated:</strong>
+  <%= @invoice_header.TAX_VALIDATED %>
+</p>
+
+<p>
+  <strong>Vendor site code:</strong>
+  <%= @invoice_header.VENDOR_SITE_CODE %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @invoice_header.SOURCE %>
+</p>
+
+<p>
+  <strong>Valid:</strong>
+  <%= @invoice_header.valid %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_header_path(@invoice_header) %> |
+<%= link_to 'Back', invoice_headers_path %>

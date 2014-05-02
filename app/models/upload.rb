@@ -1,6 +1,8 @@
 class Upload < ActiveRecord::Base
       validates :filepath, uniqueness: true
       
+      has_one :file_header
+      
 def self.save(upload)
     name =  upload['datafile'].original_filename
     directory = "public/data"

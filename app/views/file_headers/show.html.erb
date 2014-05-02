@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Line num:</strong>
+  <%= @file_header.line_num %>
+</p>
+
+<p>
+  <strong>Record type:</strong>
+  <%= @file_header.RECORD_TYPE %>
+</p>
+
+<p>
+  <strong>File date:</strong>
+  <%= @file_header.FILE_DATE %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @file_header.SOURCE %>
+</p>
+
+<p>
+  <strong>Invoice count:</strong>
+  <%= @file_header.INVOICE_COUNT %>
+</p>
+
+<p>
+  <strong>Invoice amount:</strong>
+  <%= @file_header.INVOICE_AMOUNT %>
+</p>
+
+<p>
+  <strong>Tax validated:</strong>
+  <%= @file_header.TAX_VALIDATED %>
+</p>
+
+<p>
+  <strong>Valid:</strong>
+  <%= @file_header.valid %>
+</p>
+
+<%= link_to 'Edit', edit_file_header_path(@file_header) %> |
+<%= link_to 'Back', file_headers_path %>

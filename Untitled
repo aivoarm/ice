@@ -1,4 +1,4 @@
-rails g scaffold supplier SupplierNo:string SupplerName:string Account:string SubAccount: string OU:string AB:string BC:string MA:string NB:string NF:string NS:string NU:string NT:string FC:string ONT:string PE:string QC:string SK:string YU:string IO:string IQ:string
+rails g scaffold invoice SupplierNo:string SupplerName:string Account:string SubAccount: string OU:string AB:string BC:string MA:string NB:string NF:string NS:string NU:string NT:string FC:string ONT:string PE:string QC:string SK:string YU:string IO:string IQ:string
 
 
 rails generate migration add_filepath_to_uploads filepath:string
@@ -7,3 +7,14 @@ rails generate migration add_filepath_to_uploads filepath:string
 
 
 ActiveRecord::Migration.drop_table(:users)
+
+
+
+rails g scaffold invoice_header line_num:integer RECORD_TYPE:string FILE_DATE:integer VENDOR_NUMBER:string PROVINCE_TAX_CODE:string CURRENCY_CODE:string INVOICE_NUMBER:string INVOICE_DATE:integer INVOICE_AMOUNT:decimal ITEM_AMOUNT:decimal GST_AMOUNT:decimal PST_AMOUNT:decimal COMPANY_CODE_SEGMENT:string TAX_VALIDATED:string VENDOR_SITE_CODE:string SOURCE:string valid:boolean 
+
+
+rails g scaffold invoice_details line_num:integer RECORD_TYPE:string FILE_DATE:integer VENDOR_NUMBER:string PROVINCE_TAX_CODE:string INVOICE_NUMBER:string ITEM_AMOUNT:decimal GST_AMOUNT:decimal PST_AMOUNT:decimal COST_CENTER_SEGMENT:string ACCOUNT_SEGMENT:string SUB_ACCOUNT_SEGMENT:string SOURCE:string FILLER:string valid:boolean 
+
+
+
+rails g scaffold file_header line_num:integer RECORD_TYPE:string FILE_DATE:integer SOURCE:string  INVOICE_COUNT:integer  INVOICE_AMOUNT:decimal TAX_VALIDATED:string valid:boolean 

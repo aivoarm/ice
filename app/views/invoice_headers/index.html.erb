@@ -1,0 +1,59 @@
+<h1>Listing invoice_headers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line num</th>
+      <th>Record type</th>
+      <th>File date</th>
+      <th>Vendor number</th>
+      <th>Province tax code</th>
+      <th>Currency code</th>
+      <th>Invoice number</th>
+      <th>Invoice date</th>
+      <th>Invoice amount</th>
+      <th>Item amount</th>
+      <th>Gst amount</th>
+      <th>Pst amount</th>
+      <th>Company code segment</th>
+      <th>Tax validated</th>
+      <th>Vendor site code</th>
+      <th>Source</th>
+      <th>Valid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoice_headers.each do |invoice_header| %>
+      <tr>
+        <td><%= invoice_header.line_num %></td>
+        <td><%= invoice_header.RECORD_TYPE %></td>
+        <td><%= invoice_header.FILE_DATE %></td>
+        <td><%= invoice_header.VENDOR_NUMBER %></td>
+        <td><%= invoice_header.PROVINCE_TAX_CODE %></td>
+        <td><%= invoice_header.CURRENCY_CODE %></td>
+        <td><%= invoice_header.INVOICE_NUMBER %></td>
+        <td><%= invoice_header.INVOICE_DATE %></td>
+        <td><%= invoice_header.INVOICE_AMOUNT %></td>
+        <td><%= invoice_header.ITEM_AMOUNT %></td>
+        <td><%= invoice_header.GST_AMOUNT %></td>
+        <td><%= invoice_header.PST_AMOUNT %></td>
+        <td><%= invoice_header.COMPANY_CODE_SEGMENT %></td>
+        <td><%= invoice_header.TAX_VALIDATED %></td>
+        <td><%= invoice_header.VENDOR_SITE_CODE %></td>
+        <td><%= invoice_header.SOURCE %></td>
+        <td><%= invoice_header.valid %></td>
+        <td><%= link_to 'Show', invoice_header %></td>
+        <td><%= link_to 'Edit', edit_invoice_header_path(invoice_header) %></td>
+        <td><%= link_to 'Destroy', invoice_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

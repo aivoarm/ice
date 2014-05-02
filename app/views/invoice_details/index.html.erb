@@ -1,0 +1,55 @@
+<h1>Listing invoice_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line num</th>
+      <th>Record type</th>
+      <th>File date</th>
+      <th>Vendor number</th>
+      <th>Province tax code</th>
+      <th>Invoice number</th>
+      <th>Item amount</th>
+      <th>Gst amount</th>
+      <th>Pst amount</th>
+      <th>Cost center segment</th>
+      <th>Account segment</th>
+      <th>Sub account segment</th>
+      <th>Source</th>
+      <th>Filler</th>
+      <th>Valid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoice_details.each do |invoice_detail| %>
+      <tr>
+        <td><%= invoice_detail.line_num %></td>
+        <td><%= invoice_detail.RECORD_TYPE %></td>
+        <td><%= invoice_detail.FILE_DATE %></td>
+        <td><%= invoice_detail.VENDOR_NUMBER %></td>
+        <td><%= invoice_detail.PROVINCE_TAX_CODE %></td>
+        <td><%= invoice_detail.INVOICE_NUMBER %></td>
+        <td><%= invoice_detail.ITEM_AMOUNT %></td>
+        <td><%= invoice_detail.GST_AMOUNT %></td>
+        <td><%= invoice_detail.PST_AMOUNT %></td>
+        <td><%= invoice_detail.COST_CENTER_SEGMENT %></td>
+        <td><%= invoice_detail.ACCOUNT_SEGMENT %></td>
+        <td><%= invoice_detail.SUB_ACCOUNT_SEGMENT %></td>
+        <td><%= invoice_detail.SOURCE %></td>
+        <td><%= invoice_detail.FILLER %></td>
+        <td><%= invoice_detail.valid %></td>
+        <td><%= link_to 'Show', invoice_detail %></td>
+        <td><%= link_to 'Edit', edit_invoice_detail_path(invoice_detail) %></td>
+        <td><%= link_to 'Destroy', invoice_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Invoice detail', new_invoice_detail_path %>

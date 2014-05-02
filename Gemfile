@@ -50,6 +50,7 @@ gem 'cancan'
 
 gem 'bootstrap-sass'
 
+gem 'safe_attributes'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
