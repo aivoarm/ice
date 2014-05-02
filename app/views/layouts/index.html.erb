@@ -20,7 +20,7 @@
             
             <td><%= layoutfile.filepath %></td>
                  <td>
-                     <%= link_to 'Download', download_index_path( :id => layoutfile.id, :filepath => "public/layouts" ), :method => :get, :controller => DownloadController %>
+                     <%= link_to 'Download', download_index_path( :file => layoutfile.filepath, :filepath => "public/layouts" ), :method => :get, :controller => DownloadController %>
                 </td>
                 
                  <td>

@@ -1,6 +1,8 @@
+
  
 <table>
 <tbody>
+<% if @uploads %>
    <% @uploads.each do |up| %>
  <tr>
         <td><%= up.filepath %></td>
@@ -12,7 +14,7 @@
      
 </tr>
   <% end %>
-
+ <% end %>
 
   </tbody>
   </table>

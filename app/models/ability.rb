@@ -9,7 +9,7 @@ class Ability
          can :manage, :all
     
     elsif user.role == "editor"
-          can :ajax, Upload, :published => true
+          #can :ajax, Upload, :published => true
           can :index, Validator,  :published => true
           can :destroy, Upload
       else

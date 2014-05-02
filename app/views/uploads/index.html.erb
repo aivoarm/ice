@@ -1,3 +1,12 @@
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+  
+  <% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+  <% end %>
+  
 <h1>Welcome to ICE validation toolkit</h1>
 
 <h3>Upload file for validation</h3>
@@ -5,16 +14,19 @@
 <br />
 
 
-<%= flash[:notice]%>
 
-<div class="selected_btn">
-<%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
-    <%= file_field 'upload', 'file'%>
-    <%= submit_tag 'Upload' %>
-	
-<% end %>
-</div>
-<div  id = "drop-files" class= 'dropz'>Click or drop file Here</div>
+
+        <div class="selected_btn">
+        <%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
+            <%= file_field 'upload', 'file'%>
+            <%= hidden_field_tag :user, :value => @user %>
+          <%= submit_tag 'Upload' %>
+        	
+        <% end %>
+        </div>
+        <div  id = "drop-files" class= 'dropz'>Click or drop file Here</div>
+
+
 <br />
 
 <br />
@@ -147,7 +159,9 @@ function callajax(data){
 <br />
 <br />
 
-<br />
+
+ <br />
+
 <h3>List of uploaded files </h3>
 
  
@@ -156,7 +170,16 @@ function callajax(data){
  <%end%>
 
    <div id="divajax"></div>
+ 
+ <% if !@user.nil? %>
+ <%= @user.email   %>
+  <%end%>
+  
+ <br />
+<br />
+ 
  <%= render partial: 'uploaded' %>
+   
    
     <% if can? :update, :all%> 
   

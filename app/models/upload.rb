@@ -1,4 +1,6 @@
 class Upload < ActiveRecord::Base
+      validates :filepath, uniqueness: true
+      
 def self.save(upload)
     name =  upload['datafile'].original_filename
     directory = "public/data"
@@ -12,6 +14,7 @@ def self.save(upload)
 
 def self.read(upload)
     name =  upload  #['datafile'].original_filename
+    filename=sanitize_filename(filename) 
     directory = "public/data"
     # create the file path
     path = File.join(directory, name)
@@ -19,4 +22,16 @@ def self.read(upload)
     arr = IO.readlines(path)
        
   end
-end
+  
+  
+  def sanitize_filename(filename) 
+      filename.strip.tap do |name| 
+       name.gsub! /^.*(\\|\/)/, ''
+       name.gsub! /[^\w\.\-]/, '_' 
+       
+       
+       end 
+   end     
+   
+   
+ end

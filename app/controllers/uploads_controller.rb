@@ -1,10 +1,16 @@
 class UploadsController < ApplicationController
- skip_before_filter :verify_authenticity_token  
+before_filter :authenticate_user!
+skip_before_filter :verify_authenticity_token  
+ 
 load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
-      @uploads = Upload.all
-      
+      @user= current_user
+       if current_user.role == "administrator"
+             @uploads = Upload.all
+        else
+             @uploads = Upload.where(:user => current_user.email)
+        end
        
   end
   def ajax
@@ -60,11 +66,15 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
 end
    
     def create
+        
+       
+        
         unless params[:upload][:file].nil?
             save_file(params[:upload][:file]) 
         end
             
-             redirect_to action: 'index'
+            redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
+             #redirect_to action: 'index', :notice =>  params[:upload][:user]
              
              
     end
@@ -93,7 +103,7 @@ end
         File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
           file.write(uploaded_io.read)
        
-           @file =Upload.new(:filepath =>formdata.original_filename )
+           @file =Upload.new(:filepath =>formdata.original_filename, :user => current_user.email )
            @file.save 
          end   
   end
