@@ -52,13 +52,13 @@ class ValidatorController < ApplicationController
   
          @invoice_details=InvoiceDetail.all
  
-        # !InvoiceDetail.find(:all).empty? @check_for_pst=check_for_pst() : @check_for_pst=""
+         @check_for_pst=check_for_pst() 
          
          
       #---------------------TEST------------------------------------------      
      
         
-        @display=to_params_for_db_loadTEST(idetails, 0)
+       # @display=to_params_for_db_loadTEST(idetails, 0)
         
 
 #---------------------TEST------------------------------------------ 
@@ -78,21 +78,7 @@ class ValidatorController < ApplicationController
        
   end
   
-  def to_params_for_db_loadTEST(obj, i)
-      val={}
-      
-      obj.each do |k,v|
-        val[k] = v[i]
-        if val[k] == 'FILE_DATE'
-            val[k]= v[i][0..7]
-            
-        end
-      
-      end
-      
-      #return val
   
-  end
   
   #####################################################################################################################
   private
