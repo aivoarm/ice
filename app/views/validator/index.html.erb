@@ -1,11 +1,16 @@
  
-
+<div>
+<lable>back to </lable>
+<%= link_to "Upload", "/uploads" %>
+</div>
 
   <% if flash[:error] %>
     <p class='error'><%=h flash[:error] %></p>
   <% end %>
-  
-
+  <br /><br />
+ <%=@display %>
+ <br /><br />
+ 
 <div>
  
     <%= @check_for_pst %>

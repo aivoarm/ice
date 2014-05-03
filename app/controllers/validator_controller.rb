@@ -5,9 +5,13 @@ class ValidatorController < ApplicationController
   require 'reset'
   
   def cleanup
-     FileHeader.delete_all
-     InvoiceHeader.delete_all
-     InvoiceDetail.delete_all
+        FileHeader.destroy_all
+        InvoiceHeader.destroy_all
+        InvoiceDetail.destroy_all
+        FileHeader.reset_pk_sequence
+        InvoiceHeader.reset_pk_sequence
+        InvoiceDetail.reset_pk_sequence
+        
      redirect_to '/uploads'
   end
   
@@ -21,8 +25,8 @@ class ValidatorController < ApplicationController
          InvoiceHeader.destroy_all
          InvoiceDetail.destroy_all
          FileHeader.reset_pk_sequence
-        InvoiceHeader.reset_pk_sequence
-        InvoiceDetail.reset_pk_sequence
+         InvoiceHeader.reset_pk_sequence
+         InvoiceDetail.reset_pk_sequence
         
         fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
         idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
@@ -48,13 +52,13 @@ class ValidatorController < ApplicationController
   
          @invoice_details=InvoiceDetail.all
  
-         @check_for_pst=check_for_pst()
+        # !InvoiceDetail.find(:all).empty? @check_for_pst=check_for_pst() : @check_for_pst=""
          
          
       #---------------------TEST------------------------------------------      
      
         
-        @display=check_for_pst()
+        @display=to_params_for_db_loadTEST(idetails, 0)
         
 
 #---------------------TEST------------------------------------------ 
@@ -74,6 +78,22 @@ class ValidatorController < ApplicationController
        
   end
   
+  def to_params_for_db_loadTEST(obj, i)
+      val={}
+      
+      obj.each do |k,v|
+        val[k] = v[i]
+        if val[k] == 'FILE_DATE'
+            val[k]= v[i][0..7]
+            
+        end
+      
+      end
+      
+      #return val
+  
+  end
+  
   #####################################################################################################################
   private
 
@@ -86,6 +106,8 @@ def check_for_pst()
     message={}
     good=[]
     bad=[]
+  
+  
   
   for i in 1..InvoiceDetail.count-1
   
@@ -106,7 +128,10 @@ def check_for_pst()
   message['not valid'] = bad
   
   return message
-    
+  
+ 
+ 
+  
 end
  #-------------------------------------------------------------------------- 
 # 
@@ -145,11 +170,16 @@ end
       
       obj.each do |k,v|
         val[k] = v[i]
+        if k == 'FILE_DATE'
+            val[k]= v[i].to_s[0..7]
+        end
+      
       end
       
       return val
   
   end
+  
   
   
  #   {"line_num"=>[2, 3], "RECORD_TYPE"=>["D", "D"], "FILE_DATE"=>["20140409085502", "20140409085502"], "VENDOR_NUMBER"=>["B098259 ", "B098259 "], "PROVINCE_TAX_CODE"=>["ON", "ON"], "INVOICE_NUMBER"=>["06201404090855", "06201404090855"], 
