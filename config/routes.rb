@@ -3,7 +3,7 @@ App::Application.routes.draw do
   
 resources :file_headers do
     resources :invoice_headers do
-        resources :invoice_headers
+        resources :invoice_details
     end
 end
 
@@ -51,7 +51,7 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
   #resources :uploads
    get '/validator',  to: 'validator#index'
   
-  #delete "invoices/index"
+  delete '/validator/d',  to: 'validator#cleanup'
   
     resources :layouts do
     collection do

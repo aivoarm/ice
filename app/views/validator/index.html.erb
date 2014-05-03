@@ -1,32 +1,40 @@
+ 
+
+
+  <% if flash[:error] %>
+    <p class='error'><%=h flash[:error] %></p>
+  <% end %>
+  
+
+<div>
+ 
+    <%= @check_for_pst %>
+    
+</div>
 
 
 <div>
 <lable>back to </lable>
 <%= link_to "Upload", "/uploads" %>
 </div>
-<br /><br /><br />
-
-<p> <%= @idetails%></p>
-
-<br /><br /><br />
 
 
+ <%= render partial: 'file_header' %>
 
-<br /><br /><br />
+<br /><br />
+
+ <%= render partial: 'invoice_headers' %>
+
+
+
+<br /><br />
+
+ <%= render partial: 'invoice_details' %>
+
+<br /><br />
   
  
- <br /><br /><br />
- 
- 
- <%=  @file%>
- 
- 
-  <br /><br /><br />
+  
 
-<p> <%= @idetails_par%></p>
-
-
-
-
-
+<td><%= link_to 'Destroy', validator_d_path, method: :delete, data: { confirm: 'Are you sure?' } %></t
 

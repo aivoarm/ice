@@ -1,41 +1,63 @@
 class ValidatorController < ApplicationController
-      protect_from_forgery with: :exception
+    
+    protect_from_forgery with: :exception
     load_and_authorize_resource
-  #require_relative "invoice.rb"
- # require "fileClass.rb"
- 
- 
+  require 'reset'
+  
+  def cleanup
+     FileHeader.delete_all
+     InvoiceHeader.delete_all
+     InvoiceDetail.delete_all
+     redirect_to '/uploads'
+  end
+  
   def index
       
         id = (params[:id])
         
         name =Upload.find(id).filepath  
     
-      
+         FileHeader.destroy_all
+         InvoiceHeader.destroy_all
+         InvoiceDetail.destroy_all
+         FileHeader.reset_pk_sequence
+        InvoiceHeader.reset_pk_sequence
+        InvoiceDetail.reset_pk_sequence
+        
         fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
         idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
         iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
        
         
-        @file_header=FileHeader.new(to_params_for_db_load(fheader), 1)
-               @file_header.save
+        file_headers=FileHeader.new(to_params_for_db_load(fheader, 0))
+        file_headers.save
+        @file_headers =FileHeader.all
+             
+
+
+        for i in 0..iheader['line_num'].length
+             invoice_headers=InvoiceHeader.new(to_params_for_db_load(iheader, i))
+             invoice_headers.save
+        end
+         @invoice_headers=InvoiceHeader.all
         
-        @invoice_detail=InvoiceDetail.new(to_params_for_db_load( idetails), 1)
-               @invoice_detail.save
+        for i in 0..idetails['line_num'].length
+           invoice_details=InvoiceDetail.new(to_params_for_db_load( idetails, i))
+           invoice_details.save
+         end
   
-  
-        @invoice_header=InvoiceHeader.new(to_params_for_db_load(iheader), 1)
-               @invoice_header.save
-  
-  
-  
-  
-  
-    # if @invoice_detail.save
-        # redirect_to @file_header
-       # end
+         @invoice_details=InvoiceDetail.all
+ 
+         @check_for_pst=check_for_pst()
+         
+         
+      #---------------------TEST------------------------------------------      
+     
         
+        @display=check_for_pst()
         
+
+#---------------------TEST------------------------------------------ 
 =begin     
 
    
@@ -54,71 +76,77 @@ class ValidatorController < ApplicationController
   
   #####################################################################################################################
   private
+
+#-------------------------------------------------------------------------- 
+# 
+#  checking taxes
+# 
+#-------------------------------------------------------------------------- 
+def check_for_pst()
+    message={}
+    good=[]
+    bad=[]
   
-  def file_header_params()
-     return {                           :line_num =>1, 
-                                        :RECORD_TYPE => "F", 
-                                        :FILE_DATE => '',
-                                        :SOURCE => '', 
-                                        :INVOICE_COUNT =>'', 
-                                        :INVOICE_AMOUNT =>'', 
-                                        :TAX_VALIDATED =>'', 
-                                        :valid => false
-            }
-   end
+  for i in 1..InvoiceDetail.count-1
   
-  def invoice_header_params()
-     return {                           
-                                        :line_num => 0,
-                                        :RECORD_TYPE =>'',
-                                        :FILE_DATE =>'',
-                                        :VENDOR_NUMBER =>'',
-                                        :PROVINCE_TAX_CODE =>'',
-                                        :CURRENCY_CODE =>'',
-                                        :INVOICE_NUMBER =>'',
-                                        :INVOICE_DATE =>'',
-                                        :INVOICE_AMOUNT =>'',
-                                        :ITEM_AMOUNT =>'',
-                                        :GST_AMOUNT =>'',
-                                        :PST_AMOUNT =>'',
-                                        :COMPANY_CODE_SEGMENT =>'',
-                                        :TAX_VALIDATED =>'',
-                                        :VENDOR_SITE_CODE =>'',
-                                        :SOURCE =>'',
-                                        :valid => false
-            }
-   end
+    supplier_from_inv_table=InvoiceDetail.find(i).VENDOR_NUMBER
+    account__from_inv_table=InvoiceDetail.find(i).ACCOUNT_SEGMENT
+    supplier = Supplier.where(:SupplierNo => supplier_from_inv_table.strip, :Account => account__from_inv_table.strip)
+    province = InvoiceDetail.find(i).PROVINCE_TAX_CODE
+    pst_expected = supplier.first[pr_map(province)]
+    pst_posted = to_b(InvoiceDetail.find(i).PST_AMOUNT)
+    
+    line_num =  InvoiceDetail.find(i).line_num
+    
+    d=pst_expected.to_s=="N" ? '0.0' : 'NOT 0.0'
+    
+     pst_expected == pst_posted ? good << "valid . line:"+ line_num.to_s : bad << "should be    #{pst_expected.to_s=="N" ? '0.0' : 'NOT 0.0'}. line: "+line_num.to_s
+  end
+  message['valid'] = good
+  message['not valid'] = bad
   
-  def invoice_detail_params()
-     return {                           
-                                        :line_num => 0,
-                                        :RECORD_TYPE =>'',
-                                        :FILE_DATE =>'',
-                                        :VENDOR_NUMBER =>'',
-                                        :PROVINCE_TAX_CODE =>'',
-                                        :INVOICE_NUMBER =>'',
-                                        :ITEM_AMOUNT =>'',
-                                        :GST_AMOUNT =>'',
-                                        :PST_AMOUNT =>'',
-                                        :COST_CENTER_SEGMENT =>'',
-                                        :ACCOUNT_SEGMENT =>'',
-                                        :SUB_ACCOUNT_SEGMENT =>'',
-                                        :SOURCE =>'',
-                                        :FILLER =>'',
-                                        :valid => false
-            }
-   end
-   #--------------------------------------------------------------------- 
+  return message
+    
+end
+ #-------------------------------------------------------------------------- 
+# 
+#  Province mapping
+# 
+#-------------------------------------------------------------------------- 
+def to_b(am)
+    
+     am == 0 ? "N" : "Y"
+    
+end
+
+#-------------------------------------------------------------------------- 
+# 
+#  Province mapping
+# 
+#-------------------------------------------------------------------------- 
+def pr_map(p)
+    case p
+    when 'ON'
+        return 'ONT'
+    when 'SA'
+        return 'SK'  
+    else return p    
+    end
+end
  
+ 
+#-------------------------------------------------------------------------- 
+# 
+#  creating aparms for db load
+# 
+#-------------------------------------------------------------------------- 
   def to_params_for_db_load(obj, i)
       val={}
       
       obj.each do |k,v|
-        
         val[k] = v[i]
-       
-          
       end
+      
       return val
   
   end
@@ -278,3 +306,58 @@ class ValidatorController < ApplicationController
   
   
 end
+
+
+ def file_header_params()
+     return {                           :line_num =>1, 
+                                        :RECORD_TYPE => "F", 
+                                        :FILE_DATE => '',
+                                        :SOURCE => '', 
+                                        :INVOICE_COUNT =>'', 
+                                        :INVOICE_AMOUNT =>'', 
+                                        :TAX_VALIDATED =>'', 
+                                        :valid => false
+            }
+   end
+  
+  def invoice_header_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :CURRENCY_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :INVOICE_DATE =>'',
+                                        :INVOICE_AMOUNT =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COMPANY_CODE_SEGMENT =>'',
+                                        :TAX_VALIDATED =>'',
+                                        :VENDOR_SITE_CODE =>'',
+                                        :SOURCE =>'',
+                                        :valid => false
+            }
+   end
+  
+  def invoice_detail_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COST_CENTER_SEGMENT =>'',
+                                        :ACCOUNT_SEGMENT =>'',
+                                        :SUB_ACCOUNT_SEGMENT =>'',
+                                        :SOURCE =>'',
+                                        :FILLER =>'',
+                                        :valid => false
+            }
+   end

@@ -1,0 +1,34 @@
+<p id="error"><%= flash[:error] %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line num</th>
+      <th>Record type</th>
+      <th>File date</th>
+      <th>Source</th>
+      <th>Invoice count</th>
+      <th>Invoice amount</th>
+      <th>Tax validated</th>
+      <th>Valid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @file_headers.each do |file_header| %>
+      <tr>
+        <td><%= file_header.line_num %></td>
+        <td><%= file_header.RECORD_TYPE %></td>
+        <td><%= file_header.FILE_DATE %></td>
+        <td><%= file_header.SOURCE %></td>
+        <td><%= file_header.INVOICE_COUNT %></td>
+        <td><%= file_header.INVOICE_AMOUNT %></td>
+        <td><%= file_header.TAX_VALIDATED %></td>
+        <td><%= file_header.valid %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
