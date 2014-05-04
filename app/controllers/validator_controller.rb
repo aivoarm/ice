@@ -23,18 +23,15 @@ class ValidatorController < ApplicationController
 # 2.----------write to object ----------------------------------------------
 
         fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
-       
         iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
-        
         idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
          
 # 3. ---------checking for layout ---------------------------------------------
+         @fheader_layout= checking_layout_per_type(fheader) # if !checking_layout_per_type(fheader).any?
+         @iheader_layout= checking_layout_per_type(iheader) #if !checking_layout_per_type(iheader).any?
+         @idetails_layout = checking_layout_per_type(idetails) #if !checking_layout_per_type(idetails).any?
 
-         @fheader_layout= checking_layout_per_type(fheader) if !checking_layout_per_type(fheader).any?
-         @iheader_layout= checking_layout_per_type(iheader) if !checking_layout_per_type(iheader).any?
-         @idetails_layout = checking_layout_per_type(idetails) if !checking_layout_per_type(idetails).any?
-
-#  ----------clean DB -----------------------------------------------    
+# 4. -------- save to DB----------------------------------------------    
          FileHeader.destroy_all
          InvoiceHeader.destroy_all
          InvoiceDetail.destroy_all
@@ -42,7 +39,7 @@ class ValidatorController < ApplicationController
          InvoiceHeader.reset_pk_sequence
          InvoiceDetail.reset_pk_sequence 
        
-# 4. ------------save to DB-----------------------------------------        
+     
         file_headers=FileHeader.new(to_params_for_db_load(fheader, 0))
         file_headers.save
         
@@ -56,6 +53,7 @@ class ValidatorController < ApplicationController
            invoice_details=InvoiceDetail.new(to_params_for_db_load( idetails, i))
            invoice_details.save
          end
+         
 # 6. --------------checking for Amounts  --------------------
 
 
@@ -77,14 +75,15 @@ class ValidatorController < ApplicationController
                
                #@display = #test(iheader)
                
-#============================================================================================================================================
+#+++++++++++++++++++++++++++TEST+++++++++++++++++++++++++++++++++++++++
 
        
   end
   
   
   
-  #####################################################################################################################
+#============================================================================================================================================
+
   private
 
 #-------------------------------------------------------------------------- 
@@ -180,39 +179,52 @@ end
  
  def checking_layout_per_type(obj)
                
-                   
+              rg={
+                "gate14" => /^ *\d{14}$/,
+                "gate8" => /^ *\d{8}$/,
+                "amt" => /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/,
+                "yn" => /^[YN]/, 
+                "alfanum" =>/^[A-Za-z0-9\s\.]/
+                }
+                
         message={}
         item=[ obj['FILE_DATE'], obj['INVOICE_DATE'], obj['INVOICE_AMOUNT'],
         obj['ITEM_AMOUNT'],obj['GST_AMOUNT'], obj['PST_AMOUNT'], obj['TAX_VALIDATED'], obj['line_num']]
         #---check for empty field
-        
+        empty_data=[]
                obj.each do |k,v|
                    if k !="FILLER"
                       
                       v.each do |i|
                         if i.to_s.strip==""
-                                return  message["message"]=[false,("Empty data in " + k)]
+                            empty_data << [false,("Empty data in " + k)]
+                                  
+                         end
+                         
+                         if !!(  rg['alfanum'] =~ i.to_s.strip)
+                            empty_data << [false,("something wrong in " + k)]
+                                  
                          end
                     end     
                   end
                end
                
-          #return good
-           
-          # return obj['RECORD_TYPE'][0]
+          
+         
+          
            
                   all_validations=[]
                   to_message=[]
                   
                    for i in 0..obj['RECORD_TYPE'].length-1
                    
-                        all_validations <<   [(!!(  /^ *\d{14}$/                      =~ item[0][i].strip) unless item[0].nil?), (item[0][i]+' : '+ item[7][i].to_json unless item[0].nil?)]
-                        all_validations <<   [(!!(  /^ *\d{8}$/                       =~ item[1][i].strip) unless item[1].nil?), (item[1][i]+' : '+ item[7][i].to_json unless item[1].nil?)]
-                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[2][i].strip) unless item[2].nil?), (item[2][i]+' : '+ item[7][i].to_json unless item[2].nil?)]
-                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[3][i].strip) unless item[3].nil?), (item[3][i]+' : '+ item[7][i].to_json unless item[3].nil?)]
-                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[4][i].strip) unless item[4].nil?), (item[4][i]+' : '+ item[7][i].to_json unless item[4].nil?)]
-                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[5][i].strip) unless item[5].nil?), (item[5][i]+' : '+ item[7][i].to_json unless item[5].nil?)]
-                        all_validations <<   [(!!(  /^[YN]/                           =~ item[6][i].strip) unless item[6].nil?), (item[6][i]+' : '+ item[7][i].to_json unless item[6].nil?)]
+                        all_validations <<   [(!!(  rg['gate14'] =~ item[0][i].strip) unless item[0].nil?), (item[0][i]+' : line - '+ item[7][i].to_json unless item[0].nil?)]
+                        all_validations <<   [(!!(  rg['gate8']  =~ item[1][i].strip) unless item[1].nil?), (item[1][i]+' : line - '+ item[7][i].to_json unless item[1].nil?)]
+                        all_validations <<   [(!!(  rg['amt']    =~ item[2][i].strip) unless item[2].nil?), (item[2][i]+' : line - '+ item[7][i].to_json unless item[2].nil?)]
+                        all_validations <<   [(!!(  rg['amt']    =~ item[3][i].strip) unless item[3].nil?), (item[3][i]+' : line - '+ item[7][i].to_json unless item[3].nil?)]
+                        all_validations <<   [(!!(  rg['amt']    =~ item[4][i].strip) unless item[4].nil?), (item[4][i]+' : line - '+ item[7][i].to_json unless item[4].nil?)]
+                        all_validations <<   [(!!(  rg['amt']    =~ item[5][i].strip) unless item[5].nil?), (item[5][i]+' : line - '+ item[7][i].to_json unless item[5].nil?)]
+                        all_validations <<   [(!!(  rg['yn']     =~ item[6][i].strip) unless item[6].nil?), (item[6][i]+' : line - '+ item[7][i].to_json unless item[6].nil?)]
                  
                   end
                   
@@ -222,9 +234,11 @@ end
                   end
                 end
                 
-                return  message['message']=to_message
+                  
              
-  
+                 empty_data.any? ? message["message"]=empty_data : message['message']=all_validations
+                                 
+                return message.to_json
               
              
            end 

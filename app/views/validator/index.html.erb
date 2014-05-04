@@ -1,8 +1,11 @@
  
-  <p class = "error"><%= @fheader_layout %></p>
-    <p class = "error"><%= @iheader_layout %></p>
-    <p class = "error"><%= @idetails_layout %></p>
-         
+  <div>
+<lable>back to </lable>
+<%= link_to "Upload", "/uploads" %>
+</div>
+
+  
+       
   
   <br /><br />
  <%=@display %>
@@ -11,17 +14,49 @@
  <%=@a %>
  <br /><br />
  
+ <div id="data" style="color:red">
+   
+ </div>
+<script>
+         
+  $(document).ready(function(){
+      $('#data').html("<h4>Layout validation</h4>").css("color","black")
+     var obj1 = <%= @fheader_layout.html_safe %>
+     var obj2 = <%= @iheader_layout.html_safe %>
+     var obj3 = <%= @idetails_layout.html_safe %>
+   
+    $('#data').append( to_each(obj1).join('') );
+    $('#data').append( to_each(obj2).join(''));
+     $('#data').append( to_each(obj3).join('') );
+     
+  });
+ 
+ function to_each(obj){
+       var items = [];
+     $.each(obj, function(index, message)    {
+        
+        $.each(message, function(i, item) {
+            if (item[0]== null || item[0] ){}
+                else{
+              items.push('<li>'+item[0]+' : '+item[1] + '</li>');
+            }
+             
+        });
+   });  // close each()
+     return items
+ }
+
+
+</script>  
 <div>
+
+
  <h4> Pst validation</h4>
     <%= @check_for_pst %>
     
 </div>
 
 
-<div>
-<lable>back to </lable>
-<%= link_to "Upload", "/uploads" %>
-</div>
 
 
  <%= render partial: 'file_header' %>
