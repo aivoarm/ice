@@ -184,7 +184,7 @@ end
                 "gate8" => /^ *\d{8}$/,
                 "amt" => /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/,
                 "yn" => /^[YN]/, 
-                "alfanum" =>/^[A-Za-z0-9\s\.]/
+                "alfanum" => /[\s]/
                 }
                 
         message={}
@@ -192,17 +192,19 @@ end
         obj['ITEM_AMOUNT'],obj['GST_AMOUNT'], obj['PST_AMOUNT'], obj['TAX_VALIDATED'], obj['line_num']]
         #---check for empty field
         empty_data=[]
-               obj.each do |k,v|
+              
+              
+               obj.each do |k,v |
                    if k !="FILLER"
                       
-                      v.each do |i|
+                      v.each_with_index do |i,index|
                         if i.to_s.strip==""
                             empty_data << [false,("Empty data in " + k)]
                                   
                          end
                          
                          if !!(  rg['alfanum'] =~ i.to_s.strip)
-                            empty_data << [false,("something wrong in " + k)]
+                            empty_data << [false,("something wrong with |"+i.to_s+'| in ' + k+ " line: "+obj["line_num"][index].to_json)]
                                   
                          end
                     end     

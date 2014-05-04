@@ -20,36 +20,59 @@
 <script>
          
   $(document).ready(function(){
-      $('#data').html("<h4>Layout validation</h4>").css("color","black")
+      
+       
+      $('#data').html("<h4 style='color:black'>Layout validation</h4>")
+      
      var obj1 = <%= @fheader_layout.html_safe %>
      var obj2 = <%= @iheader_layout.html_safe %>
      var obj3 = <%= @idetails_layout.html_safe %>
    
-    $('#data').append( to_each(obj1).join('') );
+   
+   
+   if (to_each(obj1)== ' '|| to_each(obj2)== ' ' || to_each(obj3)== ' '){
+       
+    $('#data').append( to_each(obj1).join(''));
     $('#data').append( to_each(obj2).join(''));
-     $('#data').append( to_each(obj3).join('') );
+    $('#data').append( to_each(obj3).join(''));
+   }
+   
+   else{
+       
+        $('#data').append("<p style='color:green'>Valid</p>")
+   
+   }
      
+      
   });
+  
+ 
  
  function to_each(obj){
        var items = [];
      $.each(obj, function(index, message)    {
         
         $.each(message, function(i, item) {
-            if (item[0]== null || item[0] ){}
+            if (item[0]== null || item[0] ){ }
                 else{
               items.push('<li>'+item[0]+' : '+item[1] + '</li>');
             }
              
         });
    });  // close each()
+ 
+  
+  
      return items
+  
  }
 
 
-</script>  
-<div>
+</script>
 
+<br /><br />
+
+<div>
 
  <h4> Pst validation</h4>
     <%= @check_for_pst %>
