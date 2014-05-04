@@ -16,65 +16,69 @@ class ValidatorController < ApplicationController
   end
   
   def index
-      
-        id = (params[:id])
-        
+      id =params[:id]
+# 1.--------pick a file---------------------------------------------       
         name =Upload.find(id).filepath  
-    
+
+# 2.----------write to object ----------------------------------------------
+
+        fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
+       
+        iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
+        
+        idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
+         
+# 3. ---------checking for layout ---------------------------------------------
+
+         @fheader_layout= checking_layout_per_type(fheader) if !checking_layout_per_type(fheader).any?
+         @iheader_layout= checking_layout_per_type(iheader) if !checking_layout_per_type(iheader).any?
+         @idetails_layout = checking_layout_per_type(idetails) if !checking_layout_per_type(idetails).any?
+
+#  ----------clean DB -----------------------------------------------    
          FileHeader.destroy_all
          InvoiceHeader.destroy_all
          InvoiceDetail.destroy_all
          FileHeader.reset_pk_sequence
          InvoiceHeader.reset_pk_sequence
-         InvoiceDetail.reset_pk_sequence
-        
-        fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
-        idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
-        iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
+         InvoiceDetail.reset_pk_sequence 
        
-        
+# 4. ------------save to DB-----------------------------------------        
         file_headers=FileHeader.new(to_params_for_db_load(fheader, 0))
         file_headers.save
-        @file_headers =FileHeader.all
-             
-
-
+        
         for i in 0..iheader['line_num'].length
              invoice_headers=InvoiceHeader.new(to_params_for_db_load(iheader, i))
              invoice_headers.save
         end
-         @invoice_headers=InvoiceHeader.all
+        
         
         for i in 0..idetails['line_num'].length
            invoice_details=InvoiceDetail.new(to_params_for_db_load( idetails, i))
            invoice_details.save
          end
-  
-         @invoice_details=InvoiceDetail.all
+# 6. --------------checking for Amounts  --------------------
+
+
+# 5. --------------checking for  TAXes  --------------------
  
-         @check_for_pst=check_for_pst() 
+       #  @check_for_pst=check_for_pst() 
          
-         
-      #---------------------TEST------------------------------------------      
-     
-        
-       # @display=to_params_for_db_loadTEST(idetails, 0)
-        
+#  ------Presentation---------------------------------         
+ 
+  @file_headers =FileHeader.all
+  @invoice_headers=InvoiceHeader.all
+  @invoice_details=InvoiceDetail.all
+ 
 
-#---------------------TEST------------------------------------------ 
-=begin     
 
-   
-                @amt=0
-                idetails['ITEM_AMOUNT'].each do |i|
-                    @amt=@amt+i.to_f
-                end
-        @chk = validate_layouts(/^ *\d{14}$/,fheader['FILE_DATE'][0])
-         
-        @chkamt = validate_layouts(/^(\+|-)?([0-9]+(\.[0-9]{1,2}))/, fheader['INVOICE_AMOUNT'][0])
+
+#+++++++++++++++++++++++++++TEST+++++++++++++++++++++++++++++++++++++++
        
-     
-=end
+               
+               #@display = #test(iheader)
+               
+#============================================================================================================================================
+
        
   end
   
@@ -106,7 +110,7 @@ def check_for_pst()
     
     line_num =  InvoiceDetail.find(i).line_num
     
-    d=pst_expected.to_s=="N" ? '0.0' : 'NOT 0.0'
+   
     
      pst_expected == pst_posted ? good << "valid . line:"+ line_num.to_s : bad << "should be    #{pst_expected.to_s=="N" ? '0.0' : 'NOT 0.0'}. line: "+line_num.to_s
   end
@@ -125,9 +129,7 @@ end
 # 
 #-------------------------------------------------------------------------- 
 def to_b(am)
-    
      am == 0 ? "N" : "Y"
-    
 end
 
 #-------------------------------------------------------------------------- 
@@ -135,13 +137,14 @@ end
 #  Province mapping
 # 
 #-------------------------------------------------------------------------- 
-def pr_map(p)
+def pr_map(p="ON")
     case p
     when 'ON'
         return 'ONT'
     when 'SA'
         return 'SK'  
-    else return p    
+    else return p  
+        
     end
 end
  
@@ -167,43 +170,64 @@ end
   end
   
   
-  
- #   {"line_num"=>[2, 3], "RECORD_TYPE"=>["D", "D"], "FILE_DATE"=>["20140409085502", "20140409085502"], "VENDOR_NUMBER"=>["B098259 ", "B098259 "], "PROVINCE_TAX_CODE"=>["ON", "ON"], "INVOICE_NUMBER"=>["06201404090855", "06201404090855"], 
- #   "ITEM_AMOUNT"=>[" 163.29", " -3549.22"], "GST_AMOUNT"=>[" 20.91", " -0.01"], "PST_AMOUNT"=>[" 0.00", " 0.00"], "COST_CENTER_SEGMENT"=>["H5676", "H8193"], "ACCOUNT_SEGMENT"=>["946122", "961780"], "SUB_ACCOUNT_SEGMENT"=>["000 ", "000 "], "SOURCE"=>["MC ", "MC "], "FILLER"=>[" \r", " \r"]}
- #   
+#-------------------------------------------------------------------------- 
+# 
+#  checking layout
+# 
+#-------------------------------------------------------------------------- 
  
- #  {:line_num=>1, :RECORD_TYPE=>"F", :FILE_DATE=>"20140409085502", :SOURCE=>"MC ", :INVOICE_COUNT=>" 1", :INVOICE_AMOUNT=>" -3365.03", :TAX_VALIDATED=>"Y", :valid=>false}
-
-
-  
-  
-  
-  
-   #--------------------------------------------------------------------- 
-  
-  def checking_for_layout(fheader)
-      
-   
-    
-    error_msg = ""
-      
-      chk1 = validate_layouts(/^ *\d{14}$/,fheader['FILE_DATE'][0])
-      chk2 =  validate_layouts(/^ *\d{14}$/,fheader["TAX_VALIDATED"][0])
-      
-      if   chk1.nil? || chk2.nil? 
-          error_msg  = " check  in file header line"
-      end
-   
-    
-     return error_msg  
-  end
-  #--------------------------------------------------------------------- 
  
+ 
+ def checking_layout_per_type(obj)
+               
+                   
+        message={}
+        item=[ obj['FILE_DATE'], obj['INVOICE_DATE'], obj['INVOICE_AMOUNT'],
+        obj['ITEM_AMOUNT'],obj['GST_AMOUNT'], obj['PST_AMOUNT'], obj['TAX_VALIDATED'], obj['line_num']]
+        #---check for empty field
+        
+               obj.each do |k,v|
+                   if k !="FILLER"
+                      
+                      v.each do |i|
+                        if i.to_s.strip==""
+                                return  message["message"]=[false,("Empty data in " + k)]
+                         end
+                    end     
+                  end
+               end
+               
+          #return good
+           
+          # return obj['RECORD_TYPE'][0]
+           
+                  all_validations=[]
+                  to_message=[]
+                  
+                   for i in 0..obj['RECORD_TYPE'].length-1
+                   
+                        all_validations <<   [(!!(  /^ *\d{14}$/                      =~ item[0][i].strip) unless item[0].nil?), (item[0][i]+' : '+ item[7][i].to_json unless item[0].nil?)]
+                        all_validations <<   [(!!(  /^ *\d{8}$/                       =~ item[1][i].strip) unless item[1].nil?), (item[1][i]+' : '+ item[7][i].to_json unless item[1].nil?)]
+                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[2][i].strip) unless item[2].nil?), (item[2][i]+' : '+ item[7][i].to_json unless item[2].nil?)]
+                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[3][i].strip) unless item[3].nil?), (item[3][i]+' : '+ item[7][i].to_json unless item[3].nil?)]
+                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[4][i].strip) unless item[4].nil?), (item[4][i]+' : '+ item[7][i].to_json unless item[4].nil?)]
+                        all_validations <<   [(!!(  /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/ =~ item[5][i].strip) unless item[5].nil?), (item[5][i]+' : '+ item[7][i].to_json unless item[5].nil?)]
+                        all_validations <<   [(!!(  /^[YN]/                           =~ item[6][i].strip) unless item[6].nil?), (item[6][i]+' : '+ item[7][i].to_json unless item[6].nil?)]
+                 
+                  end
+                  
+                all_validations.each do |all_validation|
+                  if !all_validation[0] || all_validation[0].nil?
+                    to_message << all_validation 
+                  end
+                end
+                
+                return  message['message']=to_message
+             
   
-   def validate_layouts(regex, f_FILE_DATE)
-    regex.match(f_FILE_DATE)
-  
-   end
+              
+             
+           end 
 #-------------------------------------------------------------------------------------------------------------------------------------  
 # 
 #  apply  LAYOUT to file
@@ -216,15 +240,13 @@ end
 
   def split_per_layout(file, layout, t)
      
-       data=[]
-         line_num=[]
+    data=[]
+    line_num=[]
             
            file.each do |l|
-               
-               
               if l[1][0]==t
                   line_num.push(l[0])
-                  data.push(l[1])
+                  data.push(l[1].gsub(/\n+|\r+/, "\n").squeeze("\n").strip)
               end
            end
            
@@ -307,7 +329,7 @@ end
     path = File.join(directory, name)
      
         IO.foreach(path) do |line| 
-          
+            
             data << [count, line] if !line.chomp.empty?
             count=count+1
         

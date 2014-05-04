@@ -70,10 +70,15 @@ end
        
         
         unless params[:upload][:file].nil?
-            save_file(params[:upload][:file]) 
+            if save_file(params[:upload][:file]) 
+                redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
+            else
+                redirect_to({:action => :index}, :flash => { :error  => current_user.email + ": Or ICE file already uploaded , or it has wrong layout"})
+            end
+            
         end
             
-            redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
+          #  redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
              #redirect_to action: 'index', :notice =>  params[:upload][:user]
              
              
@@ -97,15 +102,32 @@ end
   
   
   private 
+  
+ #---------READ FILE ------------------------------- 
      
     def save_file(formdata)
-      uploaded_io = formdata
-        File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
-          file.write(uploaded_io.read)
+      
+      
+       if File.exist?(Rails.root.join('public', 'data', formdata.original_filename)) 
+           return nil 
+        else   
        
-           @file =Upload.new(:filepath =>formdata.original_filename, :user => current_user.email )
-           @file.save 
-         end   
+        File.open(Rails.root.join('public', 'data', formdata.original_filename), 'wb') do |file|
+            read_data=formdata.read
+                record_type_valid = /^[FHD]/.match(read_data[0]) 
+            
+            
+        if record_type_valid.nil?
+               return nil
+            else  
+              file.write(read_data)
+           
+               @file =Upload.new(:filepath =>formdata.original_filename, :user => current_user.email )
+               @file.save 
+               
+            end
+         end
+        end 
   end
  
  

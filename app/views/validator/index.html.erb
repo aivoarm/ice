@@ -1,18 +1,18 @@
  
-<div>
-<lable>back to </lable>
-<%= link_to "Upload", "/uploads" %>
-</div>
-
-  <% if flash[:error] %>
-    <p class='error'><%=h flash[:error] %></p>
-  <% end %>
+  <p class = "error"><%= @fheader_layout %></p>
+    <p class = "error"><%= @iheader_layout %></p>
+    <p class = "error"><%= @idetails_layout %></p>
+         
+  
   <br /><br />
  <%=@display %>
+ <br />
+ 
+ <%=@a %>
  <br /><br />
  
 <div>
- 
+ <h4> Pst validation</h4>
     <%= @check_for_pst %>
     
 </div>
