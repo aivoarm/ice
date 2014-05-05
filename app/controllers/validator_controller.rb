@@ -40,19 +40,19 @@ class ValidatorController < ApplicationController
         # InvoiceDetail.reset_pk_sequence 
        
      
-        file_headers=FileHeader.new(to_params_for_db_load(fheader, 0))
-        file_headers.save
+       file_headers=FileHeader.new(to_params_for_db_load(fheader, 0))
+       file_headers.save
         
-        for i in 0..iheader['line_num'].length
-             invoice_headers=InvoiceHeader.new(to_params_for_db_load(iheader, i))
+     #   for i in 0..iheader['line_num'].length
+       #      invoice_headers=InvoiceHeader.new(to_params_for_db_load(iheader, i))
             # invoice_headers.save
-        end
+     #   end
         
         
-        for i in 0..idetails['line_num'].length
-           invoice_details=InvoiceDetail.new(to_params_for_db_load( idetails, i))
+     #   for i in 0..idetails['line_num'].length
+     #      invoice_details=InvoiceDetail.new(to_params_for_db_load( idetails, i))
           # invoice_details.save
-         end
+    #     end
          
 # 6. --------------checking for Amounts  --------------------
 
