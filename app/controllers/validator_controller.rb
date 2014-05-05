@@ -59,7 +59,7 @@ class ValidatorController < ApplicationController
 
 # 5. --------------checking for  TAXes  --------------------
  
-         @check_for_pst=check_for_pst() 
+     #    @check_for_pst=check_for_pst() 
          
 #  ------Presentation---------------------------------         
  
