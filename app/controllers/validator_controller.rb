@@ -4,18 +4,51 @@ class ValidatorController < ApplicationController
     load_and_authorize_resource
   require 'reset'
   
-  def cleanup
-        FileHeader.destroy_all
-        InvoiceHeader.destroy_all
-        InvoiceDetail.destroy_all
-        FileHeader.reset_pk_sequence
-        InvoiceHeader.reset_pk_sequence
-        InvoiceDetail.reset_pk_sequence
-        
-     redirect_to '/uploads'
-  end
   
   def index
+      name =Upload.find(params[:id]).filepath  
+        
+        @id =id=params[:id]
+        
+        fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
+        iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
+        idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
+    
+    
+       
+
+        obj=[fheader,iheader, idetails]
+    
+        respond_to do |format|
+      
+           format.json { render json:  obj }
+           format.html # index.html.erb
+        end
+ 
+  end
+  
+  def data
+       id =params[:id]
+# 1.--------pick a file---------------------------------------------       
+       name =Upload.find(id).filepath  
+        
+        @validate_name =name
+        
+      
+         
+      respond_to do |format|
+           format.json { render :json =>  @fheader }
+      end
+      
+      
+  
+  end
+  
+  
+  
+  
+  
+  def valid
       id =params[:id]
 # 1.--------pick a file---------------------------------------------       
         name =Upload.find(id).filepath  
@@ -33,7 +66,7 @@ class ValidatorController < ApplicationController
 
 # 4. -------- save to DB----------------------------------------------    
          FileHeader.destroy_all
-      #   InvoiceHeader.destroy_all
+      #  InvoiceHeader.destroy_all
        #  InvoiceDetail.destroy_all
          FileHeader.reset_pk_sequence
         # InvoiceHeader.reset_pk_sequence

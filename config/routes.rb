@@ -48,8 +48,15 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
  
  # resources :layouts
 
-  #resources :uploads
-   get '/validator',  to: 'validator#index'
+  ##resources :validator do
+    #  member do
+    #       get 'index'
+    #        post 'index'
+    #  end 
+      
+#  end
+  get '/validator',  to: 'validator#index'
+  post '/validator',  to: 'validator#index'
   
   delete '/validator/d',  to: 'validator#cleanup'
   

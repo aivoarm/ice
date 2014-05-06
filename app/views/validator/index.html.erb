@@ -8,38 +8,97 @@
        
   
   <br /><br />
- <%=@display %>
+ <%=@raw %>
  <br />
  
- <%=@a %>
+ 
+ 
+ 
+<button method='post' id = "button" data-remote ="true" class='btn'>  link </button>
+ 
+  <br /><br />
+ 
+ 
+ 
  <br /><br />
+ 
+ 
  
  <div id="data" style="color:red">
    
  </div>
 <script>
+  
          
   $(document).ready(function(){
       
+      $('#button').click(function(){
        
-      $('#data').html("<h4 style='color:black'>Layout validation</h4>")
+      var data, xhr;
       
-     var obj1 = <%= @fheader_layout.html_safe %>
-     var obj2 = <%= @iheader_layout.html_safe %>
-     var obj3 = <%= @idetails_layout.html_safe %>
-   
-   
-   
-  
-       
-    $('#data').append( to_each(obj1).join(''));
-    $('#data').append( to_each(obj2).join(''));
-    $('#data').append( to_each(obj3).join(''));
-  
+     
+      data = callajax()
       
+      
+        
   });
   
+  
+  });  
+  
+  //===================================
+   function callajax(){
+       
+   $.ajax({
+   url: '/validator.json/?id=<%=@id%>', dataType: "json",
+     beforeSend : function(xhr){
+       xhr.setRequestHeader("Accept", "application/json")
+     },
+     success : function(data){
+       //.. do something with data
+      $.each(data, function( i, v ) {
+           $('#data').append("<ul>")
+          $.each(v, function( index, value ) {
+                $('#data').append( "<li>"+value +"</li>")
+          });
+           $('#data').append("</ul>")
+    });
+     },
+     error: function(objAJAXRequest, strError, errorThrown){
+       alert("ERROR: " + strError);
+     }
+  }
+);
+
+
+   
+     
+}   
  
+//===================================================================   
+   function getXMLHttpRequest() {
+
+   var xhr = null;
+
+   if (window.XMLHttpRequest || window.ActiveXObject) {
+      if (window.ActiveXObject) {
+         try {
+            xhr = new ActiveXObject("Msxml2.XMLHTTP");
+         } catch(e) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+         }
+      } else {
+         xhr = new XMLHttpRequest();
+      }
+   } else {
+      alert("Your browser doesn't support XMLHTTPRequest...");
+      return null;
+   }
+
+   return xhr;
+
+}
+//===================================================================
  
  function to_each(obj){
        var items = [];
@@ -65,32 +124,13 @@
 
 <br /><br />
 
-<div>
-
- <h4> Pst validation</h4>
-    <%= @check_for_pst %>
-    
-</div>
 
 
-
-
- <%= render partial: 'file_header' %>
-
-<br /><br />
-
- <%= render partial: 'invoice_headers' %>
-
-
-
-<br /><br />
-
- <%= render partial: 'invoice_details' %>
-
+ 
 <br /><br />
   
  
   
 
-<td><%= link_to 'Destroy', validator_d_path, method: :delete, data: { confirm: 'Are you sure?' } %></t
+
 
