@@ -4,46 +4,24 @@
 <%= link_to "Upload", "/uploads" %>
 </div>
 
-  
-       
-  
-  <br /><br />
- <%=@raw %>
+ <%=@mytest1 %>
+<br /><br />
+ <%=@mytest %>
  <br />
- 
- 
- 
- 
+
 <button method='post' id = "button" data-remote ="true" class='btn'>  link </button>
  
   <br /><br />
  
+ <div id="data" style="color:red"></div>
  
- 
- <br /><br />
- 
- 
- 
- <div id="data" style="color:red">
-   
- </div>
 <script>
-  
-         
-  $(document).ready(function(){
-      
+ 
+ $(document).ready(function(){
       $('#button').click(function(){
-       
-      var data, xhr;
-      
-     
-      data = callajax()
-      
-      
-        
-  });
-  
-  
+       $('#loadingmessage').show()
+         callajax();
+        });
   });  
   
   //===================================
@@ -55,6 +33,7 @@
        xhr.setRequestHeader("Accept", "application/json")
      },
      success : function(data){
+           $('#loadingmessage').hide();
        //.. do something with data
       $.each(data, function( i, v ) {
            $('#data').append("<ul>")
@@ -63,70 +42,25 @@
           });
            $('#data').append("</ul>")
     });
-     },
-     error: function(objAJAXRequest, strError, errorThrown){
-       alert("ERROR: " + strError);
-     }
-  }
-);
+        },
+          error: function(objAJAXRequest, strError, errorThrown){
+           alert("ERROR: " + strError);
+        }
+        }
+    );
 
 
-   
-     
 }   
  
 //===================================================================   
-   function getXMLHttpRequest() {
-
-   var xhr = null;
-
-   if (window.XMLHttpRequest || window.ActiveXObject) {
-      if (window.ActiveXObject) {
-         try {
-            xhr = new ActiveXObject("Msxml2.XMLHTTP");
-         } catch(e) {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
-         }
-      } else {
-         xhr = new XMLHttpRequest();
-      }
-   } else {
-      alert("Your browser doesn't support XMLHTTPRequest...");
-      return null;
-   }
-
-   return xhr;
-
-}
-//===================================================================
- 
- function to_each(obj){
-       var items = [];
-     $.each(obj, function(index, message)    {
-        
-        $.each(message, function(i, item) {
-            if (item[0]== null || item[0] ){   }
-                else{
-              items.push('<li>'+item[0]+' : '+item[1] + '</li>');
-            }
-             
-        });
-   });  // close each()
- 
-  
-  
-     return items
-  
- }
-
-
 </script>
 
 <br /><br />
+<div id='loadingmessage' style='display:none'>
+       <img src='../assets/images/ajax-loader.gif'/>
+</div>
 
 
-
- 
 <br /><br />
   
  

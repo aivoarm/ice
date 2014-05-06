@@ -1,48 +1,295 @@
+
+
+class DataFile
+    
+ 
+    attr_accessor :name , :filepath, :size, :data, :obj
+   
+  def initialize(name= nil, filepath = nil  , size = nil, data=[], obj={} )
+      @name , @filepath, @size, @data, @obj=  name , filepath, size, data, obj
+      
+  end
+  
+      def read(name)
+        path  = self.filepath
+        filename=sanitize_filename(name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, name)
+        # read the file
+        arr = IO.readlines(path)
+      end
+  
+      def to_obj(name)
+          count=0
+          obj={}
+        path  = self.filepath
+        filename=sanitize_filename(name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, name)
+        # read the file
+        arr = IO.readlines(path)
+        
+            arr.each do |a|
+                  obj[count]=a  
+                  count=count+1  
+            end
+          return obj
+      end
+      
+      def obj 
+          count=0
+          obj={}
+        
+        filename=sanitize_filename(self.name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, filename)
+        # read the file
+        arr = IO.readlines(path)
+        
+            arr.each do |a|
+                  obj[count]=a  
+                  count=count+1  
+            end
+          return obj
+      end
+      
+      def ou(name)
+        path  = self.filepath
+        filename=sanitize_filename(name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, name)
+        # read the file
+        arr = IO.readlines(path)
+        arr[1][111,5]
+        
+      
+      end
+      
+      def to_layout(layout)
+           
+          file_data=[]
+          
+           file = self.obj
+        
+            file.each do |k, file_line|
+              
+             case file_line[0]
+        
+                        when "F"
+                          tmp=[] 
+                           tmp.push(k)
+                              for i in layout[0]
+                                      start = i[1].to_i-1
+                                      length = i[2].to_i
+                                     
+                                      tmp.push(file_line[start,length])
+                                     
+                             end     
+                             file_data << tmp
+                           
+                            
+                            #  file_data object {'line_num': 1, "FILE DATE":123123.....
+                            
+                        when "H"
+                           tmp=[] 
+                           tmp.push(k)
+                              for i in layout[1]
+                                      start = i[1].to_i-1
+                                      length = i[2].to_i
+                                     
+                                      tmp.push(file_line[start,length])
+                                     
+                             end     
+                             file_data << tmp
+                           
+                            
+                        when "D"
+                         
+                          tmp=[] 
+                           tmp.push(k)
+                              for i in layout[2]
+                                      start = i[1].to_i-1
+                                      length = i[2].to_i
+                                     
+                                      tmp.push(file_line[start,length])
+                                     
+                             end     
+                             file_data << tmp
+                                 
+                           
+                    end
+        
+        
+        
+            end      
+        
+           return file_data
+       end
+       
+       
+  
+      def to_s
+        "#{name}, #{obj}"
+      end
+  
+    def sanitize_filename(filename) 
+      filename.strip.tap do |name| 
+       name.gsub! /^.*(\\|\/)/, ''
+       name.gsub! /[^\w\.\-]/, '_' 
+      end 
+   end     
+    
+end
+
+class DataLayout < DataFile
+
+def file_Header(name)
+    name.split('.')[-1]
+end
+
+ def layout
+    
+     lay=[self.fheader, self.iheader, self.idetails]
+     return lay
+ end
+ 
+ def fheader 
+          
+         
+          obj=[]
+        path  = self.filepath
+        filename=sanitize_filename(self.name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, filename)
+        # read the file
+        arr = IO.readlines(path)
+        
+          #
+            arr.each do |a|
+                if a.split(/\W+/)[1] == "File_Header"
+                     obj << [a.split(/\W+/)[2], a.split(/\W+/)[3], a.split(/\W+/)[4]]
+                end 
+               
+            end
+           
+                  
+               
+          return obj
+      end
+      
+      def iheader 
+          
+          obj=[]
+        path  = self.filepath
+        filename=sanitize_filename(self.name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, filename)
+        # read the file
+        arr = IO.readlines(path)
+        
+          #
+            arr.each do |a|
+                if a.split(/\W+/)[1] == "Invoice_Header"
+                     obj << [a.split(/\W+/)[2], a.split(/\W+/)[3], a.split(/\W+/)[4]]
+                end 
+                #tmp =[a[2],a[3],a[4]]
+            end
+           
+                  
+               
+          return obj
+      end
+    def idetails 
+          
+          obj=[]
+        path  = self.filepath
+        filename=sanitize_filename(self.name) 
+        directory = self.filepath
+        # create the file path
+        path = File.join(directory, filename)
+        # read the file
+        arr = IO.readlines(path)
+        
+          #
+            arr.each do |a|
+                if a.split(/\W+/)[1] == "Invoice_Detail"
+                     obj << [a.split(/\W+/)[2], a.split(/\W+/)[3], a.split(/\W+/)[4]]
+                end 
+                #tmp =[a[2],a[3],a[4]]
+            end
+           
+                
+               
+          return obj
+      end
+end
+#==============================================================================================================================================
+
 class ValidatorController < ApplicationController
     
     protect_from_forgery with: :exception
     load_and_authorize_resource
-  require 'reset'
+    require 'reset'
   
+  
+  
+ 
   
   def index
+      
       name =Upload.find(params[:id]).filepath  
         
         @id =id=params[:id]
+        ou="BMO"
+           
+           
+         #========test============test=========test=========test=========test===========
+    
+        #========test============test=========test=========test=========test===========
         
-        fheader=split_per_layout( read_file(id), read_layout("BMO")[0], "F")
-        iheader =split_per_layout( read_file(id), read_layout("BMO")[1], "H")
-        idetails = split_per_layout( read_file(id), read_layout("BMO")[2], "D")
+  myfile = DataFile.new(Upload.find(id).filepath, "public/data")
+  layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
     
+  
+  
+ 
+   
+  @mytest = myfile.to_layout(layout.layout)    #test( read_layout("BMO"), id).to_json
+
     
+     
        
 
-        obj=[fheader,iheader, idetails]
+     #  obj=[fheader,iheader, idetails]
     
         respond_to do |format|
-      
-           format.json { render json:  obj }
-           format.html # index.html.erb
+            format.json { render json:  @mytest }
+            format.html # index.html.erb
         end
  
   end
   
-  def data
-       id =params[:id]
-# 1.--------pick a file---------------------------------------------       
-       name =Upload.find(id).filepath  
-        
-        @validate_name =name
-        
-      
-         
-      respond_to do |format|
-           format.json { render :json =>  @fheader }
-      end
-      
-      
+ # layout object 
+    
+ 
   
-  end
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -183,7 +430,7 @@ end
  
 #-------------------------------------------------------------------------- 
 # 
-#  creating aparms for db load
+#  creating a parms for db load
 # 
 #-------------------------------------------------------------------------- 
   def to_params_for_db_load(obj, i)
@@ -328,12 +575,10 @@ end
   def read_layout(ou)
      
     name = LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath
-    
-    directory = "public/layouts"
-    # create the file path
-    path = File.join(directory, name)
-    # read the file
+    path = File.join("public/layouts", name)
     data = IO.readlines(path)
+   
+   #FileLayout attr_accessor :ou, :ftype, :description,:start, :length
    
    
     ftype =["File_Header", "Invoice_Header", "Invoice_Detail"]
@@ -356,7 +601,7 @@ end
          
     end
     
-    line=[ file_Header,invoice_Header,invoice_Detail]
+    line={ ftype[0] => file_Header,ftype[1] => invoice_Header,ftype[2] => invoice_Detail}
     
   
     return line
@@ -394,6 +639,21 @@ end
   
 end
 
+
+
+=begin
+
+
+ 
+ 
+
+
+
+
+
+
+
+=begin
 
  def file_header_params()
      return {                           :line_num =>1, 
@@ -448,3 +708,4 @@ end
                                         :valid => false
             }
    end
+=end

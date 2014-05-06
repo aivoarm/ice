@@ -55,6 +55,7 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
     #  end 
       
 #  end
+
   get '/validator',  to: 'validator#index'
   post '/validator',  to: 'validator#index'
   
