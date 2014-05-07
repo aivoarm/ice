@@ -1,4 +1,5 @@
 class Upload < ActiveRecord::Base
+     
       validates :filepath, uniqueness: true
       
       has_one :file_header
@@ -11,7 +12,7 @@ def self.save(upload)
     # write the file
     File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
     
-  end
+ end
 
 
 def self.read(upload)

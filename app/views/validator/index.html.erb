@@ -9,10 +9,13 @@
  <%=@mytest %>
  <br />
 
-
+<%= image_tag("ajax-loader.gif", :alt => "Spinning", :class => "round", :id =>'loadingmessage' ) %>
+ 
   <br /><br />
  
  <div id="data" style="color:red"></div>
+ 
+ <div id="val" style="color:green"> Valid File</div>
  
 <script>
  
@@ -21,6 +24,7 @@
        //$('#loadingmessage').show()
          callajax();
         //});
+        
   });  
   
   //===================================
@@ -33,36 +37,47 @@
      },
      success : function(data){
            $('#loadingmessage').hide();
-       //.. do something with data
-      $.each(data, function( i, v ) {
-           $('#data').append("<table><tr>")
-          $.each(v, function( index, value ) {
-              var ddd=v.toString()
+            $('#val').hide();
+           
               
-            if( ddd.indexOf('error') >= 0){
-                $('#data').append( "<td>"+value +"</td>")
-              }
-              
-              
-          });
-           $('#data').append("</tr></table>")
-    });
+       showdata(data);
+   
         },
           error: function(objAJAXRequest, strError, errorThrown){
            alert("ERROR: " + strError);
         }
         }
-    );
+ );
 
-
-}   
+}
+   
  
+
+ 
+ 
+function showdata(data){
+    $.each(data, function( i, v ) { 
+          
+        var check=v.toString()
+          
+        
+           $('#data').append("<table><tr>")
+           
+               if(check.indexOf('error') != -1){
+                    $.each(v, function( index, value ) {
+                        $('#data').append( "<td>"+value +"</td>")
+                     });
+               }
+           
+           $('#data').append("</tr></table>")
+           
+    });
+}
 //===================================================================   
 </script>
 
 <br /><br />
 
- <%= image_tag("ajax-loader.gif", :alt => "Spinning", :class => "round", :id =>'loadingmessage' ) %>
  
 
 

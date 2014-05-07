@@ -1,11 +1,5 @@
 
-
-  
-  
-    
-  
-  
-<h1>Welcome to ICE validation toolkit</h1>
+<%= @d %>
 
 <h3>Upload file for validation</h3>
 <br />
@@ -18,6 +12,7 @@
         <%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
             <%= file_field 'upload', 'file'%>
             <%= hidden_field_tag :user, :value => @user %>
+           
           <%= submit_tag 'Upload' %>
         	
         <% end %>
@@ -33,7 +28,7 @@
 .dropz {
   border: 2px dashed #707070;
   color: #6E6E6E;  
-  height: 70px;
+  height: 120px;
   padding-top: 50px;
   text-align: center;
   width: 400px;
@@ -42,7 +37,7 @@
 #uploadfile 	{
   border: 2px dashed #707070;
   color: #6E6E6E;  
-  height: 70px;
+  height: 120px;
   padding-top: 50px;
   text-align: center;
   width: 400px;
@@ -107,7 +102,7 @@ if(isIE(8)){ /* runs in IE8 */
 
     	data = new FormData();
     	data.append( 'file', files[0] );
-//alert( files[0] )
+       //alert(data.to_json)
  	    callajax(data)
     
     });
@@ -115,12 +110,18 @@ if(isIE(8)){ /* runs in IE8 */
  
 
 
+$( '.val' ).click(function(e) {
+    
+   	   	//	confirm("")//$("#file_info").html('click').show();
+		});
+    
+
 });
 
 function callajax(data){
     xhr =  getXMLHttpRequest()
 
-    xhr.open( 'POST', 'ajax', true );
+    xhr.open( 'POST', 'uploads/ajax', true );
     xhr.onreadystatechange = function ( response ) {location.reload(true)};
     xhr.send( data );
 	e.preventDefault();
@@ -163,20 +164,37 @@ function callajax(data){
 <h3>List of uploaded files </h3>
 
  
- <% if can? :update, cleandb_uploads_path%>
-<%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
- <%end%>
-
-   <div id="divajax"></div>
+ 
+   <div id="file_info" style="display:none; position:absolute; top:100px, left:100px"></div>
  
  <% if !@user.nil? %>
- <%= @user.email   %>
+ 
+ 
   <%end%>
   
  <br />
 <br />
  
- <%= render partial: 'uploaded' %>
+ 
+ 
+<table>
+<tbody>
+<% if @uploads %>
+   <% @uploads.each do |up| %>
+ <tr>
+        <td><%= up.filepath %></td>
+        <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
+        <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Validate', validator_path(:id => up.id), :class => "val" %></td>
+
+     
+</tr>
+  <% end %>
+ <% end %>
+
+  </tbody>
+  </table>
+  
    
    
     <% if can? :update, :all%> 
@@ -187,3 +205,8 @@ function callajax(data){
 <p><%= link_to 'Layout', layouts_path %></p>
 
   <%end%>
+
+
+<% if can? :update, cleandb_uploads_path%>
+<%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
+ <%end%>

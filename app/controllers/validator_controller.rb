@@ -3,13 +3,12 @@
 class DataFile
     
  
-    attr_accessor :name , :filepath, :size, :data, :obj
+    attr_accessor :name , :filepath, :type, :data, :obj
    
   def initialize(name= nil, filepath = nil  , size = nil, data=[], obj={} )
-     @filepath, @size, @data, @obj=   filepath, size, data, obj
-       
-       
-       @name = name
+     @filepath, @size, @data, @obj=   filepath, type, data, obj
+     
+     @name = name
   end
   
   def run(layout)
@@ -19,6 +18,10 @@ class DataFile
   
   #========================================================================================================================
   private
+  
+  
+      
+  
       def read(name)
         path  = self.filepath
         name=sanitize_filename(name) 
@@ -274,40 +277,41 @@ class ValidatorController < ApplicationController
   def index
       
       name =Upload.find(params[:id]).filepath  
-        
-        @id =id=params[:id]
-        ou="BMO"
+      
+       ou="BMO"
+      
+     if LayoutFile.find(:all).empty?
+               flash[:error] ="Layout file is missing"
+     else
+                
+              
+             
+           @id =id=params[:id]
+             
+                   
+                   
+                
+          myfile = DataFile.new(Upload.find(id).filepath, "public/data")
+          layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
+            
+          
+          
+         
            
-           
-         #========test============test=========test=========test=========test===========
-    
-        #========test============test=========test=========test=========test===========
+          mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
         
-  myfile = DataFile.new(Upload.find(id).filepath, "public/data")
-  layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
-    
-  
-  
- 
-   
-  mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
-
-    
-     
+            
+             #  obj=[fheader,iheader, idetails]
+            
+                respond_to do |format|
+                    format.json { render json:  mytest }
+                    format.html # index.html.erb
+                end
        
-
-     #  obj=[fheader,iheader, idetails]
-    
-        respond_to do |format|
-            format.json { render json:  mytest }
-            format.html # index.html.erb
-        end
+     end
  
+ #======test============test=========test=========test=========test===========
   end
-  
- # layout object 
-    
- 
   
  
   

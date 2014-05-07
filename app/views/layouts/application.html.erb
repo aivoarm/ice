@@ -7,8 +7,7 @@
   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" %>
   <%= javascript_include_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" %>
   
-    
-  
+ 
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -16,6 +15,10 @@
 <p><%= notice %></p>
 <p><%= alert %></p>
 <div class="error"><%= flash[:error] %></div>
+
+<h1> ICE validation toolkit</h1>
+
+
 
 <%= render partial: 'layouts/header' %>
 <br />
