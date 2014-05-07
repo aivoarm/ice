@@ -6,13 +6,22 @@ class DataFile
     attr_accessor :name , :filepath, :size, :data, :obj
    
   def initialize(name= nil, filepath = nil  , size = nil, data=[], obj={} )
-      @name , @filepath, @size, @data, @obj=  name , filepath, size, data, obj
+     @filepath, @size, @data, @obj=   filepath, size, data, obj
+       
+       
+       @name = name
+  end
+  
+  def run(layout)
+      to_layout(layout)
       
   end
   
+  #========================================================================================================================
+  private
       def read(name)
         path  = self.filepath
-        filename=sanitize_filename(name) 
+        name=sanitize_filename(name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, name)
@@ -24,7 +33,7 @@ class DataFile
           count=0
           obj={}
         path  = self.filepath
-        filename=sanitize_filename(name) 
+        filename=(name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, name)
@@ -41,8 +50,8 @@ class DataFile
       def obj 
           count=0
           obj={}
-        
-        filename=sanitize_filename(self.name) 
+        name=self.name
+        filename=(name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, filename)
@@ -58,7 +67,7 @@ class DataFile
       
       def ou(name)
         path  = self.filepath
-        filename=sanitize_filename(name) 
+        filename=(name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, name)
@@ -69,12 +78,42 @@ class DataFile
       
       end
       
+      def sterilize_file_data(k, data)
+          
+          rg={
+                "gate14" => /^ *\d{14}$/,
+                "gate8" => /^ *\d{8}$/,
+                "amt" => /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/,
+                "yn" => /^[YN]/, 
+                "alfanum" => /[\s]/
+                }
+          
+          
+          
+           if (k.include? "AMOUNT")
+               rg['amt'] =~ data.strip ?   data = data.to_f : data  = data+" =error"
+           end
+           
+             return data
+      
+      end
+     # item=[ obj['FILE_DATE'], obj['INVOICE_DATE'], obj['INVOICE_AMOUNT'],obj['ITEM_AMOUNT'],obj['GST_AMOUNT'], obj['PST_AMOUNT'], obj['TAX_VALIDATED'], obj['line_num']]
+        #---check for empty field
+     # all_validations <<   [(!!(  rg['gate14'] =~ item[0][i].strip) unless item[0].nil?), (item[0][i]+' : line - '+ item[7][i].to_json unless item[0].nil?)]
+     # all_validations <<   [(!!(  rg['gate8']  =~ item[1][i].strip) unless item[1].nil?), (item[1][i]+' : line - '+ item[7][i].to_json unless item[1].nil?)]
+     # all_validations <<   [(!!(  rg['amt']    =~ item[2][i].strip) unless item[2].nil?), (item[2][i]+' : line - '+ item[7][i].to_json unless item[2].nil?)]
+     # all_validations <<   [(!!(  rg['amt']    =~ item[3][i].strip) unless item[3].nil?), (item[3][i]+' : line - '+ item[7][i].to_json unless item[3].nil?)]
+     # all_validations <<   [(!!(  rg['amt']    =~ item[4][i].strip) unless item[4].nil?), (item[4][i]+' : line - '+ item[7][i].to_json unless item[4].nil?)]
+     # all_validations <<   [(!!(  rg['amt']    =~ item[5][i].strip) unless item[5].nil?), (item[5][i]+' : line - '+ item[7][i].to_json unless item[5].nil?)]
+     # all_validations <<   [(!!(  rg['yn']     =~ item[6][i].strip) unless item[6].nil?), (item[6][i]+' : line - '+ item[7][i].to_json unless item[6].nil?)]
+                 
+      
+      
       def to_layout(layout)
            
           file_data=[]
-          
-           file = self.obj
-        
+          file = obj()
+         
             file.each do |k, file_line|
               
              case file_line[0]
@@ -85,9 +124,9 @@ class DataFile
                               for i in layout[0]
                                       start = i[1].to_i-1
                                       length = i[2].to_i
-                                     
-                                      tmp.push(file_line[start,length])
-                                     
+                                      
+                                      data = sterilize_file_data(i[0],file_line[start,length])
+                                      tmp.push(data)
                              end     
                              file_data << tmp
                            
@@ -101,7 +140,8 @@ class DataFile
                                       start = i[1].to_i-1
                                       length = i[2].to_i
                                      
-                                      tmp.push(file_line[start,length])
+                                      data = sterilize_file_data(i[0],file_line[start,length])
+                                      tmp.push(data)
                                      
                              end     
                              file_data << tmp
@@ -115,18 +155,13 @@ class DataFile
                                       start = i[1].to_i-1
                                       length = i[2].to_i
                                      
-                                      tmp.push(file_line[start,length])
+                                      data = sterilize_file_data(i[0],file_line[start,length])
+                                      tmp.push(data)
                                      
                              end     
                              file_data << tmp
-                                 
-                           
-                    end
-        
-        
-        
+                     end
             end      
-        
            return file_data
        end
        
@@ -136,12 +171,7 @@ class DataFile
         "#{name}, #{obj}"
       end
   
-    def sanitize_filename(filename) 
-      filename.strip.tap do |name| 
-       name.gsub! /^.*(\\|\/)/, ''
-       name.gsub! /[^\w\.\-]/, '_' 
-      end 
-   end     
+   
     
 end
 
@@ -162,7 +192,7 @@ end
          
           obj=[]
         path  = self.filepath
-        filename=sanitize_filename(self.name) 
+        filename=(self.name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, filename)
@@ -186,7 +216,7 @@ end
           
           obj=[]
         path  = self.filepath
-        filename=sanitize_filename(self.name) 
+        filename=(self.name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, filename)
@@ -209,7 +239,7 @@ end
           
           obj=[]
         path  = self.filepath
-        filename=sanitize_filename(self.name) 
+        filename=(self.name) 
         directory = self.filepath
         # create the file path
         path = File.join(directory, filename)
@@ -260,7 +290,7 @@ class ValidatorController < ApplicationController
   
  
    
-  @mytest = myfile.to_layout(layout.layout)    #test( read_layout("BMO"), id).to_json
+  mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
 
     
      
@@ -269,7 +299,7 @@ class ValidatorController < ApplicationController
      #  obj=[fheader,iheader, idetails]
     
         respond_to do |format|
-            format.json { render json:  @mytest }
+            format.json { render json:  mytest }
             format.html # index.html.erb
         end
  

@@ -107,12 +107,15 @@ end
      
     def save_file(formdata)
       
+      name=formdata.original_filename
+      name.gsub!(/^.*(\\|\/)/, '')
+       name.gsub! /^.*(\\|\/)/, ''
       
-       if File.exist?(Rails.root.join('public', 'data', formdata.original_filename)) 
+       if File.exist?(Rails.root.join('public', 'data', name)) 
            return nil 
         else   
        
-        File.open(Rails.root.join('public', 'data', formdata.original_filename), 'wb') do |file|
+        File.open(Rails.root.join('public', 'data', name), 'wb') do |file|
             read_data=formdata.read
                 record_type_valid = /^[FHD]/.match(read_data[0]) 
             
@@ -121,8 +124,9 @@ end
                return nil
             else  
               file.write(read_data)
+              
            
-               @file =Upload.new(:filepath =>formdata.original_filename, :user => current_user.email )
+               @file =Upload.new(:filepath =>name, :user => current_user.email )
                @file.save 
                
             end
