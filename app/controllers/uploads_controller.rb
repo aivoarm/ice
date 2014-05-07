@@ -29,22 +29,30 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
   
   def create
     
-             #path =Rails.root.join('public', 'data', params[:upload][:file].original_filename)
+    
+     #   File.open(Rails.root.join('public', 'data', params[:upload][:file].original_filename), 'wb') do |file|
+       #     read_data=params[:upload][:file].read
+       #      
+        #    file.write(read_data)
+         #    f=  read_data.split(/[\r\n]+/)     
+          #    @d= f.to_json        
              
-            # File.open(path, 'wb') do |file|
-            #           @d= read_data=params[:upload][:file].read
-             #       end  
+        # end 
+     
+    #===================================================================================================
                     
-                     @d= read_data=params[:upload][:file]
+       
         
          unless params[:upload][:file].nil?
-            if save_file(params[:upload][:file]) 
+           if save_file(params[:upload][:file]) 
                 redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
             else
-                redirect_to({:action => :index}, :flash => { :error  => current_user.email + ": Or ICE file already uploaded , or it has wrong layout"}, :d => @d )
-            end
+               redirect_to({:action => :index}, :flash => { :error  => current_user.email + ": Or ICE file already uploaded , or it has wrong layout"}, :d => @d )
+           end
             
-        end
+          end
+        
+        
    end
 
             
@@ -122,12 +130,13 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
  #---------READ FILE ------------------------------- 
      
         def save_file(formdata)
-        
+      
+        file_lines=[]
        name=formdata.original_filename
-      name.gsub!(/^.*(\\|\/)/, '')
+       name.gsub!(/^.*(\\|\/)/, '')
        name.gsub! /^.*(\\|\/)/, ''
       
-      path=Rails.root.join('public', 'data', name)
+       path=Rails.root.join('public', 'data', name)
       
        if File.exist?(Rails.root.join('public', 'data', name)) 
            return nil 
@@ -142,11 +151,14 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
                return nil
             else  
               file.write(read_data)
-                             
+                          file_lines  << read_data.split(/[\r\n]+/)       
+                          
+                          if file_lines[0].any? "NOVR"
                                   
-                               ftype = "BMO"
-                               
-                               
+                               ftype = "NOVR"
+                           else
+                                ftype = "BMO"
+                           end
                                size = File.size("#{path}")/1024
                       
                                @file =Upload.new(:filepath =>name, :user => current_user.email, :size => size , :ftype =>ftype, :valid => false )

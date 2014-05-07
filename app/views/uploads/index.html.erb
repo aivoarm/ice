@@ -43,6 +43,8 @@
   width: 400px;
     position: absolute;
     left: -1000px;
+    
+   
 }
 
 
@@ -67,6 +69,8 @@ $(document).ready(function() {
 if(isIE(8)){ /* runs in IE8 */
     $( ".dropz" ).hide()
     $('#uploadfile').css("left", "0px")
+    $('#rest').css("padding-top", "100px")
+  
     
 } 
 	 $( ".dropz" ).click(function(e) {
@@ -161,6 +165,7 @@ function callajax(data){
 
  <br />
 
+<div id="rest">
 <h3>List of uploaded files </h3>
 
  
@@ -210,3 +215,5 @@ function callajax(data){
 <% if can? :update, cleandb_uploads_path%>
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
  <%end%>
+ 
+ </div>
