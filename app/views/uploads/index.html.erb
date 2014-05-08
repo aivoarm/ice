@@ -24,8 +24,8 @@
 
 <div id="popup">
 
-<%= collection_select(:country_id, 0, Country.all, :id, :country) %>
-<%= collection_select(:filetype_id, 0, Filetype.all, :id, :ftype) %>
+
+<%= collection_select(:filetype_id, 0, Filetype.all, :id,  :ftype) %>
 
 </div>
 
@@ -46,7 +46,7 @@
 
  
 $(document).ready(function() {
-   
+   	$('#popup').hide();
    
 	 jQuery.event.props.push('dataTransfer');
     if(isIE(8)){ /* runs in IE8 */
@@ -57,6 +57,7 @@ $(document).ready(function() {
         
 	 $( ".dropz" ).click(function(e) {
    	   		$("#upload_file").trigger('click');
+   	   	
 		});
 
 	if(!isIE(8)){ /* runs in IE8 */
@@ -89,39 +90,16 @@ $(document).ready(function() {
     	data = new FormData();
     	data.append( 'file', files[0] );
        //alert(data.to_json)
- 	    callajax(data)
+ 	    callajax(data);
     
-    
+   
     
     });
   
    ///================================================================= 
-
+ popup();
     
     
-   
-       $.ajax({
-            url: '/uploads.json/', dataType: "json",
-            beforeSend : function(xhr){
-            xhr.setRequestHeader("Accept", "application/json")
-            },
-        success : function(data){
-            $('#popup').show();
-           
-              
-            
-                 $.each(data, function( k, v ) { 
-                   $('#popup').append( "<p> You are going to process \""+v.ftype+"\" file</p>")
-                          
-  //         
-                 });  
-   
-        },
-          error: function(objAJAXRequest, strError, errorThrown){
-           alert("ERROR: " + strError);
-        }
-        });//End ajax
- 
 
 
 //=============================================================================================================
@@ -132,6 +110,38 @@ $(document).ready(function() {
 
 //=============================================================================================================   
 }); //END document ready
+function popup(){
+    
+    
+    //xhr =  getXMLHttpRequest()
+       $.ajax({
+            url: '/uploads.json/', dataType: "json",
+            beforeSend : function(xhr){
+            xhr.setRequestHeader("Accept", "application/json")
+            },
+        success : function(data){
+            $('#popup').show();
+           
+              d=[];
+              
+            
+                 $.each(data, function( k, v ) { 
+                     d.push(v)
+                          
+  //         
+                 });  
+   
+   $('#popup').prepend( "<p> We are identified the file for \""+d[d.length-1].ftype+"\" .  If this is incorrect please select the right option below</p>")
+                   
+        },
+          error: function(objAJAXRequest, strError, errorThrown){
+           alert("ERROR: " + strError);
+        }
+        });//End ajax
+ 
+}
+
+
 
 function callajax(data){
     xhr =  getXMLHttpRequest()

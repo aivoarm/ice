@@ -266,6 +266,11 @@ end
 
 class ValidatorController < ApplicationController
     
+    before_filter :authenticate_user!
+skip_before_filter :verify_authenticity_token  
+ 
+
+
     protect_from_forgery with: :exception
     load_and_authorize_resource
     require 'reset'
