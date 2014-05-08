@@ -1,0 +1,25 @@
+<%= form_for(@file_type) do |f| %>
+  <% if @file_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@file_type.errors.count, "error") %> prohibited this file_type from being saved:</h2>
+
+      <ul>
+      <% @file_type.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ftype %><br>
+    <%= f.text_field :ftype %>
+  </div>
+  <div class="field">
+    <%= f.label :countr_id %><br>
+    <%= f.number_field :countr_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

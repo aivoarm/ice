@@ -1,4 +1,6 @@
 App::Application.routes.draw do
+  resources :file_types
+
   resources :file_headers
   
 resources :file_headers do

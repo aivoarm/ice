@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507140922) do
+ActiveRecord::Schema.define(version: 20140508032217) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20140507140922) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
 
+  create_table "countries", force: true do |t|
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "file_headers", force: true do |t|
     t.integer  "line_num"
     t.string   "RECORD_TYPE"
@@ -37,6 +43,13 @@ ActiveRecord::Schema.define(version: 20140507140922) do
     t.decimal  "INVOICE_AMOUNT"
     t.string   "TAX_VALIDATED"
     t.boolean  "valid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "file_types", force: true do |t|
+    t.string   "ftype"
+    t.integer  "countr_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
