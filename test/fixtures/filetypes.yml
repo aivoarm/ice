@@ -2,8 +2,8 @@
 
 one:
   ftype: MyString
-  countr_id: 1
+  country: MyString
 
 two:
   ftype: MyString
-  countr_id: 1
+  country: MyString

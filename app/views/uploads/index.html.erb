@@ -22,9 +22,12 @@
 
 <br /><br /><br />
 
+<div id="popup">
+
 <%= collection_select(:country_id, 0, Country.all, :id, :country) %>
+<%= collection_select(:filetype_id, 0, Filetype.all, :id, :ftype) %>
 
-
+</div>
 
 <br /><br /><br />
 <script>

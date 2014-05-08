@@ -1,10 +1,10 @@
-<%= form_for(@file_type) do |f| %>
-  <% if @file_type.errors.any? %>
+<%= form_for(@filetype) do |f| %>
+  <% if @filetype.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@file_type.errors.count, "error") %> prohibited this file_type from being saved:</h2>
+      <h2><%= pluralize(@filetype.errors.count, "error") %> prohibited this filetype from being saved:</h2>
 
       <ul>
-      <% @file_type.errors.full_messages.each do |msg| %>
+      <% @filetype.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -16,8 +16,8 @@
     <%= f.text_field :ftype %>
   </div>
   <div class="field">
-    <%= f.label :countr_id %><br>
-    <%= f.number_field :countr_id %>
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
   </div>
   <div class="actions">
     <%= f.submit %>

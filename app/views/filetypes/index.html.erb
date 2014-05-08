@@ -1,0 +1,29 @@
+<h1>Listing filetypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ftype</th>
+      <th>Country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @filetypes.each do |filetype| %>
+      <tr>
+        <td><%= filetype.ftype %></td>
+        <td><%= filetype.country %></td>
+        <td><%= link_to 'Show', filetype %></td>
+        <td><%= link_to 'Edit', edit_filetype_path(filetype) %></td>
+        <td><%= link_to 'Destroy', filetype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Filetype', new_filetype_path %>
