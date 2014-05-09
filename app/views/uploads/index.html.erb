@@ -4,7 +4,10 @@
 <%= javascript_include_tag "uploads" %>
   
 
-
+<div id="popup" class ="notice" style="color:green; display:none">
+    <%= collection_select(:filetype_id, 0, Filetype.all, :id,  :ftype) %>
+</div>
+<br /><br />
 <h3>Upload file for validation</h3>
 <br /><br />
 
@@ -22,20 +25,16 @@
 
 <br /><br /><br />
 
-<div id="popup">
-
-
-<%= collection_select(:filetype_id, 0, Filetype.all, :id,  :ftype) %>
-
-</div>
 
 <br /><br /><br />
+
 <script>
  
  
   
   //===================================
  
+ var uploaded = false;
  function isIE( version, comparison ){
     var $div = $('<div style="display:none;"/>').appendTo($('body'));
     $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
@@ -120,8 +119,8 @@ function popup(){
             xhr.setRequestHeader("Accept", "application/json")
             },
         success : function(data){
-            $('#popup').show();
-           
+            if (true) {$('#popup').show();
+            
               d=[];
               
             
@@ -132,7 +131,7 @@ function popup(){
                  });  
    
    $('#popup').prepend( "<p> We are identified the file for \""+d[d.length-1].ftype+"\" .  If this is incorrect please select the right option below</p>")
-                   
+            }  
         },
           error: function(objAJAXRequest, strError, errorThrown){
            alert("ERROR: " + strError);
@@ -147,9 +146,10 @@ function callajax(data){
     xhr =  getXMLHttpRequest()
 
     xhr.open( 'POST', 'uploads/ajax', true );
-    xhr.onreadystatechange = function ( response ) {location.reload(true)};
+    xhr.onreadystatechange = function ( response ) {location.reload(true); uploaded = true};
     xhr.send( data );
 	e.preventDefault();
+	
      
 }   
    
