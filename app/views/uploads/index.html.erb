@@ -2,11 +2,14 @@
 
 <%= stylesheet_link_tag    "uploads" %>
 <%= javascript_include_tag "uploads" %>
-  
+   <%= @d %>
 
 <div id="popup" class ="notice" style="color:green; display:none">
-    <%= collection_select(:filetype_id, 0, Filetype.all, :id,  :ftype) %>
+
+  
+  <%= collection_select(:get,:ftype_id,Filetype.all,:id, :ftype) %>
 </div>
+
 <br /><br />
 <h3>Upload file for validation</h3>
 <br /><br />
@@ -43,9 +46,24 @@
     return ieTest;
 }
 
- 
+
+
 $(document).ready(function() {
-   	$('#popup').hide();
+     
+
+ $('#get_ftype_id').change(function(){
+    $.ajax({
+        url:"uploads/index",
+        type: "GET",
+        data: { val: $('#get_ftype_id option:selected').text()} })
+        .done(function() {
+        //location.reload(true)
+        data =  $('#popup').append("done")
+      });
+   });
+
+
+
    
 	 jQuery.event.props.push('dataTransfer');
     if(isIE(8)){ /* runs in IE8 */
@@ -91,14 +109,14 @@ $(document).ready(function() {
        //alert(data.to_json)
  	    callajax(data);
     
-   
+       
     
     });
   
    ///================================================================= 
- popup();
+ 
     
-    
+    popup();
 
 
 //=============================================================================================================
@@ -111,7 +129,7 @@ $(document).ready(function() {
 }); //END document ready
 function popup(){
     
-    
+    $('#popup').show()
     //xhr =  getXMLHttpRequest()
        $.ajax({
             url: '/uploads.json/', dataType: "json",
@@ -119,7 +137,7 @@ function popup(){
             xhr.setRequestHeader("Accept", "application/json")
             },
         success : function(data){
-            if (true) {$('#popup').show();
+            
             
               d=[];
               
@@ -131,7 +149,7 @@ function popup(){
                  });  
    
    $('#popup').prepend( "<p> We are identified the file for \""+d[d.length-1].ftype+"\" .  If this is incorrect please select the right option below</p>")
-            }  
+              
         },
           error: function(objAJAXRequest, strError, errorThrown){
            alert("ERROR: " + strError);

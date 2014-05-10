@@ -43,6 +43,7 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
         post 'index'
         post 'create'
         get 'ajax'
+        post 'popup'
         delete 'cleandb'
      end 
    

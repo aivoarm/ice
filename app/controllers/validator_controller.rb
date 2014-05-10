@@ -88,15 +88,25 @@ class DataFile
                 "gate8" => /^ *\d{8}$/,
                 "amt" => /^(\+|-)?([0-9]+(\.[0-9]{1,2}$))/,
                 "yn" => /^[YN]/, 
-                "alfanum" => /[\s]/
+                "alfanum" => /^(.*\s+.*)+$/
                 }
           
           
+           
+             if (rg['alfanum'] =~ data.strip) ;   data  = "<" + data +": error>"; end
+            
           
            if (k.include? "AMOUNT")
-               rg['amt'] =~ data.strip ?   data = data.to_f : data  = data+" =error"
+               rg['amt'] =~ data.strip ?   data = data.to_f : data  = "<" + data+": error>"
            end
            
+           if (k.include? "FILE_DATE")
+               rg['gate14'] =~ data.strip ?   data = data.to_s : data  = "<" + data+": error>"
+           end
+           
+           if (k.include? "TAX_VALIDATED")
+               rg['yn'] =~ data.strip ?   data = data.to_s : data  = "<" + data +": error>"
+           end
              return data
       
       end
@@ -117,7 +127,7 @@ class DataFile
           file_data=[]
           file = obj()
          
-            file.each do |k, file_line|
+            file.each do |k, file_line| # file_line each line from the file 
               
              case file_line[0]
         

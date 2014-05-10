@@ -6,19 +6,27 @@ skip_before_filter :verify_authenticity_token
 load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
+      @filetypes = Filetype.all
       @countries=Country.all
       @user= current_user
        
       if current_user.role == "administrator"
-             @uploads = Upload.all
-             
            
+          
+  
+       
+            @uploads = Upload.all
             
             respond_to do |format|
-                    format.json { render json:  @uploads}
-                    format.html { }
+                    format.json { render json: {:upload => @uploads,:params => params[:val]}}
+                    format.html 
             end
                 
+                       
+    unless Upload.all.empty?
+           #Upload.last.update(:ftype => "BPB") 
+            Upload.last.update(:ftype => params[:val]) 
+    end
         else
              @uploads = Upload.where(:user => current_user.email)
         end
@@ -61,8 +69,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
         
       save_file(params[:file])
              
-             
-        
+            
                 # respond_to do |format|
                
             #    format.html { redirect_to '/uploads/index', notice: 'File was successfully created.' }
@@ -73,6 +80,18 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
       
   end
   
+  def popup
+      unless Upload.all.empty?
+           #Upload.last.update(:ftype => "BPB") 
+            Upload.last.update(:ftype => params[:val]) 
+    end
+       
+            
+            
+           
+                
+        
+  end 
    def destroy
        
         unless Dir["public/data/*"].empty?
@@ -143,19 +162,40 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
             
         if record_type_valid.nil?
                return nil
-            else  
+        else  
               file.write(read_data)
                           
                           file_lines=  read_data.split(/[\r\n]+/)    
          
-        # da= file_lines[0] "NOVR"  
-           
-           if file_lines[0].include? "NOVR"  
-              ftype = "NOVR"
-           else
-              ftype = "BMO"
-           end
-                          
+        
+                                                # deciding file type from file
+                                                   
+                                                   if file_lines[0].include? "TEL"  
+                                                        if file_lines[1][112, 300].include? "132011"  
+                                                             ftype = "TEL BMOA"
+                                                         
+                                                         elsif file_lines[1][112, 300].include? "00055"  
+                                                             ftype = "TEL BMO CAD"
+                                                         
+                                                         elsif file_lines[1][112, 300].include? "NTLTD"  
+                                                             ftype = "TEL NB CAD"
+                                                         else ftype = "UNDEFINED"
+                                                         end
+                                                   else
+                                                      
+                                                      
+                                                         if file_lines[1][112, 300].include? "132011"  
+                                                             ftype = "BMOA"
+                                                         elsif file_lines[1][112, 300].include? "00055"  
+                                                             ftype = "BMO CAD"
+                                                         
+                                                         elsif file_lines[1][112, 300].include? "NTLTD"  
+                                                             ftype = "NB CAD"
+                                                          else ftype = "UNDEFINED"
+                                                         end
+                                                         
+                                                   end
+                                            
                          
                                size = File.size("#{path}")/1024
                       
