@@ -12,12 +12,14 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
        
       if current_user.role == "administrator"
             @uploads = Upload.all
-            
-                
-                       
-   
+            @validfiles =Validfile.all
+            if params[:valid] 
+                flash[:notice] = "file valid "+params[:id]
+                moveValidFile(params[:id])
+            end
         else
              @uploads = Upload.where(:user => current_user.email)
+       
         end
         
        
@@ -29,44 +31,26 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
   
   def create
 
-#===================================================================================================
-                      
-       
-       
-         unless params[:upload][:file].nil?
+        unless params[:upload][:file].nil?
          
            if save_file(params[:upload][:file]) 
                 redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
             else
                redirect_to({:action => :index}, :flash => { :error  => current_user.email + ": Or ICE file already uploaded , or it has wrong layout"} )
            end
-            
-          end
+        end
       
         
    end
 
-            
-          #  redirect_to({:action => :index}, {:notice => "File uploaded by " +current_user.email})
-             #redirect_to action: 'index', :notice =>  params[:upload][:user]
-             
-             
-   # end
+        
   
  def ajax
       # @uploads = Upload.all
         
       save_file(params[:file])
              
-            
-                # respond_to do |format|
-               
-            #    format.html { redirect_to '/uploads/index', notice: 'File was successfully created.' }
-            #    format.json {}
-                #format.js   
-               
-          #  end
-      
+         
   end
   
   def popup
@@ -75,22 +59,28 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
   end 
    def destroy
        
+        
         unless Dir["public/data/*"].empty?
         filename =Upload.find(params[:id]).filepath  
         File.delete('public/data/'+filename)
-         end
+         
         redirect_to action: 'index'
         Upload.where(:id => params[:id]).destroy_all
+    end
+        unless Dir["public/done/*"].empty?
+        filename =Validfile.find(params[:id]).filepath  
+        File.delete('public/done/'+filename)
+         
+        redirect_to action: 'index'
+        Validfile.where(:id => params[:id]).destroy_all
+   end
    end
    
     def show
      uploaded_io = params[:file]
-        #File.open(Rails.root.join('public', 'data', uploaded_io.original_filename), 'wb') do |file|
-        #file.write(uploaded_io.read)
-       
            @file =Upload.new(:filepath =>params[:file].original_filename )
            @file.save 
-        #end   
+      
            respond_to do |format|
                 if @file.save
                 format.html { redirect_to 'show', notice: 'File was successfully created.' }
@@ -122,7 +112,23 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
   private 
 #============================================  
  #---------READ FILE ------------------------------- 
+     def moveValidFile(id)
+         
+         
+        filename =Upload.find(id).filepath  
+         path=Rails.root.join('public', 'data', filename) 
+        validpath = Rails.root.join('public', 'done', filename )
+        
+          File.open(validpath, 'wb') do |file|
+            read_data=path.read
+            file.write(read_data)
+            size = File.size("#{path}")/1024
+            ftype=""
+            @validfile =Upload.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
+                               @validfile.save 
+     end
      
+ end 
         def save_file(formdata)
       
         file_lines=[]

@@ -93,7 +93,7 @@ class DataFile
           
           
            
-             if (rg['alfanum'] =~ data.strip) ;   data  = "<" + data +": error>"; end
+         #    if (rg['alfanum'] =~ data.strip) ;   data  = "<" + data +": error>"; end
             
           
            if (k.include? "AMOUNT")
@@ -309,10 +309,6 @@ skip_before_filter :verify_authenticity_token
           myfile = DataFile.new(Upload.find(id).filepath, "public/data")
           layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
             
-          
-          
-         
-           
           mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
         
             

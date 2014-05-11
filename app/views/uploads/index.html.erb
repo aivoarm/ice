@@ -69,10 +69,26 @@ $(document).ready(function() {
   <% end %>
  <% end %>
 
+<br />
+<h3>Validated file for validation</h3>
+<br />
+
+
   </tbody>
   </table>
   
-   
+   <% if @validfiles %>
+   <% @validfiles.each do |up| %>
+ <tr>
+        <td><%= up.filepath %></td>
+        <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
+        <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Validate', validator_path(:id => up.id), :class => "val" %></td>
+
+     
+</tr>
+  <% end %>
+ <% end %>
    
     <% if can? :update, :all%> 
   
@@ -88,4 +104,14 @@ $(document).ready(function() {
 <%= link_to  'Clean DB' , cleandb_uploads_path, :method => :delete, data: { confirm: 'Are you sure?' } %>
  <%end%>
  
+ 
+ 
+ 
+ 
  </div>
+ 
+ 
+ 
+ 
+ 
+ 

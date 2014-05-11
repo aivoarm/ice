@@ -2,8 +2,18 @@
   <div>
 <lable>back to </lable>
 <%= link_to "Upload", "/uploads" %>
+
+
 </div>
 
+
+  <%= form_tag(uploads_path(:id =>  @id), :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
+            <%= hidden_field_tag :valid, :value => true %>
+            <%= hidden_field_tag :user, :value => @user %>
+            <%= submit_tag 'Valid', data: { confirm: 'Are you sure?' } %>
+        	
+    <% end %>
+        
  <%=@mytest1 %>
 <br /><br />
  <%=@mytest %>

@@ -18,3 +18,16 @@ rails g scaffold invoice_details line_num:integer RECORD_TYPE:string FILE_DATE:i
 
 
 rails g scaffold file_header line_num:integer RECORD_TYPE:string FILE_DATE:integer SOURCE:string  INVOICE_COUNT:integer  INVOICE_AMOUNT:decimal TAX_VALIDATED:string valid:boolean 
+
+
+rails g model validfile filepath:string user:string size:string ftype:string valid:boolean
+
+ create_table "uploads", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "filepath"
+    t.string   "user"
+    t.string   "size"
+    t.string   "ftype"
+    t.boolean  "valid"
+  end
