@@ -301,7 +301,7 @@ skip_before_filter :verify_authenticity_token
                 
               
              
-           @id =id=params[:id]
+           @id =params[:id]
              
                    
                    

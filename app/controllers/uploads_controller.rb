@@ -15,7 +15,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
             @validfiles =Validfile.all
             if params[:valid] 
                 flash[:notice] = "file valid "+params[:id]
-                moveValidFile(params[:id])
+                #moveValidFile(params[:id][:id])
             end
         else
              @uploads = Upload.where(:user => current_user.email)
