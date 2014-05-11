@@ -11,22 +11,11 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
       @user= current_user
        
       if current_user.role == "administrator"
-           
-          
-  
-       
             @uploads = Upload.all
             
-            respond_to do |format|
-                    format.json { render json: {:upload => @uploads,:params => params[:val]}}
-                    format.html 
-            end
                 
                        
-    unless Upload.all.empty?
-           #Upload.last.update(:ftype => "BPB") 
-            Upload.last.update(:ftype => params[:val]) 
-    end
+   
         else
              @uploads = Upload.where(:user => current_user.email)
         end
@@ -81,14 +70,6 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
   end
   
   def popup
-      unless Upload.all.empty?
-           #Upload.last.update(:ftype => "BPB") 
-            Upload.last.update(:ftype => params[:val]) 
-    end
-       
-            
-            
-           
                 
         
   end 

@@ -47,13 +47,6 @@ ActiveRecord::Schema.define(version: 20140508193334) do
     t.datetime "updated_at"
   end
 
-  create_table "file_types", force: true do |t|
-    t.string   "ftype"
-    t.integer  "countr_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "filetypes", force: true do |t|
     t.string   "ftype"
     t.string   "country"

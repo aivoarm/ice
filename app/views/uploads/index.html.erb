@@ -1,18 +1,14 @@
 
 
-<%= stylesheet_link_tag    "uploads" %>
-<%= javascript_include_tag "uploads" %>
-   <%= @d %>
 
 <div id="popup" class ="notice" style="color:green; display:none">
 
-  
   <%= collection_select(:get,:ftype_id,Filetype.all,:id, :ftype) %>
 </div>
 
-<br /><br />
+<br />
 <h3>Upload file for validation</h3>
-<br /><br />
+<br />
 
     <div class="selected_btn">
         <%= form_tag({:action => 'create'}, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
@@ -23,13 +19,9 @@
         <% end %>
     </div>
 
-        <div  id = "drop-files" class= 'dropz'>Click or drop file Here</div>
 
 
-<br /><br /><br />
-
-
-<br /><br /><br />
+<br />
 
 <script>
  
@@ -37,164 +29,13 @@
   
   //===================================
  
- var uploaded = false;
- function isIE( version, comparison ){
-    var $div = $('<div style="display:none;"/>').appendTo($('body'));
-    $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
-    var ieTest = $div.find('a').length;
-    $div.remove();
-    return ieTest;
-}
+ 
 
 
 
 $(document).ready(function() {
      
-
- $('#get_ftype_id').change(function(){
-    $.ajax({
-        url:"uploads/index",
-        type: "GET",
-        data: { val: $('#get_ftype_id option:selected').text()} })
-        .done(function() {
-        //location.reload(true)
-        data =  $('#popup').append("done")
-      });
-   });
-
-
-
-   
-	 jQuery.event.props.push('dataTransfer');
-    if(isIE(8)){ /* runs in IE8 */
-    $( ".dropz" ).hide()
-    $('#uploadfile').css("left", "0px")
-    $('#rest').css("padding-top", "100px")
-        }
-        
-	 $( ".dropz" ).click(function(e) {
-   	   		$("#upload_file").trigger('click');
-   	   	
-		});
-
-	if(!isIE(8)){ /* runs in IE8 */
-		 $('#uploadfile input').change(function (e) {
-				if(e) $('input[type=submit]').trigger('click')
-		    });
-    	}
-	
-	
-    var dataArray = [];
-     var  files;
-    $('.dropz')
-	.bind('dragenter', function (e) {
-         e.originalEvent.stopPropagation();
-        e.originalEvent.preventDefault();
-     })
-      .bind('dragover', function (e) {
-          e.originalEvent.stopPropagation();
-        e.originalEvent.preventDefault();
-        $('.dropz').css("backdround-color", "grey")
-     })
-    .bind('drop', function (e) {
-        e.originalEvent.stopPropagation();
-        e.originalEvent.preventDefault();
-        
-       files = e.dataTransfer.files;
-     
-  	   var data, xhr;
-
-    	data = new FormData();
-    	data.append( 'file', files[0] );
-       //alert(data.to_json)
- 	    callajax(data);
-    
-       
-    
-    });
-  
-   ///================================================================= 
- 
-    
-    popup();
-
-
-//=============================================================================================================
-   
-
-
-
-
-//=============================================================================================================   
-}); //END document ready
-function popup(){
-    
-    $('#popup').show()
-    //xhr =  getXMLHttpRequest()
-       $.ajax({
-            url: '/uploads.json/', dataType: "json",
-            beforeSend : function(xhr){
-            xhr.setRequestHeader("Accept", "application/json")
-            },
-        success : function(data){
-            
-            
-              d=[];
-              
-            
-                 $.each(data, function( k, v ) { 
-                     d.push(v)
-                          
-  //         
-                 });  
-   
-   $('#popup').prepend( "<p> We are identified the file for \""+d[d.length-1].ftype+"\" .  If this is incorrect please select the right option below</p>")
-              
-        },
-          error: function(objAJAXRequest, strError, errorThrown){
-           alert("ERROR: " + strError);
-        }
-        });//End ajax
- 
-}
-
-
-
-function callajax(data){
-    xhr =  getXMLHttpRequest()
-
-    xhr.open( 'POST', 'uploads/ajax', true );
-    xhr.onreadystatechange = function ( response ) {location.reload(true); uploaded = true};
-    xhr.send( data );
-	e.preventDefault();
-	
-     
-}   
-   
-   
-   function getXMLHttpRequest() {
-
-   var xhr = null;
-
-   if (window.XMLHttpRequest || window.ActiveXObject) {
-      if (window.ActiveXObject) {
-         try {
-            xhr = new ActiveXObject("Msxml2.XMLHTTP");
-         } catch(e) {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
-         }
-      } else {
-         xhr = new XMLHttpRequest();
-      }
-   } else {
-      alert("Your browser doesn't support XMLHTTPRequest...");
-      return null;
-   }
-
-   return xhr;
-
-}
-
+});
 
  
  
