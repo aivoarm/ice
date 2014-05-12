@@ -104,8 +104,11 @@ class ValidatorController < ApplicationController
                   lih = l[1].to_i-1
                end
             end 
-        #lih = layout.iheader["TAX_VALIDATED"]      
-#  -------------------layout---------------------------       
+        #lih = layout.iheader["TAX_VALIDATED"]    
+        
+#  -------------------end layout---------------------------    
+
+
  if  session[:val] =='VALID'
      
       session[:file_id] =nil
@@ -146,7 +149,7 @@ class ValidatorController < ApplicationController
      
       session[:val]=nil
          session[:file_id] =nil
-        redirect_to "/uploads"
+        redirect_to "/uploads" , :flash => { :error  => "VALID" }
         
     end
     
