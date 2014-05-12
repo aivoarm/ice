@@ -7,11 +7,11 @@
 </div>
 
 
-  <%= form_tag(uploads_path, :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
+  <%= form_tag(uploads_path(:id => params[:id]), :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
             <%= hidden_field_tag :valid, :value => true %>
-             <%= hidden_field_tag :id, :id => @id %>
+            <%= hidden_field_tag :file_id, :id => @id %>
             <%= hidden_field_tag :user, :value => @user %>
-            <%= submit_tag 'Valid', data: { confirm: 'Are you sure?' } %>
+            <%= submit_tag 'Valid' %>
         	
     <% end %>
         
@@ -57,33 +57,22 @@
           error: function(objAJAXRequest, strError, errorThrown){
            alert("ERROR: " + strError);
         }
-        }
- );
-
-}
+        });
+    }
    
- 
-
- 
  
 function showdata(data){
     $.each(data, function( i, v ) { 
-          
         var check=v.toString()
-          
-        
            $('#data').append("<table><tr>")
-           
                if(check.indexOf('error') != -1){
                     $.each(v, function( index, value ) {
                         $('#data').append( "<td>"+value +"</td>")
                      });
                }
-           
            $('#data').append("</tr></table>")
-           
-    });
-}
+        });
+    }
 //===================================================================   
 </script>
 

@@ -15,7 +15,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
             @validfiles =Validfile.all
             if params[:valid] 
                 flash[:notice] = "file valid "+params[:id]
-                #moveValidFile(params[:id][:id])
+                moveValidFile(params[:id].to_i)
             end
         else
              @uploads = Upload.where(:user => current_user.email)
@@ -116,7 +116,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
          
          
         filename =Upload.find(id).filepath  
-         path=Rails.root.join('public', 'data', filename) 
+        path=Rails.root.join('public', 'data', filename) 
         validpath = Rails.root.join('public', 'done', filename )
         
           File.open(validpath, 'wb') do |file|
@@ -124,11 +124,14 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
             file.write(read_data)
             size = File.size("#{path}")/1024
             ftype=""
-            @validfile =Upload.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
+            @validfile =Validfile.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
                                @validfile.save 
      end
      
  end 
+ 
+ 
+ 
         def save_file(formdata)
       
         file_lines=[]

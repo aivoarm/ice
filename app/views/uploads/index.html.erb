@@ -25,21 +25,8 @@
 
 <script>
  
- 
-  
-  //===================================
- 
- 
+$(document).ready(function() {});
 
-
-
-$(document).ready(function() {
-     
-});
-
- 
- 
-//===================================================================   
 </script>
 
     
@@ -47,49 +34,42 @@ $(document).ready(function() {
 
 <div id="rest">
     <h3>List of uploaded files </h3>
-
-   <div id="file_info" style="display:none; position:absolute; top:100px, left:100px"></div>
-
- <br /><br />
-
- 
- 
+<br />
 <table>
 <tbody>
 <% if @uploads %>
    <% @uploads.each do |up| %>
- <tr>
-        <td><%= up.filepath %></td>
-        <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
-        <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Validate', validator_path(:id => up.id), :class => "val" %></td>
-
-     
-</tr>
-  <% end %>
+        <tr>
+            <td><%= up.filepath %></td>
+            <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
+            <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Validate', validator_path(:id => up.id), :class => "val" %></td>
+    
+        </tr>
+     <% end %>
  <% end %>
-
-<br />
-<h3>Validated file for validation</h3>
-<br />
-
-
-  </tbody>
+</tbody>
   </table>
   
+<hr />
+<h3>Validated files</h3>
+<br />
+ <table>
+<tbody>
+  
    <% if @validfiles %>
-   <% @validfiles.each do |up| %>
- <tr>
-        <td><%= up.filepath %></td>
-        <td><%= link_to "Download", download_index_path(:file => up.filepath, :filepath => "public/data"), :method => :get, :controller => DownloadController %></td>
-        <td><%= link_to 'Delete', upload_path(:id => up.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Validate', validator_path(:id => up.id), :class => "val" %></td>
-
-     
-</tr>
+   <% @validfiles.each do |v| %>
+    <tr>
+        <td><%= v.filepath %></td>
+        <td><%= link_to "Download", download_index_path(:file => v.filepath, :filepath => "public/done"), :method => :get, :controller => DownloadController %></td>
+        <td><%= link_to 'Delete', upload_path(:id => v.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+    </tr>
   <% end %>
  <% end %>
-   
+ </tbody>
+  </table>
+  <hr /> 
     <% if can? :update, :all%> 
   
   <h3>Setup</h3>
