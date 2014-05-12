@@ -19,7 +19,9 @@ class ValidatorController < ApplicationController
 
   def index
        id =params[:id]
-        session[:file_id] = params[:id]
+       
+       session[:file_id] = params[:id]
+        
        novalid=false
       name =Upload.find(params[:id]).filepath  
       
@@ -51,12 +53,19 @@ class ValidatorController < ApplicationController
        end
        
        if novalid 
-           
+                
+                session[:val] = 'VALID'
             
-                 redirect_to  '/uploads', session[:val] => 'VALID'
+                respond_to do |format|
+                    format.json { render json:  mytest }
+                    format.html {redirect_to({:action => :valid},  :flash => { :error  => a.to_json })}
+                 end
                
             
         else
+            
+                session[:val] = 'NOT VALID'
+            
             respond_to do |format|
                     format.json { render json:  mytest }
                     format.html {redirect_to({:action => :valid},  :flash => { :error  => a.to_json })}
@@ -75,7 +84,8 @@ class ValidatorController < ApplicationController
  #VALID BUTTON 
   
   def valid
-      
+     
+          
       id = session[:file_id]
        name =Upload.find(id).filepath  
        ou="BMO"
@@ -96,7 +106,13 @@ class ValidatorController < ApplicationController
             end 
         #lih = layout.iheader["TAX_VALIDATED"]      
 #  -------------------layout---------------------------       
-
+ if  session[:val] =='VALID'
+     
+      session[:file_id] =nil
+       session[:val]=nil
+      redirect_to "/uploads"
+      
+ else
         filename =Upload.find(id).filepath  
         path=Rails.root.join('public', 'data', filename) 
         validpath = Rails.root.join('public', 'done', filename )
@@ -126,8 +142,15 @@ class ValidatorController < ApplicationController
 
    
         end
+        
+     
+      session[:val]=nil
          session[:file_id] =nil
         redirect_to "/uploads"
+        
+    end
+    
+   
   end
   
   
