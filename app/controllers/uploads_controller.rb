@@ -7,13 +7,15 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
       
-       @v = params[:val]
+      
       
       @filetypes = Filetype.all
       @countries=Country.all
       @user= current_user
        
       if current_user.role == "administrator"
+           @v = session[:val] 
+          
             @uploads = Upload.all
             @validfiles =Validfile.all
             if params[:valid] 
@@ -21,11 +23,12 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
                 moveValidFile(params[:id].to_i)
             end
         else
+             @v = session[:val] 
              @uploads = Upload.where(:user => current_user.email)
        
         end
         
-   
+   session[:val] =nil
        
   end
   

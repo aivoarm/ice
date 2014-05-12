@@ -18,7 +18,9 @@ class ValidatorController < ApplicationController
 #=================================================================================================================================================================
 
   def index
-      
+       id =params[:id]
+        session[:file_id] = params[:id]
+       novalid=false
       name =Upload.find(params[:id]).filepath  
       
        ou="BMO"
@@ -27,20 +29,15 @@ class ValidatorController < ApplicationController
                flash[:error] ="Layout file is missing"
      else
                 
-              
-             
-          id =params[:id]
-             
-                   
-          session[:file_id] = params[:id]
+         
                 
           myfile = DataFile.new(Upload.find(id).filepath, "public/data")
           layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
             
           mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
         
-        a=[]
-        novalid=false
+         a=[]
+       
            
         mytest.each do |item|
           item.each do |i|  
@@ -55,10 +52,9 @@ class ValidatorController < ApplicationController
        
        if novalid 
            
-              respond_to do |format|
-                    format.json { render json:  mytest }
-                    format.html { redirect_to  '/uploads', :val => 'VALID'} 
-               end
+            
+                 redirect_to  '/uploads', session[:val] => 'VALID'
+               
             
         else
             respond_to do |format|
