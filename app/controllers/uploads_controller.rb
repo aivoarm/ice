@@ -7,7 +7,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
       
-       @v = session[:valid]
+       @v = params[:val]
       
       @filetypes = Filetype.all
       @countries=Country.all
@@ -25,8 +25,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
        
         end
         
-       session[:valid]=nil
-       
+   
        
   end
   

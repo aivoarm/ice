@@ -57,13 +57,13 @@ class ValidatorController < ApplicationController
            
               respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid},  session[:valid] => "VALID FILE" )} 
+                    format.html { redirect_to  '/uploads', :val => 'VALID'} 
                end
             
         else
             respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid},  session[:valid] => a.to_json )}
+                    format.html {redirect_to({:action => :valid},  :flash => { :error  => a.to_json })}
             end
             
              #  obj=[fheader,iheader, idetails]
