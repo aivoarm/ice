@@ -82,6 +82,9 @@ class ValidatorController < ApplicationController
   
  
  #VALID BUTTON 
+#=================================================================================================================================================================
+# WRITE VALID FILE
+#=================================================================================================================================================================
   
   def valid
      
@@ -111,7 +114,7 @@ class ValidatorController < ApplicationController
 
  if  session[:val] =='VALID'
      
-      session[:file_id] =nil
+        session[:file_id] =nil
        session[:val]=nil
       redirect_to "/uploads"
       
@@ -124,16 +127,20 @@ class ValidatorController < ApplicationController
               
                   
               
-            read_data=path.read
+            read_data = path.read
+            
             case read_data[0] 
-             when "F"
+            
+             when "Fs"
                 read_data[lfh]="G"
              when "H"
-                  read_data[lih]="G"
+                read_data[lih]="G"
             end
-            
+             
            
             file.write(read_data)
+            
+         end
             size = File.size("#{path}")/1024
             ftype=""
             @validfile =Validfile.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
@@ -145,14 +152,16 @@ class ValidatorController < ApplicationController
              
            
             Upload.where(:id => id).destroy_all
-        end
+       
    
         end
         
      
       session[:val]=nil
          session[:file_id] =nil
-        redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
+      #  redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
+        
+       
         
     end
     
