@@ -57,19 +57,20 @@ class ValidatorController < ApplicationController
        
        if novalid 
            
-            respond_to do |format|
+           
+                respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid}, :id =>params[:id], :flash => { :error  => a.to_json} )}
+                    format.html {redirect_to "/uploads", :flash => { :notce  => "VALID FILE"}}
                 end
             
         else
-        
+            respond_to do |format|
+                    format.json { render json:  mytest }
+                    format.html {redirect_to({:action => :valid}, :id =>params[:id], :flash => { :error  => a.to_json} )}
+            end
+            
              #  obj=[fheader,iheader, idetails]
             
-                respond_to do |format|
-                    format.json { render json:  mytest }
-                    format.html # index.html.erb
-                end
         end
     
     
@@ -81,10 +82,12 @@ class ValidatorController < ApplicationController
  #VALID BUTTON 
   
   def valid
+      
       id =session[:tmp_checked] 
        name =Upload.find(id).filepath  
        ou="BMO"
-       lfh=0
+#  -------------------layout---------------------------        
+        lfh=0
         lih=0
        layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
        # lfh = layout.fheader.include? "TAX_VALIDATED" 
@@ -99,7 +102,8 @@ class ValidatorController < ApplicationController
                end
             end 
         #lih = layout.iheader["TAX_VALIDATED"]      
-       
+#  -------------------layout---------------------------       
+
         filename =Upload.find(id).filepath  
         path=Rails.root.join('public', 'data', filename) 
         validpath = Rails.root.join('public', 'done', filename )
