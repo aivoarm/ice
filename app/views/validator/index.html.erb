@@ -7,13 +7,8 @@
 </div>
 
 
-  <%= form_tag(uploads_path(:id => params[:id]), :method => :post, :multipart => true, :controller => UploadsController, :id =>"uploadfile") do %>
-            <%= hidden_field_tag :valid, :value => true %>
-            <%= hidden_field_tag :file_id, :id => @id %>
-            <%= hidden_field_tag :user, :value => @user %>
-            <%= submit_tag 'Valid' %>
-        	
-    <% end %>
+ 
+    <%= link_to 'Valid', validator_v_path(:num => @id), method: :get %>
         
  <%=@mytest1 %>
 <br /><br />
