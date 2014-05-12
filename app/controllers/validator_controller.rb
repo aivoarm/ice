@@ -32,7 +32,7 @@ class ValidatorController < ApplicationController
            @id =params[:id]
              
                    
-            session[:tmp_checked] = params[:id]
+          session[:file_id] = params[:id]
                 
           myfile = DataFile.new(Upload.find(@id).filepath, "public/data")
           layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
@@ -45,10 +45,8 @@ class ValidatorController < ApplicationController
         mytest.each do |item|
           item.each do |i|  
             if i.to_s.include? "error"
-                 a << item
-              novalid=true
-                  
-                
+                a << item
+                novalid=true
             end
             
             
@@ -57,11 +55,10 @@ class ValidatorController < ApplicationController
        
        if novalid 
            
-           
-                respond_to do |format|
+              respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to "/uploads", :flash => { :notce  => "VALID FILE"}}
-                end
+                    format.html {redirect_to({:action => :valid}, :id =>params[:id], :flash => { :notce  =>  "VALID FILE"} )} 
+               end
             
         else
             respond_to do |format|
@@ -83,7 +80,7 @@ class ValidatorController < ApplicationController
   
   def valid
       
-      id =session[:tmp_checked] 
+      id = session[:file_id]
        name =Upload.find(id).filepath  
        ou="BMO"
 #  -------------------layout---------------------------        
@@ -133,7 +130,7 @@ class ValidatorController < ApplicationController
 
    
         end
-        session[:tmp_checked] =nil
+         session[:file_id] =nil
         redirect_to "/uploads"
   end
   
