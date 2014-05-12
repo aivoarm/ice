@@ -51,9 +51,11 @@ $(document).ready(function() {});
 </tbody>
   </table>
   
- 
+ <div class="msg"><%= flash[:msg] %></div>
+ <div class="err_msg"><%= flash[:err_msg] %></div>
   
 <hr />
+<div class ="validfile">
 <h3>Validated files</h3>
 <br />
  <table>
@@ -64,13 +66,17 @@ $(document).ready(function() {});
     <tr>
         <td><%= v.filepath %></td>
         <td><%= link_to "Download", download_index_path(:file => v.filepath, :filepath => "public/done"), :method => :get, :controller => DownloadController %></td>
-        <td><%= link_to 'Delete', upload_path(:id => v.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', destroy_v_upload_path(:id => v.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
     </tr>
   <% end %>
  <% end %>
  </tbody>
   </table>
+  
+  </div>
+  
+  
   <hr /> 
     <% if can? :update, :all%> 
   

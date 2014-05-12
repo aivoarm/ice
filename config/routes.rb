@@ -36,6 +36,7 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
     resources :uploads do
      member do
         delete 'destroy'   
+        delete 'destroy_v'   
     end
      
      collection do

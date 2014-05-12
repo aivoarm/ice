@@ -58,7 +58,7 @@ class ValidatorController < ApplicationController
             
                 respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid},  :flash => { :error  => a.to_json })}
+                    format.html {redirect_to({:action => :valid},  :flash => { :err_msg  => a.to_json })}
                  end
                
             
@@ -68,7 +68,7 @@ class ValidatorController < ApplicationController
             
             respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid},  :flash => { :error  => a.to_json })}
+                    format.html {redirect_to({:action => :valid},  :flash => { :err_msg  => a.to_json })}
             end
             
              #  obj=[fheader,iheader, idetails]
@@ -149,7 +149,7 @@ class ValidatorController < ApplicationController
      
       session[:val]=nil
          session[:file_id] =nil
-        redirect_to "/uploads" , :flash => { :error  => "VALID" }
+        redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
         
     end
     

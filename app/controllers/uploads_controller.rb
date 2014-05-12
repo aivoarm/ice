@@ -66,21 +66,25 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
        
         
         unless Dir["public/data/*"].empty?
-        filename =Upload.find(params[:id]).filepath  
-        File.delete('public/data/'+filename)
-         
-        redirect_to action: 'index'
-        Upload.where(:id => params[:id]).destroy_all
-    end
-        unless Dir["public/done/*"].empty?
-        filename =Validfile.find(params[:id]).filepath  
-        File.delete('public/done/'+filename)
-         
-        redirect_to action: 'index'
-        Validfile.where(:id => params[:id]).destroy_all
-   end
+            filename =Upload.find(params[:id]).filepath  
+            File.delete('public/data/'+filename)
+             
+            redirect_to action: 'index'
+            Upload.where(:id => params[:id]).destroy_all
+        end
+    
+       
    end
    
+   def destroy_v
+        unless Dir["public/done/*"].empty?
+            filename =Validfile.find(params[:id]).filepath  
+            File.delete('public/done/'+filename)
+             
+            redirect_to action: 'index'
+            Validfile.where(:id => params[:id]).destroy_all
+        end
+   end
     def show
      uploaded_io = params[:file]
            @file =Upload.new(:filepath =>params[:file].original_filename )
