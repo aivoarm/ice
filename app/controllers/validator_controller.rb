@@ -142,7 +142,7 @@ class ValidatorController < ApplicationController
             
             
         end
-        file_lines.join(/[\r\n]+/)
+        file_lines.join("\r\n")
               read_data = file_lines
            
             file.write(read_data)
