@@ -128,15 +128,21 @@ class ValidatorController < ApplicationController
                   
               
             read_data = path.read
+             file_lines=  read_data.split(/[\r\n]+/)    
+                
+            file_lines.each do |line|
+            case line[0] 
             
-            case read_data[0] 
+              when "F"
+                   line[lfh]="G"
+              when "H"
+                  line[lih]="G"
+             end
             
-             when "Fs"
-                read_data[lfh]="G"
-             when "H"
-                read_data[lih]="G"
-            end
-             
+            
+        end
+        file_lines.join("r/n")
+              read_data = file_lines
            
             file.write(read_data)
             
@@ -159,7 +165,7 @@ class ValidatorController < ApplicationController
      
       session[:val]=nil
          session[:file_id] =nil
-      #  redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
+        redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
         
        
         
