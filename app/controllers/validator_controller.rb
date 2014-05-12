@@ -125,24 +125,27 @@ class ValidatorController < ApplicationController
                   
               
             read_data=path.read
-            
-            if read_data[0] == "H"
-                read_data[1]
-                  read_data[lih]="G"
-             end
-            
-            if read_data[0] == "F"
-                
+            case read_data[0] 
+             when "F"
                 read_data[lfh]="G"
-                
-                
+             when "H"
+                  read_data[lih]="G"
             end
+            
+           
             file.write(read_data)
             size = File.size("#{path}")/1024
             ftype=""
             @validfile =Validfile.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
                                @validfile.save 
 
+        unless Dir["public/data/*"].empty?
+            filename =Upload.find(id).filepath  
+            File.delete('public/data/'+filename)
+             
+           
+            Upload.where(:id => id).destroy_all
+        end
    
         end
         
