@@ -107,11 +107,17 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
        unless Dir["public/data/*"].empty?
         #filename =Upload.find(params[:id]).filepath 
          FileUtils.rm_rf('public/data')
+        
+       
+           # File.delete('public/data/'+filename)
+        end
+           unless Dir["public/done/*"].empty?
+        #filename =Upload.find(params[:id]).filepath 
+       
          FileUtils.rm_rf('public/done')
        
            # File.delete('public/data/'+filename)
         end
-         
       Upload.delete_all
       Validfile.delete_all
       

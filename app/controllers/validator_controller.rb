@@ -54,7 +54,7 @@ class ValidatorController < ApplicationController
        
        if novalid 
                 
-                session[:val] = 'VALID'
+                session[:val] = 'NOT VALID'
             
                 respond_to do |format|
                     format.json { render json:  mytest }
@@ -64,7 +64,7 @@ class ValidatorController < ApplicationController
             
         else
             
-                session[:val] = 'NOT VALID'
+                session[:val] = 'VALID'
             
             respond_to do |format|
                     format.json { render json:  mytest }
@@ -81,7 +81,7 @@ class ValidatorController < ApplicationController
  end
   
  
- #VALID BUTTON 
+ 
 #=================================================================================================================================================================
 # WRITE VALID FILE
 #=================================================================================================================================================================
@@ -112,42 +112,45 @@ class ValidatorController < ApplicationController
 #  -------------------end layout---------------------------    
 
 
- if  session[:val] =='VALID'
+ if  session[:val] =='NOT VALID'
      
         session[:file_id] =nil
-       session[:val]=nil
+        session[:val]=nil
       redirect_to "/uploads"
       
  else
         filename =Upload.find(id).filepath  
-        path=Rails.root.join('public', 'data', filename) 
-        validpath = Rails.root.join('public', 'done', filename )
         
+        path=Rails.root.join('public', 'data', filename) 
+        
+        validpath = Rails.root.join('public', 'done', filename )
+       
           File.open(validpath, 'wb') do |file|
-              
+              #read_data="" 
                   
-              
-            read_data = path.read
+            File.open(path, 'r') do |read_data|
+          #  read_data = path.read
             
-            file_lines=  read_data.split(/[\r\n]+/)    
+            read_data.each do |line|   
+            
                 
-            file_lines.each do |line|
-            case line[0] 
-            
-              when "F"
-                   line[lfh]="G"
-              when "H"
-                  line[lih]="G"
-             end
-            
-            
-        end
-        file_lines.join("\r\n")
-              read_data = file_lines
+                        if line[0] == "F"
+                             line.gsub!(line[lfh], "G")
+                         
+                        end
+                        if line[0] == "H"
+                             line.gsub!(line[lih], "G")
+                         end   
+                      file.write(line)
+              end   
+               
+            end
+          
            
-            file.write(read_data)
+          
             
          end
+        
             size = File.size("#{path}")/1024
             ftype=""
             @validfile =Validfile.new(:filepath =>filename, :user => current_user.email, :size => size , :ftype =>ftype, :valid => true )
@@ -164,7 +167,7 @@ class ValidatorController < ApplicationController
         end
         
      
-      session[:val]=nil
+         session[:val]=nil
          session[:file_id] =nil
         redirect_to "/uploads" , :flash => { :msg  => "VALID FILE" }
         
