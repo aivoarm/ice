@@ -6,6 +6,9 @@ skip_before_filter :verify_authenticity_token
 load_and_authorize_resource :only => [:destroy, :cleandb]
 
   def index
+      
+       @v = session[:valid]
+      
       @filetypes = Filetype.all
       @countries=Country.all
       @user= current_user
@@ -22,7 +25,7 @@ load_and_authorize_resource :only => [:destroy, :cleandb]
        
         end
         
-       
+       session[:valid]=nil
        
        
   end

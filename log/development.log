@@ -14026,3 +14026,2021 @@ NoMethodError (undefined method `original_filename' for nil:NilClass):
   Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
   Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
   Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (132.8ms)
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 09:53:01 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (8.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.3ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.2ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (191.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 626ms (Views: 523.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:02 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:03 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:03 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:03 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:03 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:03 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:04 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 09:53:04 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:04 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:04 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:05 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:06 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:06 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:06 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:07 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:08 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:08 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:08 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:11 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:11 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:53:14 -0400
+
+
+Started POST "/uploads/create" for 127.8.238.129 at 2014-05-12 09:53:25 -0400
+Processing by UploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G/Ie/90FrpAU9VgTK7btX6XeaXZTBPmh8oKEbPuMWaY=", "upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x000000044bb190 @tempfile=#<File:/tmp/RackMultipart20140512-234849-1u15pi9>, @original_filename="BMO APR 02 -08.20140409.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload[file]\"; filename=\"BMO APR 02 -08.20140409.dat\"\r\nContent-Type: application/octet-stream\r\n">}, "user"=>"{:value=>#<User id: 1, email: \"admin@example.com\", encrypted_password: \"$2a$10$m9ekjSjsI5hFBYbeuu5esOv1yyVOYuEsO2ZnZo7OdUn3...\", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: \"2014-05-12 13:05:35\", last_sign_in_at: \"2014-05-12 01:26:32\", current_sign_in_ip: \"23.251.148.106\", last_sign_in_ip: \"23.251.148.106\", created_at: \"2014-05-11 21:38:06\", updated_at: \"2014-05-12 13:05:35\", role: \"administrator\">}", "commit"=>"Upload"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUpload Exists (14.7ms)[0m  [1mSELECT 1 AS one FROM "uploads" WHERE "uploads"."filepath" = 'BMO APR 02 -08.20140409.dat' LIMIT 1[0m
+  [1m[35mSQL (116.0ms)[0m  INSERT INTO "uploads" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 12 May 2014 13:53:25 UTC +00:00], ["filepath", "BMO APR 02 -08.20140409.dat"], ["ftype", "UNDEFINED"], ["size", 1272], ["updated_at", Mon, 12 May 2014 13:53:25 UTC +00:00], ["user", "admin@example.com"], ["valid", false]]
+  [1m[36m (112.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 727ms (ActiveRecord: 244.4ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:54:43 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (1.1ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (48.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 279ms (Views: 261.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:43 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:44 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:44 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:44 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:45 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:45 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:46 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:47 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:47 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:47 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:47 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:48 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:49 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:49 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:49 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:49 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:50 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:50 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:50 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 09:54:50 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:51 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:52 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:54:52 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:57:42 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.3ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (108.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 429ms (Views: 240.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:45 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:46 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:46 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:46 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:46 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:47 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:48 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:49 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:50 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:50 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:50 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:50 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:50 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:51 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:51 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:51 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:57:52 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 326ms (Views: 321.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:52 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:53 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:54 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:54 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:54 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:54 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:55 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:56 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:56 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:56 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:56 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:57 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 09:57:58 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:57:58 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:09 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:09 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:10 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:58:11 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.3ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (8.4ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (71.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 342ms (Views: 283.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:12 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:12 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:12 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:12 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:12 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:13 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:13 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:14 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:15 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:15 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:15 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:15 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:15 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:16 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:16 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:16 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:16 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:16 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:17 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:17 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:17 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:18 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:18 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:19 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:58:20 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (17.4ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (70.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 874ms (Views: 823.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:21 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:22 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:22 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:23 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:24 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:24 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:24 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:24 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:25 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:25 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:25 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:25 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:58:33 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.3ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 278ms (Views: 255.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:34 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:34 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:34 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:34 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:35 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:35 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:35 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:35 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:36 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:36 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:36 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:36 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:37 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:38 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:38 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:38 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:39 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:40 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:40 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:40 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:41 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:41 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:42 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:43 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:44 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:44 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:45 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:45 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:46 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:46 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:46 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:46 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:47 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:48 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:49 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:50 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:51 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:52 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:53 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:53 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:53 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:58:57 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.2ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (34.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 306ms (Views: 302.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:58 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:58 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:58 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:58 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:58:59 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:00 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:01 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:02 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:02 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:59:05 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (64.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (24.5ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (116.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 519ms (Views: 400.5ms | ActiveRecord: 89.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:06 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:06 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:06 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:06 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:06 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:07 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:08 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:08 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:08 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:09 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:09 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:09 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:10 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:10 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:10 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:10 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:10 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:11 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:11 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:11 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:11 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:12 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:12 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:12 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:12 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:12 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:14 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:14 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:15 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:16 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:18 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:19 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 09:59:29 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (10.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (8.4ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 246ms (Views: 210.5ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:30 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:31 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 09:59:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:32 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:33 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:34 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:34 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:34 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:34 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:35 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:35 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:35 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:35 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:35 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:36 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:36 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:37 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:38 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:38 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:38 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:38 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:38 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:39 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:40 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:46 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:48 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:49 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:49 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 09:59:51 -0400
+
+
+Started GET "/validator?id=12" for 127.8.238.129 at 2014-05-12 09:59:56 -0400
+
+SyntaxError (/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:60: syntax error, unexpected '}', expecting ')'
+...=> :valid},  @v = "VALID FILE"} )} 
+...                               ^
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:66: syntax error, unexpected '}', expecting ')'
+...ion => :valid}, @v = a.to_json} )}
+...                               ^
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:414: syntax error, unexpected keyword_end, expecting '}'
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:429: class definition in method body
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:609: class definition in method body
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:760: syntax error, unexpected $end, expecting '}'):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3828312088004016659__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (20.2ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (33.5ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (260.6ms)
+
+
+Started GET "/validator?id=12" for 127.8.238.129 at 2014-05-12 09:59:57 -0400
+
+SyntaxError (/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:60: syntax error, unexpected '}', expecting ')'
+...=> :valid},  @v = "VALID FILE"} )} 
+...                               ^
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:66: syntax error, unexpected '}', expecting ')'
+...ion => :valid}, @v = a.to_json} )}
+...                               ^
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:414: syntax error, unexpected keyword_end, expecting '}'
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:429: class definition in method body
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:609: class definition in method body
+/var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:760: syntax error, unexpected $end, expecting '}'):
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.4) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.4) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__3828312088004016659__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (17.4ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.2ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (310.1ms)
+
+
+Started GET "/validator?id=12" for 127.8.238.129 at 2014-05-12 10:00:24 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (51.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:26)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[35mLayoutFile Load (0.4ms)[0m  SELECT "layout_files".* FROM "layout_files"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:38)
+  [1m[35mLayoutFile Load (65.0ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to 
+Completed 500 Internal Server Error in 14793ms
+
+TypeError (can't convert Symbol into String):
+  app/controllers/validator_controller.rb:60:in `block (2 levels) in index'
+  app/controllers/validator_controller.rb:58:in `index'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (51.6ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.9ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (246.5ms)
+
+
+Started GET "/validator?id=12" for 127.8.238.129 at 2014-05-12 10:01:06 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (46.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "12"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:26)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.4ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "12"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:38)
+  [1m[36mLayoutFile Load (7.8ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 18695ms (ActiveRecord: 299.9ms)
+
+
+Started GET "/validator/v" for 127.8.238.129 at 2014-05-12 10:01:31 -0400
+Processing by ValidatorController#valid as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from valid at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:89)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (37.1ms)[0m  [1mINSERT INTO "validfiles" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 12 May 2014 14:01:31 UTC +00:00], ["filepath", "BMO APR 02 -08.20140409.dat"], ["ftype", ""], ["size", 1272], ["updated_at", Mon, 12 May 2014 14:01:31 UTC +00:00], ["user", "admin@example.com"], ["valid", true]]
+  [1m[35m (469.2ms)[0m  commit transaction
+Redirected to http://project-livec92e0817edb5.rhcloud.com/uploads
+Completed 302 Found in 1080ms (ActiveRecord: 527.0ms)
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 10:01:32 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.3ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.3ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (89.4ms)
+  Rendered layouts/_header.html.erb (33.1ms)
+Completed 200 OK in 684ms (Views: 661.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:34 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:35 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:35 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:36 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:36 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:37 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:37 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:37 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:37 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:41 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:41 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:42 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:43 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:43 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:43 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:43 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:44 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:44 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:44 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:44 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:44 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:45 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:46 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 10:01:46 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:46 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:47 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:47 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:48 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:50 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:53 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:55 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:55 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 10:01:56 -0400
+
+
+Started POST "/uploads/create" for 127.8.238.129 at 2014-05-12 10:02:31 -0400
+Processing by UploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G/Ie/90FrpAU9VgTK7btX6XeaXZTBPmh8oKEbPuMWaY=", "upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fe4149edab8 @tempfile=#<File:/tmp/RackMultipart20140512-234849-yz18pr>, @original_filename="bmoice.dat.20140409MC2_bad_layout", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload[file]\"; filename=\"bmoice.dat.20140409MC2_bad_layout\"\r\nContent-Type: application/octet-stream\r\n">}, "user"=>"{:value=>#<User id: 1, email: \"admin@example.com\", encrypted_password: \"$2a$10$m9ekjSjsI5hFBYbeuu5esOv1yyVOYuEsO2ZnZo7OdUn3...\", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 3, current_sign_in_at: \"2014-05-12 13:05:35\", last_sign_in_at: \"2014-05-12 01:26:32\", current_sign_in_ip: \"23.251.148.106\", last_sign_in_ip: \"23.251.148.106\", created_at: \"2014-05-11 21:38:06\", updated_at: \"2014-05-12 13:05:35\", role: \"administrator\">}", "commit"=>"Upload"}
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (6.6ms)[0m  begin transaction
+  [1m[36mUpload Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "uploads" WHERE "uploads"."filepath" = 'bmoice.dat.20140409MC2_bad_layout' LIMIT 1[0m
+  [1m[35mSQL (57.7ms)[0m  INSERT INTO "uploads" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 12 May 2014 14:02:31 UTC +00:00], ["filepath", "bmoice.dat.20140409MC2_bad_layout"], ["ftype", "UNDEFINED"], ["size", 0], ["updated_at", Mon, 12 May 2014 14:02:31 UTC +00:00], ["user", "admin@example.com"], ["valid", false]]
+  [1m[36m (62.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 242ms (ActiveRecord: 132.2ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 10:02:31 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.3ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (46.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 235ms (Views: 223.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:32 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:32 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:33 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:34 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:34 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:34 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:34 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:34 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:35 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:35 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:35 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:35 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:36 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:36 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:36 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:36 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:37 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 10:02:38 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:38 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:39 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:40 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:43 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:45 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:45 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:45 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:46 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:02:48 -0400
+
+
+Started GET "/validator?id=13" for 127.8.238.129 at 2014-05-12 10:02:54 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "13"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:26)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "13"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:38)
+  [1m[35mLayoutFile Load (0.2ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 32ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/validator?id=13" for 127.8.238.129 at 2014-05-12 10:03:30 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "13"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:26)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (23.7ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "13"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:38)
+  [1m[36mLayoutFile Load (0.3ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 257ms (ActiveRecord: 24.6ms)
+
+
+Started GET "/validator/v" for 127.8.238.129 at 2014-05-12 10:03:31 -0400
+Processing by ValidatorController#valid as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "13"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from valid at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:89)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35m (32.0ms)[0m  begin transaction
+  [1m[36mSQL (151.9ms)[0m  [1mINSERT INTO "validfiles" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 12 May 2014 14:03:32 UTC +00:00], ["filepath", "bmoice.dat.20140409MC2_bad_layout"], ["ftype", ""], ["size", 0], ["updated_at", Mon, 12 May 2014 14:03:32 UTC +00:00], ["user", "admin@example.com"], ["valid", true]]
+  [1m[35m (218.5ms)[0m  commit transaction
+Redirected to http://project-livec92e0817edb5.rhcloud.com/uploads
+Completed 302 Found in 923ms (ActiveRecord: 403.3ms)
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 10:03:33 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (114.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (82.6ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (50.9ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.3ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (902.0ms)
+  Rendered layouts/_header.html.erb (79.8ms)
+Completed 200 OK in 3780ms (Views: 3524.5ms | ActiveRecord: 247.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:39 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:40 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:41 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:41 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:42 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:43 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:43 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:44 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:45 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:46 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:46 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:47 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:48 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:48 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:48 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:48 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:48 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 10:03:49 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:49 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:49 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:49 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:49 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:50 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:50 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:50 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:50 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:54 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:55 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:56 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:56 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:57 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:58 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:58 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 10:03:58 -0400
+
+
+Started GET "/validator?id=12" for 127.8.238.129 at 2014-05-12 10:05:48 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "12"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:26)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.3ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "12"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:38)
+  [1m[36mLayoutFile Load (0.3ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 4241ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/validator/v" for 127.8.238.129 at 2014-05-12 10:05:55 -0400
+Processing by ValidatorController#valid as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from valid at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:89)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35m (3.3ms)[0m  begin transaction
+  [1m[36mSQL (39.7ms)[0m  [1mINSERT INTO "validfiles" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 12 May 2014 14:05:55 UTC +00:00], ["filepath", "BMO APR 02 -08.20140409.dat"], ["ftype", ""], ["size", 1272], ["updated_at", Mon, 12 May 2014 14:05:55 UTC +00:00], ["user", "admin@example.com"], ["valid", true]]
+  [1m[35m (68.4ms)[0m  commit transaction
+Redirected to http://project-livec92e0817edb5.rhcloud.com/uploads
+Completed 302 Found in 523ms (ActiveRecord: 112.9ms)
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 10:05:57 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.3ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (6.1ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (75.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 233ms (Views: 213.1ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:57 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:58 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 10:05:59 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:00 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 10:06:00 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:00 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:00 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:00 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:03 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:04 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:05 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:06 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:06 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 10:06:08 -0400

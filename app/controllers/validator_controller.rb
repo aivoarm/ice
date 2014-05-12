@@ -29,12 +29,12 @@ class ValidatorController < ApplicationController
                 
               
              
-           @id =params[:id]
+          id =params[:id]
              
                    
           session[:file_id] = params[:id]
                 
-          myfile = DataFile.new(Upload.find(@id).filepath, "public/data")
+          myfile = DataFile.new(Upload.find(id).filepath, "public/data")
           layout = DataLayout.new(LayoutFile.first(:conditions => [ "filepath like ?", "%#{ou}%"]).filepath, "public/layouts")
             
           mytest = myfile.run(layout.layout)    #test( read_layout("BMO"), id).to_json
@@ -57,13 +57,13 @@ class ValidatorController < ApplicationController
            
               respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid}, :id =>params[:id], :flash => { :notce  =>  "VALID FILE"} )} 
+                    format.html {redirect_to({:action => :valid},  session[:valid] => "VALID FILE" )} 
                end
             
         else
             respond_to do |format|
                     format.json { render json:  mytest }
-                    format.html {redirect_to({:action => :valid}, :id =>params[:id], :flash => { :error  => a.to_json} )}
+                    format.html {redirect_to({:action => :valid},  session[:valid] => a.to_json )}
             end
             
              #  obj=[fheader,iheader, idetails]
