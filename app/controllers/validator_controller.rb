@@ -128,7 +128,8 @@ class ValidatorController < ApplicationController
                   
               
             read_data = path.read
-             file_lines=  read_data.split(/[\r\n]+/)    
+            
+            file_lines=  read_data.split(/[\r\n]+/)    
                 
             file_lines.each do |line|
             case line[0] 
@@ -141,7 +142,7 @@ class ValidatorController < ApplicationController
             
             
         end
-        file_lines.join("r/n")
+        file_lines.join(/[\r\n]+/)
               read_data = file_lines
            
             file.write(read_data)
