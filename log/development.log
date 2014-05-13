@@ -51789,3 +51789,2708 @@ Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 15:28:15
 
 
 Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 15:28:15 -0400
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:53:02 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (316.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 3410ms (Views: 3029.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:06 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:06 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:06 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:07 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:08 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:09 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:10 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:11 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:12 -0400
+
+
+Started DELETE "/uploads/cleandb" for 127.8.238.129 at 2014-05-12 22:53:15 -0400
+Processing by UploadsController#cleandb as HTML
+  Parameters: {"authenticity_token"=>"wiHsOZYORNkLGP3vHbaLasOzMAKL4yoTiho5CgyKgz8="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (103.1ms)[0m  [1mDELETE FROM "uploads"[0m
+  [1m[35mSQL (55.8ms)[0m  DELETE FROM "validfiles"
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 196ms (ActiveRecord: 159.3ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:53:15 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.2ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.2ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 433ms (Views: 428.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:16 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:16 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:16 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:18 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:19 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:20 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:21 -0400
+
+
+Started POST "/uploads/create" for 127.8.238.129 at 2014-05-12 22:53:26 -0400
+Processing by UploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wiHsOZYORNkLGP3vHbaLasOzMAKL4yoTiho5CgyKgz8=", "upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fb0844a1118 @tempfile=#<File:/tmp/RackMultipart20140512-110921-7j4bp0>, @original_filename="bmoice.dat.20140409MC2", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload[file]\"; filename=\"bmoice.dat.20140409MC2\"\r\nContent-Type: application/octet-stream\r\n">}, "user"=>"{:value=>#<User id: 1, email: \"admin@example.com\", encrypted_password: \"$2a$10$m9ekjSjsI5hFBYbeuu5esOv1yyVOYuEsO2ZnZo7OdUn3...\", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: \"2014-05-12 19:12:51\", last_sign_in_at: \"2014-05-12 17:16:45\", current_sign_in_ip: \"23.236.51.113\", last_sign_in_ip: \"23.236.52.112\", created_at: \"2014-05-11 21:38:06\", updated_at: \"2014-05-12 19:12:51\", role: \"administrator\">}", "commit"=>"Upload"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUpload Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "uploads" WHERE "uploads"."filepath" = 'bmoice.dat.20140409MC2' LIMIT 1[0m
+  [1m[35mSQL (214.9ms)[0m  INSERT INTO "uploads" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 02:53:27 UTC +00:00], ["filepath", "bmoice.dat.20140409MC2"], ["ftype", "UNDEFINED"], ["size", 0], ["updated_at", Tue, 13 May 2014 02:53:27 UTC +00:00], ["user", "admin@example.com"], ["valid", false]]
+  [1m[36m (106.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 515ms (ActiveRecord: 322.4ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:53:27 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.2ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 438ms (Views: 431.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:28 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:29 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:30 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:31 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:32 -0400
+
+
+Started GET "/validator?id=54" for 127.8.238.129 at 2014-05-12 22:53:34 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (1.5ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "54"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files"
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "54"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 500 Internal Server Error in 301ms
+
+URI::InvalidURIError (the scheme https does not accept registry part: aivo-c9-aivoarm_1.c9.io (or bad hostname?)):
+  /opt/rh/ruby193/root/usr/share/ruby/uri/generic.rb:213:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/http.rb:84:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `new'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `parse'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:747:in `parse'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:8:in `same_origin?'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:16:in `abort_xdomain_redirect'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:427:in `_run__3292475706347587205__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2725236403466728202__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (153.4ms)
+
+
+Started GET "/validator?id=54" for 127.8.238.129 at 2014-05-12 22:53:35 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.3ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "54"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.2ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "54"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[36mLayoutFile Load (0.2ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 47ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/validator/v" for 127.8.238.129 at 2014-05-12 22:53:36 -0400
+Processing by ValidatorController#valid as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "54"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from valid at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:98)
+  [1m[35mLayoutFile Load (3.4ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "54"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mValidfile Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "validfiles" WHERE "validfiles"."filepath" = 'bmoice.dat.20140409MC2' LIMIT 1[0m
+  [1m[35mSQL (12.3ms)[0m  INSERT INTO "validfiles" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 02:53:36 UTC +00:00], ["filepath", "bmoice.dat.20140409MC2"], ["ftype", ""], ["size", 1], ["updated_at", Tue, 13 May 2014 02:53:36 UTC +00:00], ["user", "admin@example.com"], ["valid", true]]
+  [1m[36m (109.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "54"]]
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = 54[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.6ms)[0m  [1mDELETE FROM "uploads" WHERE "uploads"."id" = ?[0m  [["id", 54]]
+  [1m[35m (26.9ms)[0m  commit transaction
+Redirected to http://project-livec92e0817edb5.rhcloud.com/uploads
+Completed 302 Found in 237ms (ActiveRecord: 162.6ms)
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 22:53:36 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.2ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.2ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 244ms (Views: 239.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:37 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:38 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:39 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:40 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:41 -0400
+
+
+Started POST "/uploads/create" for 127.8.238.129 at 2014-05-12 22:53:49 -0400
+Processing by UploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wiHsOZYORNkLGP3vHbaLasOzMAKL4yoTiho5CgyKgz8=", "upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fb084b012d8 @tempfile=#<File:/tmp/RackMultipart20140512-110921-1sgita2>, @original_filename="BMOGOOD.dat", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"upload[file]\"; filename=\"BMOGOOD.dat\"\r\nContent-Type: application/octet-stream\r\n">}, "user"=>"{:value=>#<User id: 1, email: \"admin@example.com\", encrypted_password: \"$2a$10$m9ekjSjsI5hFBYbeuu5esOv1yyVOYuEsO2ZnZo7OdUn3...\", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: \"2014-05-12 19:12:51\", last_sign_in_at: \"2014-05-12 17:16:45\", current_sign_in_ip: \"23.236.51.113\", last_sign_in_ip: \"23.236.52.112\", created_at: \"2014-05-11 21:38:06\", updated_at: \"2014-05-12 19:12:51\", role: \"administrator\">}", "commit"=>"Upload"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUpload Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "uploads" WHERE "uploads"."filepath" = 'BMOGOOD.dat' LIMIT 1[0m
+  [1m[35mSQL (38.5ms)[0m  INSERT INTO "uploads" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 02:53:49 UTC +00:00], ["filepath", "BMOGOOD.dat"], ["ftype", "UNDEFINED"], ["size", 95], ["updated_at", Tue, 13 May 2014 02:53:49 UTC +00:00], ["user", "admin@example.com"], ["valid", false]]
+  [1m[36m (57.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 221ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:53:49 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.3ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (46.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 453ms (Views: 443.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:50 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:50 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:50 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:50 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:51 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:52 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:53 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:53:54 -0400
+
+
+Started GET "/validator?id=55" for 127.8.238.129 at 2014-05-12 22:53:57 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "55"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "55"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 500 Internal Server Error in 303ms
+
+URI::InvalidURIError (the scheme https does not accept registry part: aivo-c9-aivoarm_1.c9.io (or bad hostname?)):
+  /opt/rh/ruby193/root/usr/share/ruby/uri/generic.rb:213:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/http.rb:84:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `new'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `parse'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:747:in `parse'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:8:in `same_origin?'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:16:in `abort_xdomain_redirect'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:427:in `_run__3292475706347587205__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2725236403466728202__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (107.3ms)
+
+
+Started GET "/validator?id=55" for 127.8.238.129 at 2014-05-12 22:53:58 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "55"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.3ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "55"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[36mLayoutFile Load (6.4ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 430ms (ActiveRecord: 7.3ms)
+
+ActionDispatch::Cookies::CookieOverflow (ActionDispatch::Cookies::CookieOverflow):
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:455:in `[]='
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:109:in `set_cookie'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:350:in `commit_session'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:226:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2725236403466728202__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.1ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (276.7ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:54:35 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.2ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 297ms (Views: 293.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:36 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:36 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:36 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:36 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:38 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:39 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:40 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:41 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:41 -0400
+
+
+Started DELETE "/uploads/55/destroy" for 127.8.238.129 at 2014-05-12 22:54:44 -0400
+Processing by UploadsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wiHsOZYORNkLGP3vHbaLasOzMAKL4yoTiho5CgyKgz8=", "id"=>"55"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "55"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "55"]]
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+  [1m[36mUpload Load (2.3ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = 55[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (8.8ms)[0m  [1mDELETE FROM "uploads" WHERE "uploads"."id" = ?[0m  [["id", 55]]
+  [1m[35m (74.1ms)[0m  commit transaction
+Completed 302 Found in 148ms (ActiveRecord: 85.9ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:54:44 -0400
+Processing by UploadsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.2ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (1.9ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.2ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 460ms (Views: 453.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:45 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:45 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:46 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:47 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:47 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:47 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:54:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:48 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:49 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:50 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:54:51 -0400
+
+
+Started POST "/uploads/create" for 127.8.238.129 at 2014-05-12 22:54:59 -0400
+Processing by UploadsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wiHsOZYORNkLGP3vHbaLasOzMAKL4yoTiho5CgyKgz8=", "upload"=>{"file"=>#<ActionDispatch::Http::UploadedFile:0x007fb084f40290 @tempfile=#<File:/tmp/RackMultipart20140512-110921-5jel5l>, @original_filename="BMOGOOD.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"upload[file]\"; filename=\"BMOGOOD.txt\"\r\nContent-Type: text/plain\r\n">}, "user"=>"{:value=>#<User id: 1, email: \"admin@example.com\", encrypted_password: \"$2a$10$m9ekjSjsI5hFBYbeuu5esOv1yyVOYuEsO2ZnZo7OdUn3...\", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: \"2014-05-12 19:12:51\", last_sign_in_at: \"2014-05-12 17:16:45\", current_sign_in_ip: \"23.236.51.113\", last_sign_in_ip: \"23.236.52.112\", created_at: \"2014-05-11 21:38:06\", updated_at: \"2014-05-12 19:12:51\", role: \"administrator\">}", "commit"=>"Upload"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUpload Exists (7.0ms)[0m  [1mSELECT 1 AS one FROM "uploads" WHERE "uploads"."filepath" = 'BMOGOOD.txt' LIMIT 1[0m
+  [1m[35mSQL (23.5ms)[0m  INSERT INTO "uploads" ("created_at", "filepath", "ftype", "size", "updated_at", "user", "valid") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 02:54:59 UTC +00:00], ["filepath", "BMOGOOD.txt"], ["ftype", "UNDEFINED"], ["size", 95], ["updated_at", Tue, 13 May 2014 02:54:59 UTC +00:00], ["user", "admin@example.com"], ["valid", false]]
+  [1m[36m (69.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 154ms (ActiveRecord: 100.0ms)
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 22:55:00 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFiletype Load (0.2ms)[0m  [1mSELECT "filetypes".* FROM "filetypes"[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads"
+  [1m[36mValidfile Load (0.3ms)[0m  [1mSELECT "validfiles".* FROM "validfiles"[0m
+  Rendered uploads/index.html.erb within layouts/application (44.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 493ms (Views: 483.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:00 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:00 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:01 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:02 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:03 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:04 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 22:55:05 -0400
+
+
+Started GET "/validator?id=56" for 127.8.238.129 at 2014-05-12 22:55:07 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "56"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "56"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[35mLayoutFile Load (0.3ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 500 Internal Server Error in 875ms
+
+URI::InvalidURIError (the scheme https does not accept registry part: aivo-c9-aivoarm_1.c9.io (or bad hostname?)):
+  /opt/rh/ruby193/root/usr/share/ruby/uri/generic.rb:213:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/http.rb:84:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `new'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `parse'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:747:in `parse'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:8:in `same_origin?'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:16:in `abort_xdomain_redirect'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:427:in `_run__3292475706347587205__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2725236403466728202__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (56.2ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.7ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (363.8ms)
+
+
+Started GET "/validator?id=56" for 127.8.238.129 at 2014-05-12 22:55:09 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (69.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (55.3ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.3ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[36mLayoutFile Load (32.5ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 5463ms (ActiveRecord: 157.4ms)
+
+ActionDispatch::Cookies::CookieOverflow (ActionDispatch::Cookies::CookieOverflow):
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:455:in `[]='
+  actionpack (4.0.4) lib/action_dispatch/middleware/session/cookie_store.rb:109:in `set_cookie'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:350:in `commit_session'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:226:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__2725236403466728202__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (178.9ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (139.3ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (109.1ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3156.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSessionsTable (20140513030841)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (9.0ms)[0m  [1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (11.3ms)[0m  CREATE UNIQUE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140513030841"]]
+  [1m[36m (84.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 23:09:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UploadsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'bjh0azArSCs2YkQ3ZjFFTWdPV05YUkp2ek5YSDRxWnJ6dHRtbmp2elJyQ1d4TmNTdG03dWxrWXcyTDROaHZTT3EyeGRwdVZUMFhRMjR5VTF6WUFLeldFb0JGenlZeUVkRXJacURSWHkwQVR6UUNGbnBnM1pQc05KVlE2a3MvVEsyQTB4Z0doK2piWit1eWcyaTV1dmdpTUlpaE8xd3BWY2Fka0hNRFl2MmVKTWlvQSthWDhsTWtmQ0d2VXM0Y2hrM3FDdi9TNlp0Y3ZCVGpaNlF2L2lyVWxGYWxybXBHRFFiT29MaXFkRHozLzUwZ0lmL3hUVmdXMzRwSGdIdEdWYm5SQWVNVTV1RzZGTkltaUZCK2YyNWc9PS0tMzB1cmU1MHBFcU1udnhWV0hWVSs1QT09--3d1a10fcd7348a9df4b790b4b5552809c5ca1f50' ORDER BY "sessions"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 275ms
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (277.4ms)[0m  INSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 03:09:53 UTC +00:00], ["data", "BAh7B0kiE3VzZXJfcmV0dXJuX3RvBjoGRUZJIgYvBjsARkkiCmZsYXNoBjsA\nRnsHSSIMZGlzY2FyZAY7AEZbAEkiDGZsYXNoZXMGOwBGewY6CmFsZXJ0SSI2\nWW91IG5lZWQgdG8gc2lnbiBpbiBvciBzaWduIHVwIGJlZm9yZSBjb250aW51\naW5nLgY7AFQ=\n"], ["session_id", "332beb4ef0666d540ba004dcd2356517"], ["updated_at", Tue, 13 May 2014 03:09:53 UTC +00:00]]
+  [1m[36m (35.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/sign_in" for 127.8.238.129 at 2014-05-12 23:09:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '332beb4ef0666d540ba004dcd2356517' ORDER BY "sessions"."id" ASC LIMIT 1
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/devise-3.2.4/app/views/devise/shared/_links.erb (2.5ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (521.4ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 3346ms (Views: 3228.5ms | ActiveRecord: 3.9ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (53.5ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 1  [["data", "BAh7CEkiE3VzZXJfcmV0dXJuX3RvBjoGRUZJIgYvBjsARkkiCmZsYXNoBjsA\nRnsHSSIMZGlzY2FyZAY7AEZbBjoKYWxlcnRJIgxmbGFzaGVzBjsARnsGOwZJ\nIjZZb3UgbmVlZCB0byBzaWduIGluIG9yIHNpZ24gdXAgYmVmb3JlIGNvbnRp\nbnVpbmcuBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMU1Kd2ZxUWZ2a0E4UHdy\nZVhWN1p2QzlwVlZaK2JHZnBlWU1vdzQ1U29qK3c9BjsARg==\n"], ["updated_at", Tue, 13 May 2014 03:09:57 UTC +00:00]]
+  [1m[36m (54.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:58 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:58 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 23:09:59 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:00 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:01 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:02 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:03 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:04 -0400
+
+
+Started POST "/users/sign_in" for 127.8.238.129 at 2014-05-12 23:10:12 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MJwfqQfvkA8PwreXV7ZvC9pVVZ+bGfpeYMow45Soj+w=", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = '332beb4ef0666d540ba004dcd2356517' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (15.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+  [1m[36mSQL (57.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["last_sign_in_at", Mon, 12 May 2014 19:12:51 UTC +00:00], ["current_sign_in_at", Tue, 13 May 2014 03:10:15 UTC +00:00], ["last_sign_in_ip", "23.236.51.113"], ["current_sign_in_ip", "23.236.52.112"], ["sign_in_count", 6], ["updated_at", Tue, 13 May 2014 03:10:15 UTC +00:00]]
+  [1m[35m (98.2ms)[0m  commit transaction
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 3354ms (ActiveRecord: 171.3ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (48.2ms)[0m  DELETE FROM "sessions" WHERE "sessions"."id" = ?  [["id", 1]]
+  [1m[36m (135.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SessionStore::Session Load (25.5ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (47.9ms)[0m  INSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Tue, 13 May 2014 03:10:17 UTC +00:00], ["data", "BAh7B0kiCmZsYXNoBjoGRUZ7B0kiDGRpc2NhcmQGOwBGWwBJIgxmbGFzaGVz\nBjsARnsGOgtub3RpY2VJIhxTaWduZWQgaW4gc3VjY2Vzc2Z1bGx5LgY7AFRJ\nIhl3YXJkZW4udXNlci51c2VyLmtleQY7AFRbB1sGaQZJIiIkMmEkMTAkbTll\na2pTanNJNWhGQlliZXV1NWVzTwY7AFQ=\n"], ["session_id", "fea4b87df745e49922a4172785070f17"], ["updated_at", Tue, 13 May 2014 03:10:17 UTC +00:00]]
+  [1m[36m (46.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 23:10:18 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.3ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (3.8ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (2.4ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (320.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 662ms (Views: 545.1ms | ActiveRecord: 8.8ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (89.7ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 2  [["data", "BAh7CEkiCmZsYXNoBjoGRUZ7B0kiDGRpc2NhcmQGOwBGWwY6C25vdGljZUki\nDGZsYXNoZXMGOwBGewY7BkkiHFNpZ25lZCBpbiBzdWNjZXNzZnVsbHkuBjsA\nVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpBkkiIiQyYSQxMCRt\nOWVralNqc0k1aEZCWWJldXU1ZXNPBjsAVEkiEF9jc3JmX3Rva2VuBjsARkki\nMWxyS0ljdUg1VWJWendMUm5GanBuWjR0eHBaVnRUQWU4bFVzbnNxMVorSU09\nBjsARg==\n"], ["updated_at", Tue, 13 May 2014 03:10:18 UTC +00:00]]
+  [1m[36m (34.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:19 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:20 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:21 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:22 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:23 -0400
+
+
+Started GET "/validator?id=56" for 127.8.238.129 at 2014-05-12 23:10:27 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.4ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.5ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[36mLayoutFile Load (0.4ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 500 Internal Server Error in 602ms
+
+URI::InvalidURIError (the scheme https does not accept registry part: aivo-c9-aivoarm_1.c9.io (or bad hostname?)):
+  /opt/rh/ruby193/root/usr/share/ruby/uri/generic.rb:213:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/http.rb:84:in `initialize'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `new'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:214:in `parse'
+  /opt/rh/ruby193/root/usr/share/ruby/uri/common.rb:747:in `parse'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:8:in `same_origin?'
+  turbolinks (2.2.2) lib/turbolinks/x_domain_blocker.rb:16:in `abort_xdomain_redirect'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:427:in `_run__4066776747923463533__process_action__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.4) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.4) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.4) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.4) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.4) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.4) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.4) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.4) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.4) lib/action_dispatch/routing/route_set.rb:674:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:373:in `_run__4517401713450963430__call__callbacks'
+  activesupport (4.0.4) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:138:in `service'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/httpserver.rb:94:in `run'
+  /opt/rh/ruby193/root/usr/share/ruby/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.3ms)
+  Rendered /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/lib/ruby/gems/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (146.2ms)
+
+
+Started GET "/validator?id=56" for 127.8.238.129 at 2014-05-12 23:10:28 -0400
+Processing by ValidatorController#index as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUpload Load (0.2ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Calling #find(:all) is deprecated. Please call #all directly instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:30)
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from find at /usr/libexec/openshift/cartridges/c9-0.1/root/lib/ruby/gems/gems/activerecord-deprecated_finders-1.0.3/lib/active_record/deprecated_finders/relation.rb:120)
+  [1m[36mLayoutFile Load (0.2ms)[0m  [1mSELECT "layout_files".* FROM "layout_files"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1  [["id", "56"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from index at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:37)
+  [1m[36mLayoutFile Load (0.2ms)[0m  [1mSELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/validator/v
+Completed 302 Found in 245ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.1ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 2[0m  [["data", "BAh7CkkiCmZsYXNoBjoGRUZ7B0kiDGRpc2NhcmQGOwBGWwBJIgxmbGFzaGVz\nBjsARnsGOgxlcnJfbXNnSSICzRJbWzAsIkYiLCIyMDE0MDQzMDA4NTAxNSIs\nIk1DICAgICAgICAiLCIgICAgICAgICAgICAgMzAiLDE0NzM4NC4xMSwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiXSxbMSwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nOTAwMDI3NjUzIiwiQUIiLCJDQUQiLCIwOTIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiw3MDYuNjksNjcyLjk1LDMzLjc0LDAuMCwiMDAwNTUiLCJcdTAwM0NH\nOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzQsIkgi\nLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAyNzY1MyIsIkJDIiwiQ0FEIiwiMTAy\nMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTE5OS4zLDExNDIuMDYsNTcuMjMs\nMC4wMSwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAi\nLCJNQyAgICAgICAgIl0sWzYsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAy\nNzc1NCIsIkFCIiwiQ0FEIiwiMDkyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIs\nMzQyMy4wLDMyNjAuMCwxNjMuMCwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxOCwiSCIsIjIw\nMTQwNDMwMDg1MDE1IiwiOTAwMDI3NzU0IiwiQkMiLCJDQUQiLCIxMDIwMTQw\nNDMwMDg1MCIsIjIwMTQwNDMwIiw1NzQwLjM1LDU0NjcuMCwyNzMuMzUsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMzIsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAyNzc1\nNCIsIk1CIiwiQ0FEIiwiMDcyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTI0\nNC4yNSwxMTg1LjAsNTkuMjUsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9y\nXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMzgsIkgiLCIyMDE0\nMDQzMDA4NTAxNSIsIjkwMDAyNzc1NCIsIk9OIiwiQ0FEIiwiMDYyMDE0MDQz\nMDA4NTAiLCIyMDE0MDQzMCIsMjAwMTAuMDQsMTc3MDguMCwyMzAyLjA0LDAu\nMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJN\nQyAgICAgICAgIl0sWzEwMywiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDI3\nNzU0IiwiU0siLCJDQUQiLCIwODIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwx\nNzAzLjEsMTYyMi4wLDgxLjEsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9y\nXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMTA5LCJIIiwiMjAx\nNDA0MzAwODUwMTUiLCI5MDAwMzY0MTQiLCJBQiIsIkNBRCIsIjA5MjAxNDA0\nMzAwODUwIiwiMjAxNDA0MzAiLDUwMjAuNTQsNDc4MS40NywyMzkuMDcsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMTIwLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0\nMTQiLCJCQyIsIkNBRCIsIjEwMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDY1\nODguNzUsNjI3NS4wLDMxMy43NSwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxNDAsIkgiLCIy\nMDE0MDQzMDA4NTAxNSIsIjkwMDAzNjQxNCIsIk5CIiwiQ0FEIiwiMDQyMDE0\nMDQzMDA4NTAiLCIyMDE0MDQzMCIsMTA3My41LDk1MC4wLDEyMy41LDAuMCwi\nMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAg\nICAgICAgIl0sWzE0NCwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDM2NDE0\nIiwiTkwiLCJDQUQiLCIwMTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwzNDI4\nLjc4LDMwMzQuMzIsMzk0LjQ2LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJv\nclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzE1MSwiSCIsIjIw\nMTQwNDMwMDg1MDE1IiwiOTAwMDM2NDE0IiwiTlMiLCJDQUQiLCIwMzIwMTQw\nNDMwMDg1MCIsIjIwMTQwNDMwIiw0NDQyLjA4LDM4NjIuNjgsNTc5LjQsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMTYyLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0\nMTQiLCJPTiIsIkNBRCIsIjA2MjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDc5\nMzIuNTEsNzAxOS45Miw5MTIuNTksMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVy\ncm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMTgzLCJIIiwi\nMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0MTQiLCJRQyIsIkNBRCIsIjA1MjAx\nNDA0MzAwODUwIiwiMjAxNDA0MzAiLDI0NjMzLjQ2LDIxNDI0Ljk4LDEwNzEu\nMjUsMjEzNy4yMywiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklD\nRSAgICAiLCJNQyAgICAgICAgIl0sWzIzNCwiSCIsIjIwMTQwNDMwMDg1MDE1\nIiwiOTAwMDM2NDE0IiwiU0siLCJDQUQiLCIwODIwMTQwNDMwMDg1MCIsIjIw\nMTQwNDMwIiw2NzkuMzUsNjQ3LjAsMzIuMzUsMC4wLCIwMDA1NSIsIlx1MDAz\nQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMjM3\nLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwNDgxNDkiLCJCQyIsIkNBRCIs\nIjEwMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDE0Ny4wLDEzMS4yNSw2LjU2\nLDkuMTksIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAg\nIiwiTUMgICAgICAgICJdLFsyMzksIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkw\nMDA0ODE0OSIsIk9OIiwiQ0FEIiwiMDYyMDE0MDQzMDA4NTAiLCIyMDE0MDQz\nMCIsNjA0Ni41LDUzNjEuNjQsNjg0Ljg2LDAuMCwiMDAwNTUiLCJcdTAwM0NH\nOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzI1OSwi\nSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiQUIiLCJDQUQiLCIw\nOTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwyNjAxLjE0LDI0NzcuMjksMTIz\nLjg1LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzI3OCwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nQjAxMzQ1NyAgIiwiQkMiLCJDQUQiLCIxMDIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiwzNTk1LjAzLDMyMDkuODYsMTYwLjQ4LDIyNC42OSwiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzMwNywiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiRkMiLCJD\nQUQiLCIxMzIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwzNDMzLjMzLDM0MzMu\nMzMsMC4wLDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklD\nRSAgICAiLCJNQyAgICAgICAgIl0sWzMxMSwiSCIsIjIwMTQwNDMwMDg1MDE1\nIiwiQjAxMzQ1NyAgIiwiTUIiLCJDQUQiLCIwNzIwMTQwNDMwMDg1MCIsIjIw\nMTQwNDMwIiwxNjQuNzMsMTQ1Ljc4LDcuMjgsMTEuNjcsIjAwMDU1IiwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsz\nMTUsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwMTM0NTcgICIsIk5CIiwiQ0FE\nIiwiMDQyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsODUuNjQsNzUuNzgsOS44\nNiwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAg\nIiwiTUMgICAgICAgICJdLFszMTgsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIw\nMTM0NTcgICIsIk5MIiwiQ0FEIiwiMDEyMDE0MDQzMDA4NTAiLCIyMDE0MDQz\nMCIsMTM5NS40MiwxMjM0Ljg4LDE2MC41NCwwLjAsIjAwMDU1IiwiXHUwMDND\nRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFszMjMs\nIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwMTM0NTcgICIsIk5TIiwiQ0FEIiwi\nMDMyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTU0My40MiwxMzQyLjEsMjAx\nLjMyLDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzMyOSwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nQjAxMzQ1NyAgIiwiT04iLCJDQUQiLCIwNjIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiwzMzA5OS43OCwyOTMwNC42MywzNzk1LjE1LDAuMCwiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzQxNiwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiUUMiLCJD\nQUQiLCIwNTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiw0Nzc1Ljg1LDQxNTMu\nNzksMjA3LjY2LDQxNC40LCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNF\nIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbNDQ2LCJIIiwiMjAxNDA0MzAw\nODUwMTUiLCJCMDEzNDU3ICAiLCJTSyIsIkNBRCIsIjA4MjAxNDA0MzAwODUw\nIiwiMjAxNDA0MzAiLDEwOTEuMDksOTkxLjk1LDQ5LjU3LDQ5LjU3LCIwMDA1\nNSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAg\nICAiXSxbNDU0LCJIIiwiMjAxNDA0MzAwODUwMTUiLCJCMDEzNDU3ICAiLCJH\nVCIsIkNBRCIsIjExMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDU4Ny41Nyw1\nNTkuNTksMjcuOTgsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNF\nIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbNDU2LCJIIiwiMjAxNDA0MzAw\nODUwMTUiLCJCMDk1NjMzICAiLCJGQyIsIkNBRCIsIjEzMjAxNDA0MzAwODUw\nIiwiMjAxNDA0MzAiLDMxLjAzLDMxLjAzLDAuMCwwLjAsIjAwMDU1IiwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFs0\nNTgsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwOTU2MzMgICIsIk9OIiwiQ0FE\nIiwiMDYyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsOTYwLjg4LDk2MC44NCww\nLjA0LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl1dBjsARkkiGXdhcmRlbi51c2VyLnVzZXIua2V5\nBjsAVFsHWwZpBkkiIiQyYSQxMCRtOWVralNqc0k1aEZCWWJldXU1ZXNPBjsA\nVEkiEF9jc3JmX3Rva2VuBjsARkkiMWxyS0ljdUg1VWJWendMUm5GanBuWjR0\neHBaVnRUQWU4bFVzbnNxMVorSU09BjsARkkiDGZpbGVfaWQGOwBGSSIHNTYG\nOwBUSSIIdmFsBjsARkkiDk5PVCBWQUxJRAY7AEY=\n"], ["updated_at", Tue, 13 May 2014 03:10:28 UTC +00:00]]
+  [1m[35m (100.7ms)[0m  commit transaction
+
+
+Started GET "/validator/v" for 127.8.238.129 at 2014-05-12 23:10:29 -0400
+Processing by ValidatorController#valid as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads" WHERE "uploads"."id" = ? LIMIT 1[0m  [["id", "56"]]
+DEPRECATION WARNING: Relation#first with finder options is deprecated. Please build a scope and then call #first on it instead. (called from valid at /var/lib/stickshift/5363edbb500446ca8400029c/app-root/data/850321/ice/app/controllers/validator_controller.rb:98)
+  [1m[35mLayoutFile Load (0.4ms)[0m  SELECT "layout_files".* FROM "layout_files" WHERE (filepath like '%BMO%') ORDER BY "layout_files"."id" ASC LIMIT 1
+Redirected to http://project-livec92e0817edb5.rhcloud.com/uploads
+Completed 302 Found in 33ms (ActiveRecord: 1.2ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.4ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 2  [["data", "BAh7CEkiCmZsYXNoBjoGRUZ7B0kiDGRpc2NhcmQGOwBGWwBJIgxmbGFzaGVz\nBjsARnsGOgxlcnJfbXNnSSICzRJbWzAsIkYiLCIyMDE0MDQzMDA4NTAxNSIs\nIk1DICAgICAgICAiLCIgICAgICAgICAgICAgMzAiLDE0NzM4NC4xMSwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiXSxbMSwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nOTAwMDI3NjUzIiwiQUIiLCJDQUQiLCIwOTIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiw3MDYuNjksNjcyLjk1LDMzLjc0LDAuMCwiMDAwNTUiLCJcdTAwM0NH\nOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzQsIkgi\nLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAyNzY1MyIsIkJDIiwiQ0FEIiwiMTAy\nMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTE5OS4zLDExNDIuMDYsNTcuMjMs\nMC4wMSwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAi\nLCJNQyAgICAgICAgIl0sWzYsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAy\nNzc1NCIsIkFCIiwiQ0FEIiwiMDkyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIs\nMzQyMy4wLDMyNjAuMCwxNjMuMCwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxOCwiSCIsIjIw\nMTQwNDMwMDg1MDE1IiwiOTAwMDI3NzU0IiwiQkMiLCJDQUQiLCIxMDIwMTQw\nNDMwMDg1MCIsIjIwMTQwNDMwIiw1NzQwLjM1LDU0NjcuMCwyNzMuMzUsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMzIsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAyNzc1\nNCIsIk1CIiwiQ0FEIiwiMDcyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTI0\nNC4yNSwxMTg1LjAsNTkuMjUsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9y\nXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMzgsIkgiLCIyMDE0\nMDQzMDA4NTAxNSIsIjkwMDAyNzc1NCIsIk9OIiwiQ0FEIiwiMDYyMDE0MDQz\nMDA4NTAiLCIyMDE0MDQzMCIsMjAwMTAuMDQsMTc3MDguMCwyMzAyLjA0LDAu\nMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJN\nQyAgICAgICAgIl0sWzEwMywiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDI3\nNzU0IiwiU0siLCJDQUQiLCIwODIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwx\nNzAzLjEsMTYyMi4wLDgxLjEsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9y\nXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMTA5LCJIIiwiMjAx\nNDA0MzAwODUwMTUiLCI5MDAwMzY0MTQiLCJBQiIsIkNBRCIsIjA5MjAxNDA0\nMzAwODUwIiwiMjAxNDA0MzAiLDUwMjAuNTQsNDc4MS40NywyMzkuMDcsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMTIwLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0\nMTQiLCJCQyIsIkNBRCIsIjEwMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDY1\nODguNzUsNjI3NS4wLDMxMy43NSwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxNDAsIkgiLCIy\nMDE0MDQzMDA4NTAxNSIsIjkwMDAzNjQxNCIsIk5CIiwiQ0FEIiwiMDQyMDE0\nMDQzMDA4NTAiLCIyMDE0MDQzMCIsMTA3My41LDk1MC4wLDEyMy41LDAuMCwi\nMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAg\nICAgICAgIl0sWzE0NCwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDM2NDE0\nIiwiTkwiLCJDQUQiLCIwMTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwzNDI4\nLjc4LDMwMzQuMzIsMzk0LjQ2LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJv\nclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzE1MSwiSCIsIjIw\nMTQwNDMwMDg1MDE1IiwiOTAwMDM2NDE0IiwiTlMiLCJDQUQiLCIwMzIwMTQw\nNDMwMDg1MCIsIjIwMTQwNDMwIiw0NDQyLjA4LDM4NjIuNjgsNTc5LjQsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMTYyLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0\nMTQiLCJPTiIsIkNBRCIsIjA2MjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDc5\nMzIuNTEsNzAxOS45Miw5MTIuNTksMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVy\ncm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMTgzLCJIIiwi\nMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0MTQiLCJRQyIsIkNBRCIsIjA1MjAx\nNDA0MzAwODUwIiwiMjAxNDA0MzAiLDI0NjMzLjQ2LDIxNDI0Ljk4LDEwNzEu\nMjUsMjEzNy4yMywiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklD\nRSAgICAiLCJNQyAgICAgICAgIl0sWzIzNCwiSCIsIjIwMTQwNDMwMDg1MDE1\nIiwiOTAwMDM2NDE0IiwiU0siLCJDQUQiLCIwODIwMTQwNDMwMDg1MCIsIjIw\nMTQwNDMwIiw2NzkuMzUsNjQ3LjAsMzIuMzUsMC4wLCIwMDA1NSIsIlx1MDAz\nQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMjM3\nLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwNDgxNDkiLCJCQyIsIkNBRCIs\nIjEwMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDE0Ny4wLDEzMS4yNSw2LjU2\nLDkuMTksIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAg\nIiwiTUMgICAgICAgICJdLFsyMzksIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkw\nMDA0ODE0OSIsIk9OIiwiQ0FEIiwiMDYyMDE0MDQzMDA4NTAiLCIyMDE0MDQz\nMCIsNjA0Ni41LDUzNjEuNjQsNjg0Ljg2LDAuMCwiMDAwNTUiLCJcdTAwM0NH\nOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzI1OSwi\nSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiQUIiLCJDQUQiLCIw\nOTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwyNjAxLjE0LDI0NzcuMjksMTIz\nLjg1LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzI3OCwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nQjAxMzQ1NyAgIiwiQkMiLCJDQUQiLCIxMDIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiwzNTk1LjAzLDMyMDkuODYsMTYwLjQ4LDIyNC42OSwiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzMwNywiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiRkMiLCJD\nQUQiLCIxMzIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwzNDMzLjMzLDM0MzMu\nMzMsMC4wLDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklD\nRSAgICAiLCJNQyAgICAgICAgIl0sWzMxMSwiSCIsIjIwMTQwNDMwMDg1MDE1\nIiwiQjAxMzQ1NyAgIiwiTUIiLCJDQUQiLCIwNzIwMTQwNDMwMDg1MCIsIjIw\nMTQwNDMwIiwxNjQuNzMsMTQ1Ljc4LDcuMjgsMTEuNjcsIjAwMDU1IiwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsz\nMTUsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwMTM0NTcgICIsIk5CIiwiQ0FE\nIiwiMDQyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsODUuNjQsNzUuNzgsOS44\nNiwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAg\nIiwiTUMgICAgICAgICJdLFszMTgsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIw\nMTM0NTcgICIsIk5MIiwiQ0FEIiwiMDEyMDE0MDQzMDA4NTAiLCIyMDE0MDQz\nMCIsMTM5NS40MiwxMjM0Ljg4LDE2MC41NCwwLjAsIjAwMDU1IiwiXHUwMDND\nRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFszMjMs\nIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwMTM0NTcgICIsIk5TIiwiQ0FEIiwi\nMDMyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTU0My40MiwxMzQyLjEsMjAx\nLjMyLDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzMyOSwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nQjAxMzQ1NyAgIiwiT04iLCJDQUQiLCIwNjIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiwzMzA5OS43OCwyOTMwNC42MywzNzk1LjE1LDAuMCwiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzQxNiwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiUUMiLCJD\nQUQiLCIwNTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiw0Nzc1Ljg1LDQxNTMu\nNzksMjA3LjY2LDQxNC40LCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNF\nIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbNDQ2LCJIIiwiMjAxNDA0MzAw\nODUwMTUiLCJCMDEzNDU3ICAiLCJTSyIsIkNBRCIsIjA4MjAxNDA0MzAwODUw\nIiwiMjAxNDA0MzAiLDEwOTEuMDksOTkxLjk1LDQ5LjU3LDQ5LjU3LCIwMDA1\nNSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAg\nICAiXSxbNDU0LCJIIiwiMjAxNDA0MzAwODUwMTUiLCJCMDEzNDU3ICAiLCJH\nVCIsIkNBRCIsIjExMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDU4Ny41Nyw1\nNTkuNTksMjcuOTgsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNF\nIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbNDU2LCJIIiwiMjAxNDA0MzAw\nODUwMTUiLCJCMDk1NjMzICAiLCJGQyIsIkNBRCIsIjEzMjAxNDA0MzAwODUw\nIiwiMjAxNDA0MzAiLDMxLjAzLDMxLjAzLDAuMCwwLjAsIjAwMDU1IiwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFs0\nNTgsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwOTU2MzMgICIsIk9OIiwiQ0FE\nIiwiMDYyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsOTYwLjg4LDk2MC44NCww\nLjA0LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl1dBjsARkkiGXdhcmRlbi51c2VyLnVzZXIua2V5\nBjsAVFsHWwZpBkkiIiQyYSQxMCRtOWVralNqc0k1aEZCWWJldXU1ZXNPBjsA\nVEkiEF9jc3JmX3Rva2VuBjsARkkiMWxyS0ljdUg1VWJWendMUm5GanBuWjR0\neHBaVnRUQWU4bFVzbnNxMVorSU09BjsARg==\n"], ["updated_at", Tue, 13 May 2014 03:10:29 UTC +00:00]]
+  [1m[36m (50.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/uploads" for 127.8.238.129 at 2014-05-12 23:10:29 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.3ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.3ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.3ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 505ms (Views: 499.4ms | ActiveRecord: 1.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (91.2ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 2  [["data", "BAh7CEkiCmZsYXNoBjoGRUZ7B0kiDGRpc2NhcmQGOwBGWwY6DGVycl9tc2dJ\nIgxmbGFzaGVzBjsARnsGOwZJIgLNEltbMCwiRiIsIjIwMTQwNDMwMDg1MDE1\nIiwiTUMgICAgICAgICIsIiAgICAgICAgICAgICAzMCIsMTQ3Mzg0LjExLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSJdLFsxLCJIIiwiMjAxNDA0MzAwODUwMTUi\nLCI5MDAwMjc2NTMiLCJBQiIsIkNBRCIsIjA5MjAxNDA0MzAwODUwIiwiMjAx\nNDA0MzAiLDcwNi42OSw2NzIuOTUsMzMuNzQsMC4wLCIwMDA1NSIsIlx1MDAz\nQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbNCwi\nSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDI3NjUzIiwiQkMiLCJDQUQiLCIx\nMDIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwxMTk5LjMsMTE0Mi4wNiw1Ny4y\nMywwLjAxLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAg\nICIsIk1DICAgICAgICAiXSxbNiwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAw\nMDI3NzU0IiwiQUIiLCJDQUQiLCIwOTIwMTQwNDMwMDg1MCIsIjIwMTQwNDMw\nIiwzNDIzLjAsMzI2MC4wLDE2My4wLDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBl\ncnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzE4LCJIIiwi\nMjAxNDA0MzAwODUwMTUiLCI5MDAwMjc3NTQiLCJCQyIsIkNBRCIsIjEwMjAx\nNDA0MzAwODUwIiwiMjAxNDA0MzAiLDU3NDAuMzUsNTQ2Ny4wLDI3My4zNSww\nLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwi\nTUMgICAgICAgICJdLFszMiwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDI3\nNzU0IiwiTUIiLCJDQUQiLCIwNzIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwx\nMjQ0LjI1LDExODUuMCw1OS4yNSwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFszOCwiSCIsIjIw\nMTQwNDMwMDg1MDE1IiwiOTAwMDI3NzU0IiwiT04iLCJDQUQiLCIwNjIwMTQw\nNDMwMDg1MCIsIjIwMTQwNDMwIiwyMDAxMC4wNCwxNzcwOC4wLDIzMDIuMDQs\nMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIs\nIk1DICAgICAgICAiXSxbMTAzLCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAw\nMjc3NTQiLCJTSyIsIkNBRCIsIjA4MjAxNDA0MzAwODUwIiwiMjAxNDA0MzAi\nLDE3MDMuMSwxNjIyLjAsODEuMSwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJy\nb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxMDksIkgiLCIy\nMDE0MDQzMDA4NTAxNSIsIjkwMDAzNjQxNCIsIkFCIiwiQ0FEIiwiMDkyMDE0\nMDQzMDA4NTAiLCIyMDE0MDQzMCIsNTAyMC41NCw0NzgxLjQ3LDIzOS4wNyww\nLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwi\nTUMgICAgICAgICJdLFsxMjAsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAz\nNjQxNCIsIkJDIiwiQ0FEIiwiMTAyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIs\nNjU4OC43NSw2Mjc1LjAsMzEzLjc1LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBl\ncnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzE0MCwiSCIs\nIjIwMTQwNDMwMDg1MDE1IiwiOTAwMDM2NDE0IiwiTkIiLCJDQUQiLCIwNDIw\nMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwxMDczLjUsOTUwLjAsMTIzLjUsMC4w\nLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1D\nICAgICAgICAiXSxbMTQ0LCJIIiwiMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0\nMTQiLCJOTCIsIkNBRCIsIjAxMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDM0\nMjguNzgsMzAzNC4zMiwzOTQuNDYsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVy\ncm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMTUxLCJIIiwi\nMjAxNDA0MzAwODUwMTUiLCI5MDAwMzY0MTQiLCJOUyIsIkNBRCIsIjAzMjAx\nNDA0MzAwODUwIiwiMjAxNDA0MzAiLDQ0NDIuMDgsMzg2Mi42OCw1NzkuNCww\nLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwi\nTUMgICAgICAgICJdLFsxNjIsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAz\nNjQxNCIsIk9OIiwiQ0FEIiwiMDYyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIs\nNzkzMi41MSw3MDE5LjkyLDkxMi41OSwwLjAsIjAwMDU1IiwiXHUwMDNDRzog\nZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsxODMsIkgi\nLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDAzNjQxNCIsIlFDIiwiQ0FEIiwiMDUy\nMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMjQ2MzMuNDYsMjE0MjQuOTgsMTA3\nMS4yNSwyMTM3LjIzLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwi\nSUNFICAgICIsIk1DICAgICAgICAiXSxbMjM0LCJIIiwiMjAxNDA0MzAwODUw\nMTUiLCI5MDAwMzY0MTQiLCJTSyIsIkNBRCIsIjA4MjAxNDA0MzAwODUwIiwi\nMjAxNDA0MzAiLDY3OS4zNSw2NDcuMCwzMi4zNSwwLjAsIjAwMDU1IiwiXHUw\nMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFsy\nMzcsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIjkwMDA0ODE0OSIsIkJDIiwiQ0FE\nIiwiMTAyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsMTQ3LjAsMTMxLjI1LDYu\nNTYsOS4xOSwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzIzOSwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nOTAwMDQ4MTQ5IiwiT04iLCJDQUQiLCIwNjIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiw2MDQ2LjUsNTM2MS42NCw2ODQuODYsMC4wLCIwMDA1NSIsIlx1MDAz\nQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAiXSxbMjU5\nLCJIIiwiMjAxNDA0MzAwODUwMTUiLCJCMDEzNDU3ICAiLCJBQiIsIkNBRCIs\nIjA5MjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDI2MDEuMTQsMjQ3Ny4yOSwx\nMjMuODUsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNF\nICAgICIsIk1DICAgICAgICAiXSxbMjc4LCJIIiwiMjAxNDA0MzAwODUwMTUi\nLCJCMDEzNDU3ICAiLCJCQyIsIkNBRCIsIjEwMjAxNDA0MzAwODUwIiwiMjAx\nNDA0MzAiLDM1OTUuMDMsMzIwOS44NiwxNjAuNDgsMjI0LjY5LCIwMDA1NSIs\nIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAi\nXSxbMzA3LCJIIiwiMjAxNDA0MzAwODUwMTUiLCJCMDEzNDU3ICAiLCJGQyIs\nIkNBRCIsIjEzMjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDM0MzMuMzMsMzQz\nMy4zMywwLjAsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwi\nSUNFICAgICIsIk1DICAgICAgICAiXSxbMzExLCJIIiwiMjAxNDA0MzAwODUw\nMTUiLCJCMDEzNDU3ICAiLCJNQiIsIkNBRCIsIjA3MjAxNDA0MzAwODUwIiwi\nMjAxNDA0MzAiLDE2NC43MywxNDUuNzgsNy4yOCwxMS42NywiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzMxNSwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiTkIiLCJD\nQUQiLCIwNDIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiw4NS42NCw3NS43OCw5\nLjg2LDAuMCwiMDAwNTUiLCJcdTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAg\nICAiLCJNQyAgICAgICAgIl0sWzMxOCwiSCIsIjIwMTQwNDMwMDg1MDE1Iiwi\nQjAxMzQ1NyAgIiwiTkwiLCJDQUQiLCIwMTIwMTQwNDMwMDg1MCIsIjIwMTQw\nNDMwIiwxMzk1LjQyLDEyMzQuODgsMTYwLjU0LDAuMCwiMDAwNTUiLCJcdTAw\nM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0sWzMy\nMywiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjAxMzQ1NyAgIiwiTlMiLCJDQUQi\nLCIwMzIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiwxNTQzLjQyLDEzNDIuMSwy\nMDEuMzIsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNF\nICAgICIsIk1DICAgICAgICAiXSxbMzI5LCJIIiwiMjAxNDA0MzAwODUwMTUi\nLCJCMDEzNDU3ICAiLCJPTiIsIkNBRCIsIjA2MjAxNDA0MzAwODUwIiwiMjAx\nNDA0MzAiLDMzMDk5Ljc4LDI5MzA0LjYzLDM3OTUuMTUsMC4wLCIwMDA1NSIs\nIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNFICAgICIsIk1DICAgICAgICAi\nXSxbNDE2LCJIIiwiMjAxNDA0MzAwODUwMTUiLCJCMDEzNDU3ICAiLCJRQyIs\nIkNBRCIsIjA1MjAxNDA0MzAwODUwIiwiMjAxNDA0MzAiLDQ3NzUuODUsNDE1\nMy43OSwyMDcuNjYsNDE0LjQsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAw\nM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFs0NDYsIkgiLCIyMDE0MDQz\nMDA4NTAxNSIsIkIwMTM0NTcgICIsIlNLIiwiQ0FEIiwiMDgyMDE0MDQzMDA4\nNTAiLCIyMDE0MDQzMCIsMTA5MS4wOSw5OTEuOTUsNDkuNTcsNDkuNTcsIjAw\nMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAwM0UiLCJJQ0UgICAgIiwiTUMgICAg\nICAgICJdLFs0NTQsIkgiLCIyMDE0MDQzMDA4NTAxNSIsIkIwMTM0NTcgICIs\nIkdUIiwiQ0FEIiwiMTEyMDE0MDQzMDA4NTAiLCIyMDE0MDQzMCIsNTg3LjU3\nLDU1OS41OSwyNy45OCwwLjAsIjAwMDU1IiwiXHUwMDNDRzogZXJyb3JcdTAw\nM0UiLCJJQ0UgICAgIiwiTUMgICAgICAgICJdLFs0NTYsIkgiLCIyMDE0MDQz\nMDA4NTAxNSIsIkIwOTU2MzMgICIsIkZDIiwiQ0FEIiwiMTMyMDE0MDQzMDA4\nNTAiLCIyMDE0MDQzMCIsMzEuMDMsMzEuMDMsMC4wLDAuMCwiMDAwNTUiLCJc\ndTAwM0NHOiBlcnJvclx1MDAzRSIsIklDRSAgICAiLCJNQyAgICAgICAgIl0s\nWzQ1OCwiSCIsIjIwMTQwNDMwMDg1MDE1IiwiQjA5NTYzMyAgIiwiT04iLCJD\nQUQiLCIwNjIwMTQwNDMwMDg1MCIsIjIwMTQwNDMwIiw5NjAuODgsOTYwLjg0\nLDAuMDQsMC4wLCIwMDA1NSIsIlx1MDAzQ0c6IGVycm9yXHUwMDNFIiwiSUNF\nICAgICIsIk1DICAgICAgICAiXV0GOwBGSSIZd2FyZGVuLnVzZXIudXNlci5r\nZXkGOwBUWwdbBmkGSSIiJDJhJDEwJG05ZWtqU2pzSTVoRkJZYmV1dTVlc08G\nOwBUSSIQX2NzcmZfdG9rZW4GOwBGSSIxbHJLSWN1SDVVYlZ6d0xSbkZqcG5a\nNHR4cFpWdFRBZThsVXNuc3ExWitJTT0GOwBG\n"], ["updated_at", Tue, 13 May 2014 03:10:29 UTC +00:00]]
+  [1m[36m (38.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:30 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:31 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:32 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:33 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:10:34 -0400
+
+
+Started DELETE "/uploads/cleandb" for 127.8.238.129 at 2014-05-12 23:12:14 -0400
+Processing by UploadsController#cleandb as HTML
+  Parameters: {"authenticity_token"=>"lrKIcuH5UbVzwLRnFjpnZ4txpZVtTAe8lUsnsq1Z+IM="}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (126.0ms)[0m  DELETE FROM "uploads"
+  [1m[36mSQL (96.4ms)[0m  [1mDELETE FROM "validfiles"[0m
+Redirected to http://project-livec92e0817edb5.rhcloud.com/
+Completed 302 Found in 264ms (ActiveRecord: 222.9ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.8.238.129 at 2014-05-12 23:12:15 -0400
+Processing by UploadsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT "sessions".* FROM "sessions" WHERE "sessions"."session_id" = 'fea4b87df745e49922a4172785070f17' ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFiletype Load (0.2ms)[0m  SELECT "filetypes".* FROM "filetypes"
+  [1m[36mUpload Load (0.2ms)[0m  [1mSELECT "uploads".* FROM "uploads"[0m
+  [1m[35mValidfile Load (0.2ms)[0m  SELECT "validfiles".* FROM "validfiles"
+  Rendered uploads/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 336ms (Views: 328.0ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (134.8ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 2  [["data", "BAh7B0kiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbB1sGaQZJIiIkMmEk\nMTAkbTlla2pTanNJNWhGQlliZXV1NWVzTwY7AFRJIhBfY3NyZl90b2tlbgY7\nAEZJIjFscktJY3VINVViVnp3TFJuRmpwblo0dHhwWlZ0VEFlOGxVc25zcTFa\nK0lNPQY7AEY=\n"], ["updated_at", Tue, 13 May 2014 03:12:15 UTC +00:00]]
+  [1m[36m (38.0ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/application.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:16 -0400
+
+
+Started GET "/assets/filetypes.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:16 -0400
+
+
+Started GET "/assets/invoice_details.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:16 -0400
+
+
+Started GET "/assets/file_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/download.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/invoices.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/invoice_headers.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/layouts.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:17 -0400
+
+
+Started GET "/assets/suppliers.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:18 -0400
+
+
+Started GET "/assets/uploads.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:18 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:18 -0400
+
+
+Started GET "/assets/validator.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:18 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.8.238.129 at 2014-05-12 23:12:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:19 -0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:19 -0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:19 -0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:19 -0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.ui.button.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.ui.draggable.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.ui.resizable.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:20 -0400
+
+
+Started GET "/assets/jquery.ui.dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:21 -0400
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:21 -0400
+
+
+Started GET "/assets/active_admin/lib/batch_actions.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:21 -0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:21 -0400
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:22 -0400
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:22 -0400
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:22 -0400
+
+
+Started GET "/assets/active_admin/lib/has_many.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:22 -0400
+
+
+Started GET "/assets/active_admin/lib/popover.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:22 -0400
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:23 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:24 -0400
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:24 -0400
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:24 -0400
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:24 -0400
+
+
+Started GET "/assets/download.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:25 -0400
+
+
+Started GET "/assets/file_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:26 -0400
+
+
+Started GET "/assets/filetypes.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:26 -0400
+
+
+Started GET "/assets/invoice_details.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:26 -0400
+
+
+Started GET "/assets/invoice_headers.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:27 -0400
+
+
+Started GET "/assets/invoices.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:27 -0400
+
+
+Started GET "/assets/layouts.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:27 -0400
+
+
+Started GET "/assets/uploads.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:28 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:28 -0400
+
+
+Started GET "/assets/validator.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:28 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.8.238.129 at 2014-05-12 23:12:28 -0400
