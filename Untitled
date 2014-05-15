@@ -1,3 +1,11 @@
+
+
+<% if !@myfile.blank? %>
+   <pre><%= JSON.pretty_generate(@myfile) %></pre>
+<% end %>
+ 
+
+
 rails g scaffold invoice SupplierNo:string SupplerName:string Account:string SubAccount: string OU:string AB:string BC:string MA:string NB:string NF:string NS:string NU:string NT:string FC:string ONT:string PE:string QC:string SK:string YU:string IO:string IQ:string
 
 
@@ -31,3 +39,79 @@ rails g model validfile filepath:string user:string size:string ftype:string val
     t.string   "ftype"
     t.boolean  "valid"
   end
+  
+  
+  def file_header_params()
+     return {                           :line_num =>1, 
+                                        :RECORD_TYPE => "F", 
+                                        :FILE_DATE => '',
+                                        :SOURCE => '', 
+                                        :INVOICE_COUNT =>'', 
+                                        :INVOICE_AMOUNT =>'', 
+                                        :TAX_VALIDATED =>'', 
+                                        :valid => false
+            }
+   end
+  
+  def invoice_header_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :CURRENCY_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :INVOICE_DATE =>'',
+                                        :INVOICE_AMOUNT =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COMPANY_CODE_SEGMENT =>'',
+                                        :TAX_VALIDATED =>'',
+                                        :VENDOR_SITE_CODE =>'',
+                                        :SOURCE =>'',
+                                        :valid => false
+            }
+   end
+  
+  def invoice_detail_params()
+     return {                           
+                                        :line_num => 0,
+                                        :RECORD_TYPE =>'',
+                                        :FILE_DATE =>'',
+                                        :VENDOR_NUMBER =>'',
+                                        :PROVINCE_TAX_CODE =>'',
+                                        :INVOICE_NUMBER =>'',
+                                        :ITEM_AMOUNT =>'',
+                                        :GST_AMOUNT =>'',
+                                        :PST_AMOUNT =>'',
+                                        :COST_CENTER_SEGMENT =>'',
+                                        :ACCOUNT_SEGMENT =>'',
+                                        :SUB_ACCOUNT_SEGMENT =>'',
+                                        :SOURCE =>'',
+                                        :FILLER =>'',
+                                        :valid => false
+            }
+   end
+  if file_lines[0].include? "TEL"  
+                            if file_lines[1][112, 300].include? "132011"  
+                              ftype = "TEL BMOA"
+                            elsif file_lines[1][112, 300].include? "00055"  
+                               ftype = "TEL BMO CAD"
+                            elsif file_lines[1][112, 300].include? "NTLTD"  
+                                ftype = "TEL NB CAD"
+                            else ftype = "UNDEFINED"
+                            end
+                            
+             else
+                            if file_lines[1][112, 300].include? "132011"  
+                               ftype = "BMOA"
+                            elsif file_lines[1][112, 300].include? "00055"  
+                               ftype = "BMO CAD"
+                            elsif file_lines[1][112, 300].include? "NTLTD"  
+                                  ftype = "NB CAD"
+                            else ftype = "UNDEFINED"
+                            end
+                                                             
+            end

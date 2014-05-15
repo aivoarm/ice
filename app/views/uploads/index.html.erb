@@ -1,4 +1,5 @@
 
+         
 
 
 <div id="popup" class ="notice" style="color:green; display:none">
@@ -54,8 +55,17 @@ $(document).ready(function() {});
   
  <div class="msg"><%= flash[:msg] %></div>
  <div class="err_msg"><%= flash[:err_msg] %></div>
+ 
+ 
+  <table>
+
+ 
+  
+  </table>
+  
   
 <hr />
+<br /><br />
 <div class ="validfile">
 <h3>Validated files</h3>
 <br />
@@ -99,8 +109,8 @@ $(document).ready(function() {});
  
  </div>
  
- 
- 
- 
- 
+ <hr /> 
+
+ <%=@myfile %>
+
  

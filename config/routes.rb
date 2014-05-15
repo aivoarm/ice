@@ -61,7 +61,7 @@ get 'users/sign_up' => redirect('/email_to_admin.html')
 #  end
 
   get '/validator',  to: 'validator#index'
-  get '/validator/v',  to: 'validator#valid'
+ 
   post '/validator',  to: 'validator#index'
   
   delete '/validator/d',  to: 'validator#cleanup'

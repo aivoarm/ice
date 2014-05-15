@@ -8,77 +8,19 @@
 
 
  
-    <%= link_to 'Valid', validator_v_path(:num => @id), method: :get %>
-        
- <%=@mytest1 %>
-<br /><br />
- <%=@mytest %>
- <br />
-
-<%= image_tag("ajax-loader.gif", :alt => "Spinning", :class => "round", :id =>'loadingmessage' ) %>
- 
-  <br /><br />
- 
- <div id="data" style="color:red"></div>
- 
- <div id="val" style="color:green"> Valid File</div>
- 
-<script>
- 
- $(document).ready(function(){
-      //$('#button').click(function(){
-       //$('#loadingmessage').show()
-         callajax();
-        //});
-        
-  });  
-  
-  //===================================
-   function callajax(){
-       
-   $.ajax({
-   url: '/validator.json/?id=<%=@id%>', dataType: "json",
-     beforeSend : function(xhr){
-       xhr.setRequestHeader("Accept", "application/json")
-     },
-     success : function(data){
-           $('#loadingmessage').hide();
-            $('#val').hide();
-           
-              
-       showdata(data);
    
-        },
-          error: function(objAJAXRequest, strError, errorThrown){
-           alert("ERROR: " + strError);
-        }
-        });
-    }
-   
+        
+ <table>
+ <%@mytest.each do |t| %>
+ <tr>
+ <%t.each do |i| %>
+ <td><%= i%></td>
+ <%end%>
+ </tr>
+ <%end%>
  
-function showdata(data){
-    $.each(data, function( i, v ) { 
-        var check=v.toString()
-           $('#data').append("<table><tr>")
-               if(check.indexOf('error') != -1){
-                    $.each(v, function( index, value ) {
-                        $('#data').append( "<td>"+value +"</td>")
-                     });
-               }
-           $('#data').append("</tr></table>")
-        });
-    }
-//===================================================================   
-</script>
-
-<br /><br />
-
- 
-
-
-<br /><br />
   
- 
+ </table>
   
 
 
